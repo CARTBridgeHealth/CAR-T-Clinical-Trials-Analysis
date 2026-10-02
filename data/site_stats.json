@@ -1,0 +1,185 @@
+{
+  "generated_utc": "2026-10-02T19:43:24Z",
+  "data_month": "October 2026",
+  "total_trials": 2944,
+  "recruiting": 988,
+  "recruiting_pct": 34,
+  "missing_country": 204,
+  "status": {
+    "labels": [
+      "Recruiting",
+      "Unknown",
+      "Not Yet Recruiting",
+      "Completed",
+      "Active (not recruiting)",
+      "Terminated",
+      "Other"
+    ],
+    "data": [
+      988,
+      646,
+      363,
+      312,
+      285,
+      171,
+      179
+    ]
+  },
+  "phase": {
+    "labels": [
+      "Early Phase 1",
+      "Phase 1",
+      "Phase 1/2",
+      "Phase 2",
+      "Phase 2/3",
+      "Phase 3",
+      "Phase 4"
+    ],
+    "counts": [
+      400,
+      1134,
+      528,
+      324,
+      16,
+      45,
+      11
+    ],
+    "avg_enrollment": [
+      23,
+      29,
+      52,
+      60,
+      227,
+      333,
+      80
+    ]
+  },
+  "by_country": {
+    "labels": [
+      "China",
+      "USA",
+      "UK",
+      "France",
+      "Germany",
+      "Canada",
+      "Australia",
+      "Japan",
+      "Israel",
+      "S.Korea"
+    ],
+    "all": [
+      1441,
+      930,
+      102,
+      123,
+      106,
+      92,
+      93,
+      50,
+      48,
+      39
+    ],
+    "recruiting": [
+      501,
+      333,
+      30,
+      34,
+      34,
+      33,
+      35,
+      9,
+      13,
+      17
+    ],
+    "completed": [
+      83,
+      171,
+      21,
+      35,
+      20,
+      17,
+      14,
+      9,
+      4,
+      2
+    ]
+  },
+  "growth": {
+    "years": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "trials": [
+      5,
+      4,
+      7,
+      5,
+      11,
+      25,
+      35,
+      110,
+      125,
+      170,
+      197,
+      234,
+      237,
+      270,
+      381,
+      430,
+      344
+    ],
+    "recruiting": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      7,
+      7,
+      17,
+      22,
+      35,
+      59,
+      106,
+      239,
+      292,
+      164
+    ],
+    "completed": [
+      2,
+      1,
+      3,
+      3,
+      6,
+      11,
+      14,
+      32,
+      22,
+      34,
+      41,
+      42,
+      28,
+      21,
+      18,
+      1,
+      0
+    ]
+  }
+}
