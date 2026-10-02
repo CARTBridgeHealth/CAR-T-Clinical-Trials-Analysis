@@ -542,7 +542,7 @@ body.en .cn-only { display: none; }
     <div class="stat-l cn-only">中国已批准产品</div>
   </div>
   <div class="stat">
-    <div class="stat-n g">2,913</div>
+    <div class="stat-n g" data-stat="total">2,944</div>
     <div class="stat-l en-only">Trials analyzed</div>
     <div class="stat-l cn-only">临床试验分析数量</div>
   </div>
@@ -1064,10 +1064,10 @@ body.en .cn-only { display: none; }
   <div style="max-width:1100px; margin:0 auto; padding:0 0 40px;">
     <div class="section-tag en-only">Data Analysis</div>
     <div class="section-tag cn-only">数据分析</div>
-    <h2 class="section-title en-only">2,913 real trials. The numbers don't lie.</h2>
-    <h2 class="section-title cn-only">2,913 条真实数据。数字不会说谎。</h2>
-    <p class="section-sub en-only">Independent analysis of ClinicalTrials.gov data, pulled directly via API. August 2026.</p>
-    <p class="section-sub cn-only">直接通过 API 从 ClinicalTrials.gov 获取的独立数据分析。2026 年 8 月。</p>
+    <h2 class="section-title en-only"><span data-stat="total">2,944</span> real trials. The numbers don't lie.</h2>
+    <h2 class="section-title cn-only"><span data-stat="total">2,944</span> 条真实数据。数字不会说谎。</h2>
+    <p class="section-sub en-only">Independent analysis of ClinicalTrials.gov data, pulled directly via API. <span data-stat="month">October 2026</span>.</p>
+    <p class="section-sub cn-only">直接通过 API 从 ClinicalTrials.gov 获取的独立数据分析。<span data-stat="month_cn">2026 年 10 月</span>。</p>
   </div>
   <div class="chart-grid">
     <div class="chart-card">
@@ -1233,11 +1233,11 @@ Chart.defaults.color       = "#64748b";
 
 const TEAL = "#0d9488", RED = "#dc2626", BLUE = "#1d4ed8", GRAY = "#94a3b8";
 
-new Chart(document.getElementById("trendChart"), {
+const invTrendChart = new Chart(document.getElementById("trendChart"), {
   type: "line",
   data: {
-    labels: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
-    datasets: [{ label: "Trials", data: [8,12,18,22,28,45,68,120,178,210,245,290,355,390,410,435],
+    labels: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
+    datasets: [{ label: "Trials", data: [5,4,7,5,11,25,35,110,125,170,197,234,237,270,381,430,344],
       borderColor: TEAL, backgroundColor: "rgba(13,148,136,0.08)",
       borderWidth: 2.5, pointRadius: 3, fill: true, tension: 0.4 }]
   },
@@ -1245,11 +1245,11 @@ new Chart(document.getElementById("trendChart"), {
     scales:{ x:{grid:{display:false},border:{display:false}}, y:{grid:{color:"#f1f5f9"},border:{display:false}} } }
 });
 
-new Chart(document.getElementById("countryChart"), {
+const invCountryChart = new Chart(document.getElementById("countryChart"), {
   type: "bar",
   data: {
     labels: ["China","USA","UK","France","Germany","Canada","Australia","Japan"],
-    datasets: [{ data: [1900,1030,360,290,230,200,180,160],
+    datasets: [{ data: [1441,930,102,123,106,92,93,50],
       backgroundColor: ["#dc2626","#1d4ed8","#94a3b8","#94a3b8","#94a3b8","#94a3b8","#94a3b8","#94a3b8"],
       borderRadius: 5 }]
   },
@@ -1283,6 +1283,37 @@ new Chart(document.getElementById("waitChart"), {
     plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.raw} weeks`}}},
     scales:{ x:{grid:{color:"#f1f5f9"},border:{display:false}}, y:{grid:{display:false},border:{display:false}} } }
 });
+
+// ── Live stats ───────────────────────────────────────────────────────────
+// Regenerated monthly by python/generate_site_stats.py via GitHub Actions.
+// Falls back to the literals above when the fetch fails (e.g. opened from disk).
+(async function applyStats() {
+  let s;
+  try {
+    const res = await fetch("data/site_stats.json", { cache: "no-store" });
+    if (!res.ok) return;
+    s = await res.json();
+  } catch (e) { return; }
+
+  const monthCn = s.data_month.replace(/^(\w+)\s+(\d{4})$/, (m, mon, yr) =>
+    yr + " 年 " + ({January:1,February:2,March:3,April:4,May:5,June:6,July:7,
+      August:8,September:9,October:10,November:11,December:12}[mon] || "") + " 月");
+  const text = { total: s.total_trials.toLocaleString(),
+                 month: s.data_month, month_cn: monthCn };
+  document.querySelectorAll("[data-stat]").forEach(el => {
+    const v = text[el.dataset.stat];
+    if (v !== undefined) el.textContent = v;
+  });
+
+  invTrendChart.data.labels = s.growth.years;
+  invTrendChart.data.datasets[0].data = s.growth.trials;
+  invTrendChart.update();
+
+  const want = invCountryChart.data.labels;
+  invCountryChart.data.datasets[0].data =
+    want.map(l => s.by_country.all[s.by_country.labels.indexOf(l)] ?? 0);
+  invCountryChart.update();
+})();
 </script>
 </body>
 </html>

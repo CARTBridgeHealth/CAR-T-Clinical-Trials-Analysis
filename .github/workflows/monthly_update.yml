@@ -42,7 +42,11 @@ jobs:
       - name: Update treatment data
         run: python python/update_treatment_data_2026.py
 
-      # 7. Commit and push updated CSV files
+      # 7. Recompute the figures the public pages display
+      - name: Generate site stats
+        run: python python/generate_site_stats.py
+
+      # 8. Commit and push updated CSV files
       - name: Commit updated data
         run: |
           git config --global user.name "github-actions[bot]"

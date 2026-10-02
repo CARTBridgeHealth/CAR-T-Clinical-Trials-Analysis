@@ -271,7 +271,7 @@
     <div class="hero-eyebrow">Global CAR-T Therapy Analysis · 2026</div>
     <h1>Why cancer patients are<br><span>flying to China</span> for treatment</h1>
     <p class="hero-sub">
-      An independent data analysis of 2,913 clinical trials and treatment costs
+      An independent data analysis of <span data-stat="total">2,944</span> clinical trials and treatment costs
       across 7 countries — revealing a stark global divide in access to one of
       oncology's most promising therapies.
     </p>
@@ -301,7 +301,7 @@
     <div class="stat-label">China approved products</div>
   </div>
   <div class="stat">
-    <div class="stat-num">2,913</div>
+    <div class="stat-num" data-stat="total">2,944</div>
     <div class="stat-label">Trials analyzed</div>
   </div>
 </div>
@@ -433,7 +433,7 @@
   <div class="section">
     <div class="section-header">
       <span class="section-num">02</span>
-      <span class="section-title">Clinical Trials Analysis (2,913 trials)</span>
+      <span class="section-title">Clinical Trials Analysis (<span data-stat="total">2,944</span> trials)</span>
     </div>
     <p class="section-desc">
       Data pulled directly from ClinicalTrials.gov API. Filter by trial status
@@ -453,7 +453,7 @@
         <div class="chart-wrap">
           <canvas id="trendChart"></canvas>
         </div>
-        <p class="trend-note">Source: ClinicalTrials.gov API, retrieved August 2026</p>
+        <p class="trend-note">Source: ClinicalTrials.gov API, retrieved <span data-stat="month">October 2026</span>. <span data-stat="missing">204</span> trials list no country, so country counts are a lower bound.</p>
       </div>
 
       <div class="chart-card">
@@ -466,7 +466,7 @@
 
       <div class="chart-card">
         <div class="chart-title">Trial Status Distribution</div>
-        <div class="chart-sub">35% actively recruiting — field still in rapid expansion</div>
+        <div class="chart-sub"><span data-stat="recruiting_pct">34</span>% actively recruiting — field still in rapid expansion</div>
         <div class="chart-wrap" style="height:260px">
           <canvas id="statusChart"></canvas>
         </div>
@@ -504,17 +504,23 @@ const countryColors = countries.map(c =>
   c === "China" ? "#c0392b" : c === "USA" ? "#2471a3" : c === "Canada" ? "#1a5276" : "#7f8c8d"
 );
 
-// Trial data (representative from real dataset)
-const years = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025];
-const trialCounts = [8,12,18,22,28,45,68,120,178,210,245,290,355,390,410,435];
-const recruitingCounts = [3,4,6,8,10,16,24,44,65,78,90,105,128,140,148,157];
-const completedCounts  = [5,7,10,12,16,26,38,68,99,116,137,162,198,218,228,243];
+// Used by the status tooltip; applyStats() refreshes it from site_stats.json.
+let TOTAL_TRIALS = 2944;
 
-const trialByCountry = {
+// Trial data — counted from data/cart_trials_clean.csv by python/generate_site_stats.py.
+// These literals are the October 2026 values and act as the fallback when
+// site_stats.json can't be loaded (e.g. opening this file directly from disk).
+// applyStats() below replaces them with the live figures on every page load.
+let years = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
+let trialCounts      = [5,4,7,5,11,25,35,110,125,170,197,234,237,270,381,430,344];
+let recruitingCounts = [0,0,1,0,0,1,1,7,7,17,22,35,59,106,239,292,164];
+let completedCounts  = [2,1,3,3,6,11,14,32,22,34,41,42,28,21,18,1,0];
+
+let trialByCountry = {
   labels: ["China","USA","UK","France","Germany","Canada","Australia","Japan","Israel","S.Korea"],
-  all:        [1900, 1030, 360, 290, 230, 200, 180, 160, 160, 120],
-  recruiting: [680,  370,  130, 104,  82,  72,  65,  58,  58,  43],
-  completed:  [532,  288,  101,  81,  64,  56,  50,  45,  45,  34],
+  all:        [1441, 930, 102, 123, 106,  92,  93,  50,  48,  39],
+  recruiting: [ 501, 333,  30,  34,  34,  33,  35,   9,  13,  17],
+  completed:  [  83, 171,  21,  35,  20,  17,  14,   9,   4,   2],
 };
 
 // ── Chart defaults ──────────────────────────────────────────────────────
@@ -652,12 +658,12 @@ const trialCountryChart = new Chart(trialCountryCtx, {
 
 // ── Status pie chart ─────────────────────────────────────────────────────
 const statusCtx = document.getElementById("statusChart").getContext("2d");
-new Chart(statusCtx, {
+const statusChart = new Chart(statusCtx, {
   type: "doughnut",
   data: {
     labels: ["Recruiting","Unknown","Not Yet Recruiting","Completed","Active (not recruiting)","Terminated","Other"],
     datasets: [{
-      data: [1030, 629, 335, 305, 275, 169, 170],
+      data: [988, 646, 363, 312, 285, 171, 179],
       backgroundColor: ["#e67e22","#95a5a6","#f39c12","#16a085","#2471a3","#c0392b","#bdc3c7"],
       borderWidth: 2,
       borderColor: "#fff",
@@ -670,7 +676,7 @@ new Chart(statusCtx, {
       legend: { position: "right", labels: { boxWidth: 12, font: { size: 11 } } },
       tooltip: {
         callbacks: {
-          label: ctx => ` ${ctx.label}: ${ctx.raw.toLocaleString()} (${((ctx.raw/2913)*100).toFixed(1)}%)`
+          label: ctx => ` ${ctx.label}: ${ctx.raw.toLocaleString()} (${((ctx.raw/TOTAL_TRIALS)*100).toFixed(1)}%)`
         }
       }
     }
@@ -679,13 +685,13 @@ new Chart(statusCtx, {
 
 // ── Phase bar chart ──────────────────────────────────────────────────────
 const phaseCtx = document.getElementById("phaseChart").getContext("2d");
-new Chart(phaseCtx, {
+const phaseChart = new Chart(phaseCtx, {
   type: "bar",
   data: {
     labels: ["Early Phase 1","Phase 1","Phase 1/2","Phase 2","Phase 2/3","Phase 3","Phase 4"],
     datasets: [{
       label: "Avg Enrollment",
-      data: [18, 28, 62, 145, 198, 320, 280],
+      data: [23, 29, 52, 60, 227, 333, 80],
       backgroundColor: ["#d5dbdb","#aab7b8","#717d7e","#16a085","#0e7c7b","#c0392b","#e74c3c"],
       borderRadius: 5,
     }]
@@ -704,6 +710,59 @@ new Chart(phaseCtx, {
     }
   }
 });
+
+// ── Live stats ───────────────────────────────────────────────────────────
+// data/site_stats.json is regenerated by the monthly GitHub Action, so these
+// charts follow the data refresh. If the fetch fails (opened from disk, or
+// the file isn't published yet) the literals above stay on screen.
+async function applyStats() {
+  let s;
+  try {
+    const res = await fetch("data/site_stats.json", { cache: "no-store" });
+    if (!res.ok) return;
+    s = await res.json();
+  } catch (e) {
+    return;   // offline or file:// — keep the built-in fallback values
+  }
+
+  TOTAL_TRIALS = s.total_trials;
+  const text = {
+    total:           s.total_trials.toLocaleString(),
+    month:           s.data_month,
+    recruiting_pct:  s.recruiting_pct,
+    missing:         s.missing_country.toLocaleString(),
+  };
+  document.querySelectorAll("[data-stat]").forEach(el => {
+    const v = text[el.dataset.stat];
+    if (v !== undefined) el.textContent = v;
+  });
+
+  years            = s.growth.years;
+  trialCounts      = s.growth.trials;
+  recruitingCounts = s.growth.recruiting;
+  completedCounts  = s.growth.completed;
+  trialByCountry   = s.by_country;
+
+  trendChart.data.labels = years;
+  const active = document.querySelector(".filters .pill.active");
+  const key = active && /recruit/i.test(active.textContent) ? "recruiting"
+            : active && /complet/i.test(active.textContent) ? "completed" : "trials";
+  trendChart.data.datasets[0].data = s.growth[key];
+  trendChart.update();
+
+  trialCountryChart.data.labels = trialByCountry.labels;
+  trialCountryChart.data.datasets[0].data = trialByCountry.all;
+  trialCountryChart.update();
+
+  statusChart.data.labels = s.status.labels;
+  statusChart.data.datasets[0].data = s.status.data;
+  statusChart.update();
+
+  phaseChart.data.labels = s.phase.labels;
+  phaseChart.data.datasets[0].data = s.phase.avg_enrollment;
+  phaseChart.update();
+}
+applyStats();
 </script>
 </body>
 </html>

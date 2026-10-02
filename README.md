@@ -3,7 +3,7 @@
 [![Monthly Data Update](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/monthly_update.yml/badge.svg)](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/monthly_update.yml)
 [![Deploy to Pages](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/static.yml/badge.svg)](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/static.yml)
 
-An end-to-end data pipeline analyzing **2,913 real-world CAR-T clinical trials** and **global treatment availability** across 7 countries — combining SQL database design, Python data engineering, Power BI visualization, and interactive web publishing. Data is refreshed automatically every month via GitHub Actions.
+An end-to-end data pipeline analyzing **2,944 real-world CAR-T clinical trials** and **global treatment availability** across 7 countries — combining SQL database design, Python data engineering, Power BI visualization, and interactive web publishing. Data is refreshed automatically every month via GitHub Actions.
 
 ---
 
@@ -25,7 +25,8 @@ GitHub Actions runs on the **1st of every month** and automatically:
 2. Standardizes phase labels and cleans the dataset
 3. Updates treatment cost and approved product comparison data
 4. Commits and pushes updated CSV files to this repository
-5. GitHub Pages websites refresh automatically
+5. Regenerates `data/site_stats.json`, which the websites read on load
+6. GitHub Pages websites refresh automatically
 
 No manual steps required.
 
@@ -33,12 +34,15 @@ No manual steps required.
 
 ## Key Findings
 
-### Clinical Trials · 2,913 records · August 2026
+### Clinical Trials · 2,944 records · October 2026
 
-- CAR-T trial volume grew **20×** between 2010 and 2025
-- **China leads globally** with ~1,900 trials; USA follows with ~1,000
-- Phase 1 trials dominate (1,125 trials) — field still largely pre-commercial
-- **35% of trials actively recruiting** — rapid expansion continuing
+- CAR-T trial starts grew from 5 in 2010 to **430 in 2025**
+- **China leads globally** with 1,441 trials; USA follows with 930
+- Phase 1 trials dominate (1,134 trials) — field still largely pre-commercial
+- **34% of trials actively recruiting** — rapid expansion continuing
+
+> Counts come from `data/site_stats.json`, regenerated on every monthly refresh.
+> 204 trials (7%) list no country, so country counts are a lower bound.
 
 ### Global Treatment Comparison · July 2026
 
@@ -94,7 +98,7 @@ CAR-T-Clinical-Trials-Analysis/
 │   └── monthly_update.yml            # Monthly data refresh — runs 1st of each month
 │
 ├── data/
-│   ├── cart_trials_raw.json          # Raw API response (2,913 records)
+│   ├── cart_trials_raw.json          # Raw API response (2,944 records)
 │   ├── cart_trials_clean.csv         # Cleaned, flattened dataset — auto-updated
 │   ├── approved_products.csv         # FDA & NMPA approved products (2026)
 │   ├── cost_comparison.csv           # Treatment costs by country (2026)
@@ -163,7 +167,7 @@ psql -U postgres -d cart_trials -f sql/queries.sql
 
 | Source | Data | URL |
 |---|---|---|
-| ClinicalTrials.gov | 2,913 trial records (auto-updated monthly) | clinicaltrials.gov |
+| ClinicalTrials.gov | 2,944 trial records (auto-updated monthly) | clinicaltrials.gov |
 | U.S. FDA | Approved CAR-T products | fda.gov |
 | China NMPA | Approved CAR-T products | nmpa.gov.cn |
 | Medical literature | Treatment costs, outcomes | Published 2024–2026 |
