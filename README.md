@@ -192,8 +192,6 @@ This project underpins **CARTBridge Health** — a cross-border CAR-T medical co
 
 **Yang Liu** · Research Associate, University of Manitoba
 
-Biomedical researcher with expertise in microfluidics, point-of-care diagnostics, and data analysis. Bridging clinical research with data engineering and cross-border healthcare access.
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-yang--liu--6093-blue?logo=linkedin)](https://www.linkedin.com/in/yang-liu-6093/)
 [![GitHub](https://img.shields.io/badge/GitHub-CARTBridgeHealth-black?logo=github)](https://github.com/CARTBridgeHealth)
-📧 liuyang6093@gmail.com · 📞 +1 (431) 554-0238
+📧 liuyang6093@gmail.com
