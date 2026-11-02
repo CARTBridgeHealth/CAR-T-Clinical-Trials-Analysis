@@ -106,8 +106,9 @@ def comparison_block(c):
         f"|---|---|---|---|\n"
         + "\n".join(rows) + "\n"
         f"\n"
-        f"> Costs and wait times are **manually researched**, not auto-updated — "
-        f"last reviewed {c['as_of']}."
+        f"> **Every column here is manually researched** — costs, wait times, "
+        f"approved-product counts, insurance and solid-tumour availability alike. "
+        f"None of it auto-updates. Last reviewed {c['as_of']}."
     )
 
 
