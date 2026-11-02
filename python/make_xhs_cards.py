@@ -85,38 +85,59 @@ def footer(fig, text="数据来源 ClinicalTrials.gov · 仅供科普参考"):
 
 
 def card_total(s):
-    """Card 1 — the headline number and the two-country split."""
-    fig = new_canvas()
+    """Card 1 — headline count, then the China/USA gap drawn as bars.
 
-    fig.text(0.5, 0.88, "全球 CAR-T 临床试验", ha="center",
-             fontsize=34, color=MUTED)
-
-    fig.text(0.5, 0.715, f"{s['total_trials']:,}", ha="center", va="center",
-             fontsize=175, fontweight="bold", color=ACCENT)
-    fig.text(0.5, 0.565, "项试验登记在册", ha="center",
-             fontsize=30, color=INK)
-
+    Two numbers side by side made the reader do the arithmetic. Bars make the
+    gap the thing you see first, which is the actual hook for this post.
+    """
     labels = s["by_country"]["labels"]
     counts = s["by_country"]["all"]
     cn = counts[labels.index("China")]
     us = counts[labels.index("USA")]
 
-    # Two-country split, drawn as plain text blocks rather than a chart —
-    # at thumbnail size a two-bar chart reads as noise.
-    for x, flag, name, n, colour in (
-        (0.26, "🇨🇳", "中国",  cn, RED),
-        (0.74, "🇺🇸", "美国",  us, BLUE),
-    ):
-        fig.text(x, 0.44, name, ha="center", fontsize=30, color=MUTED)
-        fig.text(x, 0.355, f"{n:,}", ha="center", va="center",
-                 fontsize=74, fontweight="bold", color=colour)
+    fig = new_canvas()
 
-    fig.text(0.5, 0.245, f"其中 {s['recruiting']:,} 项正在招募"
+    # ── Headline ──
+    fig.text(0.5, 0.925, "全球 CAR-T 临床试验", ha="center",
+             fontsize=31, color=MUTED)
+
+    fig.text(0.46, 0.800, f"{s['total_trials']:,}", ha="center", va="center",
+             fontsize=152, fontweight="bold", color=ACCENT)
+    # Unit tucked against the number rather than on its own line.
+    fig.text(0.815, 0.762, "项", ha="center", va="center",
+             fontsize=42, color=INK)
+
+    fig.text(0.5, 0.675, f"其中 {s['recruiting']:,} 项正在招募"
                          f"（{s['recruiting_pct']}%）",
-             ha="center", fontsize=27, color=INK)
-    fig.text(0.5, 0.175,
-             "试验数量 ≠ 疗效更好，也 ≠ 更容易参加",
-             ha="center", fontsize=23, color=MUTED)
+             ha="center", fontsize=26, color=INK)
+
+    # ── Divider ──
+    fig.add_artist(plt.Line2D([0.12, 0.88], [0.615, 0.615],
+                              color="#2a3f3b", linewidth=2))
+
+    # ── China vs USA, as bars ──
+    bar_left, bar_max = 0.28, 0.41
+    widest = max(cn, us)
+    for i, (name, n, colour) in enumerate((("中国", cn, ACCENT),
+                                           ("美国", us, BLUE))):
+        y = 0.505 - i * 0.125
+        fig.text(0.12, y, name, ha="left", va="center",
+                 fontsize=34, color=INK)
+        fig.patches.append(plt.Rectangle(
+            (bar_left, y - 0.028), bar_max * n / widest, 0.056,
+            transform=fig.transFigure, facecolor=colour, zorder=1))
+        fig.text(bar_left + bar_max * n / widest + 0.018, y, f"{n:,}",
+                 ha="left", va="center", fontsize=38,
+                 fontweight="bold", color=colour)
+
+    # ── The point of the card ──
+    fig.text(0.5, 0.285, f"中国试验数量约为美国的 {cn / us:.1f} 倍",
+             ha="center", fontsize=30, fontweight="bold", color=INK)
+
+    fig.text(0.5, 0.205, "但试验数量 ≠ 疗效更好",
+             ha="center", fontsize=24, color=MUTED)
+    fig.text(0.5, 0.155, "也 ≠ 更容易参加 · 多数仍在一期",
+             ha="center", fontsize=24, color=MUTED)
 
     footer(fig, f"ClinicalTrials.gov · {month_zh(s['data_month'])} · 仅供科普参考")
     path = os.path.join(OUT_DIR, "card1_total.png")
