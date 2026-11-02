@@ -46,12 +46,16 @@ jobs:
       - name: Generate site stats
         run: python python/generate_site_stats.py
 
-      # 8. Commit and push updated CSV files
+      # 8. Refresh the generated blocks in README.md
+      - name: Update README figures
+        run: python python/update_readme.py
+
+      # 9. Commit and push updated data and README
       - name: Commit updated data
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ README.md
           git diff --staged --quiet || git commit -m "Auto update: CAR-T data refresh $(date +'%B %Y')"
           git pull --rebase origin main
           git push
