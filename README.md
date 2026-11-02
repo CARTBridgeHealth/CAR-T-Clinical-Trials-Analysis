@@ -1,7 +1,7 @@
 # CAR-T Clinical Trials & Treatment Analysis Pipeline
 
 [![Monthly Data Update](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/monthly_update.yml/badge.svg)](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/monthly_update.yml)
-[![Deploy to Pages](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/static.yml/badge.svg)](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/static.yml)
+[![Deploy to Pages](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/pages/pages-build-deployment)
 
 An end-to-end data pipeline analyzing **2,975 real-world CAR-T clinical trials** and **global treatment availability** across 7 countries — combining SQL database design, Python data engineering, Power BI visualization, and interactive web publishing. Data is refreshed automatically every month via GitHub Actions.
 
