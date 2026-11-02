@@ -744,7 +744,12 @@ function markStatsStale() {
 async function applyStats() {
   let s;
   try {
-    const res = await fetch("data/site_stats.json", { cache: "no-store" });
+    // The query param is the part that actually works: "no-store" can be
+    // overridden by extensions, proxies or a warm disk cache, but a changing
+    // URL is a different resource to every cache in the path. Without it a
+    // browser can serve last month's JSON and the page renders a stale count
+    // with no sign anything is wrong.
+    const res = await fetch("data/site_stats.json?t=" + Date.now(), { cache: "no-store" });
     if (!res.ok) { markStatsStale(); return; }
     s = await res.json();
   } catch (e) {
@@ -803,7 +808,7 @@ const wk  = (lo, hi) => (lo === hi ? `${lo} weeks` : `${lo}–${hi} weeks`);
 async function applyComparison() {
   let c;
   try {
-    const res = await fetch("data/country_comparison.json", { cache: "no-store" });
+    const res = await fetch("data/country_comparison.json?t=" + Date.now(), { cache: "no-store" });
     if (!res.ok) return;
     c = await res.json();
   } catch (e) {

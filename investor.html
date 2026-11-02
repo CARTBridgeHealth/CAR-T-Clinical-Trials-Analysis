@@ -1290,7 +1290,7 @@ new Chart(document.getElementById("waitChart"), {
 (async function applyStats() {
   let s;
   try {
-    const res = await fetch("data/site_stats.json", { cache: "no-store" });
+    const res = await fetch("data/site_stats.json?t=" + Date.now(), { cache: "no-store" });
     if (!res.ok) return;
     s = await res.json();
   } catch (e) { return; }
