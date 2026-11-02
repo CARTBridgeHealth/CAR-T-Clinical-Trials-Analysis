@@ -6,7 +6,7 @@ tracks the monthly refresh instead of being hand-edited and drifting.
 
 Two blocks, each delimited by HTML comment markers:
 
-  TRIALS      — counted from data/site_stats.json. Moves every month.
+  TRIALS      — counted from data/trial_figures.json. Moves every month.
   COMPARISON  — from data/country_comparison.json, which is manually
                 maintained. The numbers only change when a human edits that
                 file; this script just keeps the README in step with it and
@@ -21,7 +21,7 @@ import re
 
 BASE       = os.path.join(os.path.dirname(__file__), "..")
 README     = os.path.join(BASE, "README.md")
-STATS      = os.path.join(BASE, "data", "site_stats.json")
+STATS      = os.path.join(BASE, "data", "trial_figures.json")
 COMPARISON = os.path.join(BASE, "data", "country_comparison.json")
 
 FLAGS = {"China": "🇨🇳", "USA": "🇺🇸", "Canada": "🇨🇦", "Germany": "🇩🇪",
@@ -70,7 +70,7 @@ def trials_block(s):
         f"- **{s['recruiting_pct']}% of trials actively recruiting** — "
         f"rapid expansion continuing\n"
         f"\n"
-        f"> Counts above are regenerated from `data/site_stats.json` on every "
+        f"> Counts above are regenerated from `data/trial_figures.json` on every "
         f"monthly refresh.\n"
         f"> {s['missing_country']} trials "
         f"({round(100 * s['missing_country'] / s['total_trials'])}%) list no "

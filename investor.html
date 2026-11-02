@@ -1285,12 +1285,12 @@ new Chart(document.getElementById("waitChart"), {
 });
 
 // ── Live stats ───────────────────────────────────────────────────────────
-// Regenerated monthly by python/generate_site_stats.py via GitHub Actions.
+// Regenerated monthly by python/generate_trial_figures.py via GitHub Actions.
 // Falls back to the literals above when the fetch fails (e.g. opened from disk).
 (async function applyStats() {
   let s;
   try {
-    const res = await fetch("data/site_stats.json?t=" + Date.now(), { cache: "no-store" });
+    const res = await fetch("data/trial_figures.json", { cache: "no-store" });
     if (!res.ok) return;
     s = await res.json();
   } catch (e) { return; }

@@ -1,8 +1,8 @@
 """
-generate_site_stats.py
+generate_trial_figures.py
 ----------------------
 Compute every figure the public pages display from cart_trials_clean.csv and
-write them to data/site_stats.json. The pages read that file at load, so the
+write them to data/trial_figures.json. The pages read that file at load, so the
 websites track the monthly data refresh instead of drifting out of date.
 
 Every value here is counted from the CSV. Nothing is estimated. Trials with no
@@ -17,7 +17,7 @@ import pandas as pd
 
 BASE      = os.path.join(os.path.dirname(__file__), "..")
 CLEAN_CSV = os.path.join(BASE, "data", "cart_trials_clean.csv")
-OUT_JSON  = os.path.join(BASE, "data", "site_stats.json")
+OUT_JSON  = os.path.join(BASE, "data", "trial_figures.json")
 
 # Chart label order, mirrored exactly by the arrays the pages consume.
 STATUS_LABELS = ["Recruiting", "Unknown", "Not Yet Recruiting", "Completed",

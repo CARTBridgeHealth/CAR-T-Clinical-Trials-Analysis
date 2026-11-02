@@ -25,7 +25,7 @@ GitHub Actions runs on the **1st of every month** and automatically:
 2. Standardizes phase labels and cleans the dataset
 3. Updates treatment cost and approved product comparison data
 4. Commits and pushes updated CSV files to this repository
-5. Regenerates `data/site_stats.json`, which the websites read on load
+5. Regenerates `data/trial_figures.json`, which the websites read on load
 6. GitHub Pages websites refresh automatically
 
 No manual steps required.
@@ -42,7 +42,7 @@ No manual steps required.
 - Phase 1 trials dominate (1,147 trials) — field still largely pre-commercial
 - **33% of trials actively recruiting** — rapid expansion continuing
 
-> Counts above are regenerated from `data/site_stats.json` on every monthly refresh.
+> Counts above are regenerated from `data/trial_figures.json` on every monthly refresh.
 > 203 trials (7%) list no country, so country counts are a lower bound.
 <!-- END:TRIALS -->
 

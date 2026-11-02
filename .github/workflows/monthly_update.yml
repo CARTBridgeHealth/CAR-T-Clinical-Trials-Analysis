@@ -43,8 +43,8 @@ jobs:
         run: python python/update_treatment_data_2026.py
 
       # 7. Recompute the figures the public pages display
-      - name: Generate site stats
-        run: python python/generate_site_stats.py
+      - name: Generate trial figures
+        run: python python/generate_trial_figures.py
 
       # 8. Refresh the generated blocks in README.md
       - name: Update README figures
