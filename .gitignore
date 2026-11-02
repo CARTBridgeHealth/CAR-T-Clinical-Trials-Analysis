@@ -11,3 +11,6 @@ data/carnk_trials_raw.json
 # OS noise
 .DS_Store
 Thumbs.db
+
+# Generated social cards — regenerate with python/make_xhs_cards.py
+xhs_cards/
