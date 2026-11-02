@@ -28,6 +28,32 @@ STATUS_KEYS   = ["RECRUITING", "UNKNOWN", "NOT_YET_RECRUITING", "COMPLETED",
 PHASE_LABELS  = ["Early Phase 1", "Phase 1", "Phase 1/2", "Phase 2",
                  "Phase 2/3", "Phase 3", "Phase 4"]
 
+# Disease grouping. The registry's free-text conditions field holds dozens of
+# spellings for the same disease ("Multiple Myeloma", "Relapsed/Refractory
+# Multiple Myeloma", "Multiple Myeloma in Relapse"), so raw value counts are
+# not usable. Each trial is assigned to the FIRST category whose pattern it
+# matches, so order encodes precedence: a myeloma trial that also says "solid
+# tumor" counts as myeloma.
+DISEASE_GROUPS = [
+    ("Multiple myeloma",   r"myeloma"),
+    ("Leukaemia",          r"leukemia|leukaemia|\bALL\b|\bAML\b|\bCLL\b|\bCML\b"
+                           r"|lymphoblastic"),
+    ("Lymphoma",           r"lymphoma|DLBCL|hodgkin|follicular|mantle cell"),
+    ("Autoimmune disease", r"lupus|sclerosis|myositis|arthritis|nephropathy"
+                           r"|myasthenia|autoimmune|sj[öo]gren|pemphigus"
+                           r"|vasculitis|crohn|colitis"),
+    ("Solid tumour",       r"solid tumou?r|carcinoma|sarcoma|glioma|glioblastoma"
+                           r"|melanoma|pancrea|ovarian|breast|colorectal|gastric"
+                           r"|hepatocellular|lung|prostate|renal|neuroblastoma"
+                           r"|mesothelioma|cervical|oesophag|esophag"),
+    # Registered against a generic blood-cancer term with no specific disease
+    # named. Separated from "Other" so the residue is genuinely unrelated
+    # studies rather than under-specified haematology.
+    ("Blood cancer, unspecified",
+                           r"h[ae]matolog|blood cancer|b[\s-]?cell malignan"
+                           r"|neoplasm|malignanc"),
+]
+
 # Display name -> substring matched against the pipe-joined countries column.
 COUNTRIES = [("China", "China"), ("USA", "United States"),
              ("UK", "United Kingdom"), ("France", "France"),
@@ -80,6 +106,18 @@ def build(df: pd.DataFrame) -> dict:
         "completed":  per_year(in_range[in_range["status"] == "COMPLETED"]),
     }
 
+    # ── Disease groups: first match wins, see DISEASE_GROUPS ──
+    conditions = df["conditions"].fillna("")
+    unassigned = pd.Series(True, index=df.index)
+    disease_labels, disease_counts = [], []
+    for label, pattern in DISEASE_GROUPS:
+        hit = unassigned & conditions.str.contains(pattern, case=False, regex=True)
+        disease_labels.append(label)
+        disease_counts.append(int(hit.sum()))
+        unassigned &= ~hit
+    disease_labels.append("Other / unspecified")
+    disease_counts.append(int(unassigned.sum()))
+
     recruiting = int(counts.get("RECRUITING", 0))
     return {
         "generated_utc":   pd.Timestamp.now("UTC").strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -92,6 +130,8 @@ def build(df: pd.DataFrame) -> dict:
         "phase":           {"labels": PHASE_LABELS,
                             "counts": phase_counts,
                             "avg_enrollment": phase_enrol},
+        "disease":         {"labels": disease_labels,
+                            "counts": disease_counts},
         "by_country":      by_country,
         "growth":          growth,
     }

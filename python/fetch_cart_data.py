@@ -109,8 +109,12 @@ def extract_fields(study: dict) -> dict:
         i.get("type", "") for i in interventions
     )
 
-    # Conditions — join multiples with a pipe
-    conditions = " | ".join(id_mod.get("conditions", []))
+    # Conditions — join multiples with a pipe.
+    # These live in conditionsModule, not identificationModule; reading the
+    # wrong module silently produced an empty column for every trial.
+    conditions = " | ".join(
+        proto.get("conditionsModule", {}).get("conditions", [])
+    )
 
     # Countries — join multiples with a pipe
     locations  = locs.get("locations", [])

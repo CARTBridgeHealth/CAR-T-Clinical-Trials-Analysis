@@ -475,6 +475,14 @@
       </div>
 
       <div class="chart-card">
+        <div class="chart-title">Trials by Disease</div>
+        <div class="chart-sub">Blood cancers dominate; autoimmune disease is the fastest-growing new application</div>
+        <div class="chart-wrap">
+          <canvas id="diseaseChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-card">
         <div class="chart-title">Trial Status Distribution</div>
         <div class="chart-sub"><span data-stat="recruiting_pct">34</span>% actively recruiting — field still in rapid expansion</div>
         <div class="chart-wrap" style="height:260px">
@@ -669,6 +677,42 @@ const trialCountryChart = new Chart(trialCountryCtx, {
   }
 });
 
+// ── Disease chart ────────────────────────────────────────────────────────
+// Each trial is counted once, in the first matching group (see DISEASE_GROUPS
+// in generate_trial_figures.py), so the bars sum to the total trial count.
+let diseaseLabels = ["Multiple myeloma","Leukaemia","Lymphoma","Autoimmune disease",
+                     "Solid tumour","Blood cancer, unspecified","Other / unspecified"];
+let diseaseCounts = [394, 735, 552, 297, 544, 142, 311];
+
+const diseaseCtx = document.getElementById("diseaseChart").getContext("2d");
+const diseaseChart = new Chart(diseaseCtx, {
+  type: "bar",
+  data: {
+    labels: diseaseLabels,
+    datasets: [{
+      label: "Trials",
+      data: diseaseCounts,
+      backgroundColor: ["#16a085","#2471a3","#1a5276","#e67e22",
+                        "#c0392b","#95a5a6","#d5dbdb"],
+      borderRadius: 5,
+    }]
+  },
+  options: {
+    indexAxis: "y",
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx =>
+        ` ${ctx.raw.toLocaleString()} trials (${((ctx.raw / TOTAL_TRIALS) * 100).toFixed(1)}%)` } }
+    },
+    scales: {
+      x: { grid: { color: "#e0e6ed" }, border: { display: false } },
+      y: { grid: { display: false }, border: { display: false } },
+    }
+  }
+});
+
 // ── Status pie chart ─────────────────────────────────────────────────────
 const statusCtx = document.getElementById("statusChart").getContext("2d");
 const statusChart = new Chart(statusCtx, {
@@ -797,6 +841,12 @@ async function applyStats() {
   phaseChart.data.labels = s.phase.labels;
   phaseChart.data.datasets[0].data = s.phase.avg_enrollment;
   phaseChart.update();
+
+  if (s.disease) {
+    diseaseChart.data.labels = s.disease.labels;
+    diseaseChart.data.datasets[0].data = s.disease.counts;
+    diseaseChart.update();
+  }
 }
 applyStats();
 

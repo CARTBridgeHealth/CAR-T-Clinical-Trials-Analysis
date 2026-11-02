@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-02T03:15:43Z",
+  "generated_utc": "2026-11-02T15:24:50Z",
   "data_month": "November 2026",
   "total_trials": 2975,
   "recruiting": 992,
@@ -52,6 +52,26 @@
       217,
       342,
       80
+    ]
+  },
+  "disease": {
+    "labels": [
+      "Multiple myeloma",
+      "Leukaemia",
+      "Lymphoma",
+      "Autoimmune disease",
+      "Solid tumour",
+      "Blood cancer, unspecified",
+      "Other / unspecified"
+    ],
+    "counts": [
+      394,
+      735,
+      552,
+      297,
+      544,
+      142,
+      311
     ]
   },
   "by_country": {
