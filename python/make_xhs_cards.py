@@ -33,6 +33,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
+from matplotlib.patches import FancyBboxPatch
 
 BASE       = os.path.join(os.path.dirname(__file__), "..")
 FIGURES    = os.path.join(BASE, "data", "trial_figures.json")
@@ -80,7 +81,7 @@ def new_canvas():
 
 
 def footer(fig, text="数据来源 ClinicalTrials.gov · 仅供科普参考"):
-    fig.text(0.5, 0.045, text, ha="center", va="center",
+    fig.text(0.5, 0.032, text, ha="center", va="center",
              fontsize=15, color=MUTED)
 
 
@@ -103,49 +104,71 @@ def card_total(s):
              + disease.get("Multiple myeloma", 0)
              + disease.get("Blood cancer, unspecified", 0))
 
+    solid = disease.get("Solid tumour", 0)
+    auto  = disease.get("Autoimmune disease", 0)
+
     fig = new_canvas()
 
-    # ── Headline ──
-    fig.text(0.5, 0.925, "全球 CAR-T 临床试验", ha="center",
-             fontsize=31, color=MUTED)
+    # ── Series badge ──
+    fig.patches.append(FancyBboxPatch(
+        (0.085, 0.935), 0.30, 0.040, transform=fig.transFigure,
+        boxstyle="round,pad=0.012,rounding_size=0.018",
+        facecolor=ACCENT, edgecolor="none", zorder=2))
+    fig.text(0.235, 0.955, "CAR-T 科普 · 01", ha="center", va="center",
+             fontsize=23, fontweight="bold", color=BG, zorder=3)
 
-    fig.text(0.46, 0.800, f"{s['total_trials']:,}", ha="center", va="center",
-             fontsize=152, fontweight="bold", color=ACCENT)
-    # Unit tucked against the number rather than on its own line.
-    fig.text(0.815, 0.762, "项", ha="center", va="center",
-             fontsize=42, color=INK)
+    # ── Hook: a question, not a label ──
+    fig.text(0.085, 0.885, "全球有多少项", ha="left", va="center",
+             fontsize=40, color=INK)
+    fig.text(0.085, 0.825, "CAR-T 临床试验？", ha="left", va="center",
+             fontsize=40, fontweight="bold", color=INK)
 
-    fig.text(0.5, 0.672, "试验登记在册 · 全球范围",
-             ha="center", fontsize=27, color=INK)
+    # ── The number ──
+    fig.text(0.085, 0.722, f"{s['total_trials']:,}", ha="left", va="center",
+             fontsize=118, fontweight="bold", color=ACCENT)
+    fig.text(0.605, 0.696, "项", ha="left", va="center",
+             fontsize=38, color=INK)
+    fig.text(0.088, 0.645, "登记在册 · 截至 " + month_zh(s["data_month"]),
+             ha="left", va="center", fontsize=24, color=MUTED)
 
-    # ── Divider ──
-    fig.add_artist(plt.Line2D([0.12, 0.88], [0.612, 0.612],
+    fig.add_artist(plt.Line2D([0.085, 0.915], [0.602, 0.602],
                               color="#2a3f3b", linewidth=2))
 
-    # ── Three facts about the field, each a number plus what it means ──
+    # ── Three numbered facts, each with a line of interpretation ──
     facts = [
-        (f"{s['recruiting']:,}", f"项正在招募（{s['recruiting_pct']}%）",
-         "仍在扩张", ACCENT),
-        (f"{early_pct:.0%}",     "处于一期或更早阶段",
-         "多数尚未进入后期验证", BLUE),
-        (f"{blood:,}",           "项针对血液肿瘤",
-         "实体瘤与自身免疫病正在增加", RED),
+        ("①", f"{s['recruiting']:,}", "项正在招募", ACCENT,
+         f"占全部试验的 {s['recruiting_pct']}%，这个领域",
+         "目前仍在快速扩张"),
+        ("②", f"{early_pct:.0%}", "处于一期或更早", BLUE,
+         "仍以安全性探索为主，距离大规模",
+         "疗效验证还有不少距离"),
+        ("③", f"{blood:,}", "项针对血液肿瘤", RED,
+         f"约占六成；实体瘤 {solid} 项、自身",
+         f"免疫病 {auto} 项正在快速追赶"),
     ]
-    y = 0.528
-    for value, what, note, colour in facts:
-        fig.text(0.13, y, value, ha="left", va="center",
-                 fontsize=52, fontweight="bold", color=colour)
-        fig.text(0.42, y + 0.016, what, ha="left", va="center",
+    y = 0.530
+    for mark, value, label, colour, line1, line2 in facts:
+        fig.text(0.085, y, mark, ha="left", va="center",
+                 fontsize=34, color=colour)
+        fig.text(0.155, y, value, ha="left", va="center",
+                 fontsize=46, fontweight="bold", color=colour)
+        fig.text(0.395, y, label, ha="left", va="center",
                  fontsize=27, color=INK)
-        fig.text(0.42, y - 0.032, note, ha="left", va="center",
+        fig.text(0.155, y - 0.040, line1, ha="left", va="center",
                  fontsize=21, color=MUTED)
-        y -= 0.123
+        fig.text(0.155, y - 0.075, line2, ha="left", va="center",
+                 fontsize=21, color=MUTED)
+        y -= 0.131
 
-    # ── The honest takeaway ──
-    fig.text(0.5, 0.152, "数量增长很快，但距离标准治疗仍有距离",
-             ha="center", fontsize=25, fontweight="bold", color=INK)
-    fig.text(0.5, 0.100, "入组条件严格 · 请与主治医生讨论",
-             ha="center", fontsize=22, color=MUTED)
+    # ── Takeaway, boxed so it reads as the conclusion ──
+    fig.patches.append(FancyBboxPatch(
+        (0.085, 0.078), 0.830, 0.090, transform=fig.transFigure,
+        boxstyle="round,pad=0.012,rounding_size=0.020",
+        facecolor="#17302c", edgecolor=ACCENT, linewidth=2, zorder=2))
+    fig.text(0.5, 0.144, "★ 试验数量 ≠ 可及性", ha="center", va="center",
+             fontsize=26, fontweight="bold", color=ACCENT, zorder=3)
+    fig.text(0.5, 0.100, "入组条件通常很严格，请先与主治医生讨论",
+             ha="center", va="center", fontsize=22, color=INK, zorder=3)
 
     footer(fig, f"ClinicalTrials.gov · {month_zh(s['data_month'])} · 仅供科普参考")
     path = os.path.join(OUT_DIR, "card1_total.png")
