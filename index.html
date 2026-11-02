@@ -281,23 +281,23 @@
 <!-- ── Stat strip ── -->
 <div class="stat-strip">
   <div class="stat">
-    <div class="stat-num china">$90K</div>
+    <div class="stat-num china" data-cmp="cost:China">$50–80K</div>
     <div class="stat-label">China all-in cost</div>
   </div>
   <div class="stat">
-    <div class="stat-num" style="color:var(--usa)">$600K</div>
+    <div class="stat-num" style="color:var(--usa)" data-cmp="cost:USA">$488–760K</div>
     <div class="stat-label">USA all-in cost</div>
   </div>
   <div class="stat">
-    <div class="stat-num china">3 wks</div>
+    <div class="stat-num china" data-cmp="wait:China">2–3 wks</div>
     <div class="stat-label">China wait time</div>
   </div>
   <div class="stat">
-    <div class="stat-num" style="color:var(--usa)">18 wks</div>
+    <div class="stat-num" style="color:var(--usa)" data-cmp="wait:Canada">16–20 wks</div>
     <div class="stat-label">Canada wait time</div>
   </div>
   <div class="stat">
-    <div class="stat-num accent">9</div>
+    <div class="stat-num accent" data-cmp="products:China">9</div>
     <div class="stat-label">China approved products</div>
   </div>
   <div class="stat">
@@ -817,6 +817,24 @@ async function applyComparison() {
 
   document.querySelectorAll('[data-cmp="as_of"]').forEach(el => {
     el.textContent = c.as_of;
+  });
+
+  // Hero stat strip: "<metric>:<country>", e.g. data-cmp="cost:China".
+  // These sat hardcoded at single values ($90K China, $600K USA) that
+  // contradicted the ranges in the table further down the same page.
+  const byName = Object.fromEntries(c.countries.map(r => [r.country, r]));
+  const compact = {
+    cost: r => "$" + Math.round(r.cost_low_usd / 1000) + "–"
+                   + Math.round(r.cost_high_usd / 1000) + "K",
+    wait: r => (r.wait_low_weeks === r.wait_high_weeks
+                 ? `${r.wait_low_weeks} wks`
+                 : `${r.wait_low_weeks}–${r.wait_high_weeks} wks`),
+    products: r => String(r.approved_products),
+  };
+  document.querySelectorAll("[data-cmp]").forEach(el => {
+    const [metric, country] = el.dataset.cmp.split(":");
+    const row = byName[country];
+    if (row && compact[metric]) el.textContent = compact[metric](row);
   });
 
   const body = document.getElementById("compareBody");
