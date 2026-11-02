@@ -517,12 +517,12 @@ body.en .cn-only { display: none; }
 <!-- STATS -->
 <div class="stats">
   <div class="stat">
-    <div class="stat-n r">$600K</div>
+    <div class="stat-n r" data-cmp="cost:USA">$400–650K</div>
     <div class="stat-l en-only">USA all-in cost</div>
     <div class="stat-l cn-only">美国全包费用</div>
   </div>
   <div class="stat">
-    <div class="stat-n t">$90K</div>
+    <div class="stat-n t" data-cmp="cost:China">$50–90K</div>
     <div class="stat-l en-only">China all-in cost</div>
     <div class="stat-l cn-only">中国全包费用</div>
   </div>
@@ -560,7 +560,7 @@ body.en .cn-only { display: none; }
 
   <div class="problem-grid">
     <div class="problem-card">
-      <div class="big">$600K</div>
+      <div class="big" data-cmp="cost:USA">$400–650K</div>
       <h3 class="en-only">Cost barrier</h3>
       <h3 class="cn-only">费用壁垒</h3>
       <p class="en-only">Average all-in cost in the USA. Insurance covers only part — often leaving families with hundreds of thousands in debt.</p>
@@ -584,8 +584,8 @@ body.en .cn-only { display: none; }
       <div class="big g">9</div>
       <h3 class="en-only">China's solution</h3>
       <h3 class="cn-only">中国的解决方案</h3>
-      <p class="en-only">NMPA-approved products — more than any other country. $50K–$80K all-in. 2–3 week wait. World's first solid tumor CAR-T approved June 2026.</p>
-      <p class="cn-only">NMPA 已批准产品数量，全球最多。全包 5万–8万美元，等待 2–3 周。2026 年 6 月批准全球首个实体瘤 CAR-T。</p>
+      <p class="en-only">NMPA-approved products — more than any other country. <span data-cmp="cost:China">$50–90K</span> all-in. <span data-cmp="wait:China">2–3 wks</span> wait. World's first solid tumor CAR-T approved June 2026.</p>
+      <p class="cn-only">NMPA 已批准产品数量，全球最多。全包 <span data-cmp="cost_cn:China">5万–9万美元</span>，等待 <span data-cmp="wait_cn:China">2–3 周</span>。2026 年 6 月批准全球首个实体瘤 CAR-T。</p>
     </div>
   </div>
 
@@ -604,13 +604,13 @@ body.en .cn-only { display: none; }
       <tbody>
         <tr class="china">
           <td>🇨🇳 China / 中国</td>
-          <td style="color:#0d9488;font-weight:700">$50K–$80K</td>
+          <td style="color:#0d9488;font-weight:700" data-cmp="costfull:China">$50K–$90K</td>
           <td style="color:#0d9488;font-weight:700">2–3 weeks / 周</td>
           <td style="color:#0d9488;font-weight:700">9 (most globally / 全球最多)</td>
           <td><span class="badge-new">World First / 全球首创</span></td>
         </tr>
-        <tr><td>🇺🇸 USA / 美国</td><td>$488K–$760K</td><td>8–12 weeks / 周</td><td>7</td><td><span class="badge-no">Not yet / 未批准</span></td></tr>
-        <tr><td>🇨🇦 Canada / 加拿大</td><td>$250K–$350K</td><td>16–20 weeks / 周</td><td>4</td><td><span class="badge-no">Not yet / 未批准</span></td></tr>
+        <tr><td>🇺🇸 USA / 美国</td><td data-cmp="costfull:USA">$400K–$650K</td><td>8–12 weeks / 周</td><td>7</td><td><span class="badge-no">Not yet / 未批准</span></td></tr>
+        <tr><td>🇨🇦 Canada / 加拿大</td><td data-cmp="costfull:Canada">$250K–$350K</td><td>16–20 weeks / 周</td><td>4</td><td><span class="badge-no">Not yet / 未批准</span></td></tr>
         <tr><td>🇩🇪 Germany / 德国</td><td>$320K–$360K</td><td>8 weeks / 周</td><td>6</td><td><span class="badge-no">Not yet / 未批准</span></td></tr>
         <tr><td>🇬🇧 UK / 英国</td><td>$290K–$320K</td><td>10 weeks / 周</td><td>5</td><td><span class="badge-no">Not yet / 未批准</span></td></tr>
       </tbody>
@@ -1087,8 +1087,8 @@ body.en .cn-only { display: none; }
     <div class="chart-card">
       <h3 class="en-only">Treatment cost comparison (USD)</h3>
       <h3 class="cn-only">各国治疗费用对比（美元）</h3>
-      <p class="sub en-only">China all-in: $90K vs USA: $600K</p>
-      <p class="sub cn-only">中国全包：9万美元 vs 美国：60万美元</p>
+      <p class="sub en-only">Midpoint of the researched range per country — see the comparison table for full ranges</p>
+      <p class="sub cn-only">各国费用区间中位值——完整区间见上方对比表</p>
       <div class="chart-wrap"><canvas id="costChart"></canvas></div>
     </div>
     <div class="chart-card">
@@ -1258,11 +1258,11 @@ const invCountryChart = new Chart(document.getElementById("countryChart"), {
     scales:{ x:{grid:{color:"#f1f5f9"},border:{display:false}}, y:{grid:{display:false},border:{display:false}} } }
 });
 
-new Chart(document.getElementById("costChart"), {
+const invCostChart = new Chart(document.getElementById("costChart"), {
   type: "bar",
   data: {
     labels: ["India","China","Japan","UK","Canada","Germany","USA"],
-    datasets: [{ data: [55000,90000,290000,320000,310000,360000,600000],
+    datasets: [{ data: [50000,70000,275000,305000,300000,340000,525000],
       backgroundColor: ["#0d9488","#0d9488","#94a3b8","#94a3b8","#94a3b8","#94a3b8","#dc2626"],
       borderRadius: 5 }]
   },
@@ -1271,11 +1271,11 @@ new Chart(document.getElementById("costChart"), {
     scales:{ x:{grid:{color:"#f1f5f9"},border:{display:false}}, y:{grid:{display:false},border:{display:false}} } }
 });
 
-new Chart(document.getElementById("waitChart"), {
+const invWaitChart = new Chart(document.getElementById("waitChart"), {
   type: "bar",
   data: {
     labels: ["China","India","Japan","Germany","UK","USA","Canada"],
-    datasets: [{ data: [3,4,6,8,10,12,18],
+    datasets: [{ data: [2.5,4,6,8,10,10,18],
       backgroundColor: ["#0d9488","#0d9488","#94a3b8","#94a3b8","#94a3b8","#94a3b8","#dc2626"],
       borderRadius: 5 }]
   },
@@ -1283,6 +1283,53 @@ new Chart(document.getElementById("waitChart"), {
     plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.raw} weeks`}}},
     scales:{ x:{grid:{color:"#f1f5f9"},border:{display:false}}, y:{grid:{display:false},border:{display:false}} } }
 });
+
+// ── Country costs ────────────────────────────────────────────────────────
+// Same source as the data-analysis page: data/country_comparison.json, whose
+// China/USA/Canada figures are derived from the treatment-centre survey.
+// Previously these were hand-written here and drifted from the published
+// table (USA showed $488K-$760K against centre data of $400K-$650K).
+(async function applyCountryCosts() {
+  let c;
+  try {
+    const res = await fetch("data/country_comparison.json", { cache: "no-store" });
+    if (!res.ok) return;
+    c = await res.json();
+  } catch (e) { return; }
+
+  const by = Object.fromEntries(c.countries.map(r => [r.country, r]));
+  const k  = n => Math.round(n / 1000);
+  const wan = n => (n / 10000).toFixed(0) + "万";
+  const fmt = {
+    cost:     r => `$${k(r.cost_low_usd)}–${k(r.cost_high_usd)}K`,
+    costfull: r => `$${k(r.cost_low_usd)}K–$${k(r.cost_high_usd)}K`,
+    cost_cn:  r => `${wan(r.cost_low_usd)}–${wan(r.cost_high_usd)}美元`,
+    wait:     r => r.wait_low_weeks === r.wait_high_weeks
+                     ? `${r.wait_low_weeks} wks`
+                     : `${r.wait_low_weeks}–${r.wait_high_weeks} wks`,
+    wait_cn:  r => r.wait_low_weeks === r.wait_high_weeks
+                     ? `${r.wait_low_weeks} 周`
+                     : `${r.wait_low_weeks}–${r.wait_high_weeks} 周`,
+  };
+  document.querySelectorAll("[data-cmp]").forEach(el => {
+    const [metric, country] = el.dataset.cmp.split(":");
+    const row = by[country];
+    if (row && fmt[metric]) el.textContent = fmt[metric](row);
+  });
+
+  // Charts show the midpoint of each range, so they can't disagree with the table.
+  const mid = (lo, hi) => (lo + hi) / 2;
+  const apply = (chart, pick) => {
+    if (!chart) return;
+    chart.data.datasets[0].data = chart.data.labels.map(l => {
+      const r = by[l];
+      return r ? pick(r) : null;
+    });
+    chart.update();
+  };
+  apply(invCostChart, r => mid(r.cost_low_usd, r.cost_high_usd));
+  apply(invWaitChart, r => mid(r.wait_low_weeks, r.wait_high_weeks));
+})();
 
 // ── Live stats ───────────────────────────────────────────────────────────
 // Regenerated monthly by python/generate_trial_figures.py via GitHub Actions.
