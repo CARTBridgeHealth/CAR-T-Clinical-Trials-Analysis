@@ -85,15 +85,23 @@ def footer(fig, text="数据来源 ClinicalTrials.gov · 仅供科普参考"):
 
 
 def card_total(s):
-    """Card 1 — headline count, then the China/USA gap drawn as bars.
+    """Card 1 — the global picture: scale, maturity, and what is being treated.
 
-    Two numbers side by side made the reader do the arithmetic. Bars make the
-    gap the thing you see first, which is the actual hook for this post.
+    Deliberately carries no country comparison. Trial counts do not evidence
+    anything about treatment quality or access, so ranking countries by them
+    would be a claim the data cannot support — and on a Chinese platform that
+    framing reads as political rather than scientific. The honest story here
+    is the field's scale against its immaturity.
     """
-    labels = s["by_country"]["labels"]
-    counts = s["by_country"]["all"]
-    cn = counts[labels.index("China")]
-    us = counts[labels.index("USA")]
+    phases = dict(zip(s["phase"]["labels"], s["phase"]["counts"]))
+    early = (phases.get("Early Phase 1", 0) + phases.get("Phase 1", 0)
+             + phases.get("Phase 1/2", 0))
+    early_pct = early / s["total_trials"]
+
+    disease = dict(zip(s["disease"]["labels"], s["disease"]["counts"]))
+    blood = (disease.get("Leukaemia", 0) + disease.get("Lymphoma", 0)
+             + disease.get("Multiple myeloma", 0)
+             + disease.get("Blood cancer, unspecified", 0))
 
     fig = new_canvas()
 
@@ -107,37 +115,37 @@ def card_total(s):
     fig.text(0.815, 0.762, "项", ha="center", va="center",
              fontsize=42, color=INK)
 
-    fig.text(0.5, 0.675, f"其中 {s['recruiting']:,} 项正在招募"
-                         f"（{s['recruiting_pct']}%）",
-             ha="center", fontsize=26, color=INK)
+    fig.text(0.5, 0.672, "试验登记在册 · 全球范围",
+             ha="center", fontsize=27, color=INK)
 
     # ── Divider ──
-    fig.add_artist(plt.Line2D([0.12, 0.88], [0.615, 0.615],
+    fig.add_artist(plt.Line2D([0.12, 0.88], [0.612, 0.612],
                               color="#2a3f3b", linewidth=2))
 
-    # ── China vs USA, as bars ──
-    bar_left, bar_max = 0.28, 0.41
-    widest = max(cn, us)
-    for i, (name, n, colour) in enumerate((("中国", cn, ACCENT),
-                                           ("美国", us, BLUE))):
-        y = 0.505 - i * 0.125
-        fig.text(0.12, y, name, ha="left", va="center",
-                 fontsize=34, color=INK)
-        fig.patches.append(plt.Rectangle(
-            (bar_left, y - 0.028), bar_max * n / widest, 0.056,
-            transform=fig.transFigure, facecolor=colour, zorder=1))
-        fig.text(bar_left + bar_max * n / widest + 0.018, y, f"{n:,}",
-                 ha="left", va="center", fontsize=38,
-                 fontweight="bold", color=colour)
+    # ── Three facts about the field, each a number plus what it means ──
+    facts = [
+        (f"{s['recruiting']:,}", f"项正在招募（{s['recruiting_pct']}%）",
+         "仍在扩张", ACCENT),
+        (f"{early_pct:.0%}",     "处于一期或更早阶段",
+         "多数尚未进入后期验证", BLUE),
+        (f"{blood:,}",           "项针对血液肿瘤",
+         "实体瘤与自身免疫病正在增加", RED),
+    ]
+    y = 0.528
+    for value, what, note, colour in facts:
+        fig.text(0.13, y, value, ha="left", va="center",
+                 fontsize=52, fontweight="bold", color=colour)
+        fig.text(0.42, y + 0.016, what, ha="left", va="center",
+                 fontsize=27, color=INK)
+        fig.text(0.42, y - 0.032, note, ha="left", va="center",
+                 fontsize=21, color=MUTED)
+        y -= 0.123
 
-    # ── The point of the card ──
-    fig.text(0.5, 0.285, f"中国试验数量约为美国的 {cn / us:.1f} 倍",
-             ha="center", fontsize=30, fontweight="bold", color=INK)
-
-    fig.text(0.5, 0.205, "但试验数量 ≠ 疗效更好",
-             ha="center", fontsize=24, color=MUTED)
-    fig.text(0.5, 0.155, "也 ≠ 更容易参加 · 多数仍在一期",
-             ha="center", fontsize=24, color=MUTED)
+    # ── The honest takeaway ──
+    fig.text(0.5, 0.152, "数量增长很快，但距离标准治疗仍有距离",
+             ha="center", fontsize=25, fontweight="bold", color=INK)
+    fig.text(0.5, 0.100, "入组条件严格 · 请与主治医生讨论",
+             ha="center", fontsize=22, color=MUTED)
 
     footer(fig, f"ClinicalTrials.gov · {month_zh(s['data_month'])} · 仅供科普参考")
     path = os.path.join(OUT_DIR, "card1_total.png")
