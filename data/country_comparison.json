@@ -1,0 +1,87 @@
+{
+  "_comment": "MANUALLY MAINTAINED. Unlike site_stats.json, nothing here is computed from a dataset — these are researched figures. Update 'as_of' only when a human has actually re-checked the numbers; do NOT wire this into the monthly Action, or the page will claim a freshness that no one verified. Costs are all-in USD estimates (treatment, hospitalisation, monitoring) and vary by centre and complications.",
+  "as_of": "July 2026",
+  "source_note": "Manually researched from published pricing, national reimbursement schedules and centre quotes. Not auto-updated.",
+  "countries": [
+    {
+      "country": "China",
+      "flag": "🇨🇳",
+      "cost_low_usd": 50000,
+      "cost_high_usd": 80000,
+      "wait_low_weeks": 2,
+      "wait_high_weeks": 3,
+      "approved_products": 9,
+      "approved_products_note": "most globally",
+      "insurance": "Partial (NRSS)",
+      "solid_tumor_cart": true,
+      "solid_tumor_label": "✅ World First",
+      "highlight": true
+    },
+    {
+      "country": "USA",
+      "flag": "🇺🇸",
+      "cost_low_usd": 488000,
+      "cost_high_usd": 760000,
+      "wait_low_weeks": 8,
+      "wait_high_weeks": 12,
+      "approved_products": 7,
+      "insurance": "Partial",
+      "solid_tumor_cart": false
+    },
+    {
+      "country": "Canada",
+      "flag": "🇨🇦",
+      "cost_low_usd": 250000,
+      "cost_high_usd": 350000,
+      "wait_low_weeks": 16,
+      "wait_high_weeks": 20,
+      "approved_products": 4,
+      "insurance": "Provincial (limited)",
+      "solid_tumor_cart": false
+    },
+    {
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "cost_low_usd": 320000,
+      "cost_high_usd": 360000,
+      "wait_low_weeks": 8,
+      "wait_high_weeks": 8,
+      "approved_products": 6,
+      "insurance": "Yes (statutory)",
+      "solid_tumor_cart": false
+    },
+    {
+      "country": "UK",
+      "flag": "🇬🇧",
+      "cost_low_usd": 290000,
+      "cost_high_usd": 320000,
+      "wait_low_weeks": 10,
+      "wait_high_weeks": 10,
+      "approved_products": 5,
+      "insurance": "NHS (limited)",
+      "solid_tumor_cart": false
+    },
+    {
+      "country": "Japan",
+      "flag": "🇯🇵",
+      "cost_low_usd": 260000,
+      "cost_high_usd": 290000,
+      "wait_low_weeks": 6,
+      "wait_high_weeks": 6,
+      "approved_products": 4,
+      "insurance": "Yes (NHI)",
+      "solid_tumor_cart": false
+    },
+    {
+      "country": "India",
+      "flag": "🇮🇳",
+      "cost_low_usd": 45000,
+      "cost_high_usd": 55000,
+      "wait_low_weeks": 4,
+      "wait_high_weeks": 4,
+      "approved_products": 2,
+      "insurance": "Limited",
+      "solid_tumor_cart": false
+    }
+  ]
+}

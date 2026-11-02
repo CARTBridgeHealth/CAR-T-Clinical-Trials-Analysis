@@ -1,10 +1,20 @@
 """
 update_treatment_data_2026.py
 ------------------------------
-Updates all treatment datasets with latest 2026 data.
-Run this to refresh: python python/update_treatment_data_2026.py
+Writes the manually researched treatment datasets to CSV.
+
+NOTE ON WHAT THIS DOES NOT DO: despite the name, this script fetches nothing.
+It serialises the hand-maintained Python literals below, so running it monthly
+produces an identical file every time. Prices, wait times and approval counts
+are a human research snapshot — to change them, edit the literals here.
+
+The country comparison shown on index.html is NOT produced from here. It reads
+data/country_comparison.json, which carries its own `as_of` date and is edited
+by hand so the page can state honestly when a person last checked the figures.
+Keep the two in sync when you revise either.
 """
 
+import json
 import pandas as pd
 import os
 
@@ -35,14 +45,26 @@ approved_products = [
 
 
 # ── 2. Cost Comparison (2026 updated) ────────────────────────────────────────
+# Derived from data/country_comparison.json — the single hand-maintained source
+# for country cost figures, and what index.html renders. Previously these were
+# separate literals holding single values, which disagreed with the ranges shown
+# on the page for all seven countries. Edit the JSON, not this.
+with open(os.path.join(OUTPUT_DIR, "country_comparison.json"), encoding="utf-8") as f:
+    _comparison = json.load(f)
+
 cost_comparison = [
-    {"country": "USA",         "treatment_only_usd": 430000, "total_allin_usd": 600000, "avg_wait_weeks": 12, "approved_products": 7,  "solid_tumor_cart": False, "insurance": "Partial"},
-    {"country": "China",       "treatment_only_usd": 65000,  "total_allin_usd": 90000,  "avg_wait_weeks": 3,  "approved_products": 9,  "solid_tumor_cart": True,  "insurance": "Partial (NRSS)"},
-    {"country": "Canada",      "treatment_only_usd": 280000, "total_allin_usd": 310000, "avg_wait_weeks": 18, "approved_products": 4,  "solid_tumor_cart": False, "insurance": "Provincial (limited)"},
-    {"country": "Germany",     "treatment_only_usd": 320000, "total_allin_usd": 360000, "avg_wait_weeks": 8,  "approved_products": 6,  "solid_tumor_cart": False, "insurance": "Yes (statutory)"},
-    {"country": "UK",          "treatment_only_usd": 290000, "total_allin_usd": 320000, "avg_wait_weeks": 10, "approved_products": 5,  "solid_tumor_cart": False, "insurance": "NHS (limited)"},
-    {"country": "Japan",       "treatment_only_usd": 260000, "total_allin_usd": 290000, "avg_wait_weeks": 6,  "approved_products": 4,  "solid_tumor_cart": False, "insurance": "Yes (NHI)"},
-    {"country": "India",       "treatment_only_usd": 45000,  "total_allin_usd": 55000,  "avg_wait_weeks": 4,  "approved_products": 2,  "solid_tumor_cart": False, "insurance": "Limited"},
+    {
+        "country":            r["country"],
+        "cost_low_usd":       r["cost_low_usd"],
+        "cost_high_usd":      r["cost_high_usd"],
+        "wait_low_weeks":     r["wait_low_weeks"],
+        "wait_high_weeks":    r["wait_high_weeks"],
+        "approved_products":  r["approved_products"],
+        "solid_tumor_cart":   r["solid_tumor_cart"],
+        "insurance":          r["insurance"],
+        "as_of":              _comparison["as_of"],
+    }
+    for r in _comparison["countries"]
 ]
 
 

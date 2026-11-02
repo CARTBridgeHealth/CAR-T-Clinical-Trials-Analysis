@@ -327,7 +327,7 @@
     <div class="chart-grid">
       <div class="chart-card wide">
         <div class="chart-title" id="metricTitle">Total All-In Treatment Cost (USD)</div>
-        <div class="chart-sub" id="metricSub">Including treatment, hospitalization, and monitoring. China total: ~$90,000 vs USA ~$600,000.</div>
+        <div class="chart-sub" id="metricSub">Including treatment, hospitalization, and monitoring. Midpoint of the researched range for each country — see the table below for full ranges.</div>
         <div class="chart-wrap tall">
           <canvas id="countryChart"></canvas>
         </div>
@@ -336,8 +336,14 @@
 
     <!-- Comparison table -->
     <div class="chart-card" style="margin-top:24px">
-      <div class="chart-title">Full Country Comparison — July 2026</div>
+      <div class="chart-title">Full Country Comparison</div>
       <div class="chart-sub">Solid tumor CAR-T refers to Satri-cel (gastric cancer), approved China June 22, 2026</div>
+      <div class="chart-sub" style="margin-top:6px">
+        💰 Costs and wait times are <strong>manually researched</strong>, not auto-updated —
+        last reviewed <span data-cmp="as_of">July 2026</span>. Figures are all-in estimates
+        and vary by treatment centre and complications. The trial charts above update monthly;
+        this table does not.
+      </div>
       <div style="overflow-x:auto; margin-top:16px">
         <table class="compare-table">
           <thead>
@@ -350,7 +356,7 @@
               <th>Solid Tumor CAR-T</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="compareBody">
             <tr class="highlight">
               <td><strong>🇨🇳 China</strong></td>
               <td><strong style="color:var(--china)">$50K–$80K</strong></td>
@@ -489,16 +495,19 @@
   Research Associate, University of Manitoba ·
   <a href="https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis">GitHub</a> ·
   <a href="https://www.linkedin.com/in/yang-liu-6093/">LinkedIn</a><br><br>
-  Data sources: ClinicalTrials.gov API · FDA · China NMPA · Published medical literature (July 2026)<br>
+  Data sources: ClinicalTrials.gov API (updated monthly) · FDA · China NMPA · Published medical literature. Cost and wait-time figures are manually researched, last reviewed <span data-cmp="as_of">July 2026</span>.<br>
   This analysis is for informational purposes only and does not constitute medical advice.
 </footer>
 
 <script>
 // ── Data ──────────────────────────────────────────────────────────────────
 const countries = ["China","India","USA","Japan","UK","Germany","Canada"];
-const costData  = [90000, 55000, 600000, 290000, 320000, 360000, 310000];
-const waitData  = [3, 4, 12, 6, 10, 8, 18];
-const prodData  = [9, 2, 7, 4, 5, 6, 4];
+// Midpoints of the researched ranges in data/country_comparison.json.
+// applyComparison() recomputes these from that file on load; the literals
+// are the July 2026 fallback for when the fetch fails.
+let costData  = [65000, 50000, 624000, 275000, 305000, 340000, 300000];
+let waitData  = [2.5, 4, 10, 6, 10, 8, 18];
+let prodData  = [9, 2, 7, 4, 5, 6, 4];
 
 const countryColors = countries.map(c =>
   c === "China" ? "#c0392b" : c === "USA" ? "#2471a3" : c === "Canada" ? "#1a5276" : "#7f8c8d"
@@ -531,7 +540,7 @@ Chart.defaults.color       = "#5d6d7e";
 // ── Country metric chart ────────────────────────────────────────────────
 let currentMetric = "cost";
 const metricConfigs = {
-  cost:     { data: costData,  label: "Total All-In Cost (USD)",           title: "Total All-In Treatment Cost (USD)",           sub: "Including treatment, hospitalization, and monitoring. China ~$90K vs USA ~$600K." },
+  cost:     { data: costData,  label: "Total All-In Cost (USD)",           title: "Total All-In Treatment Cost (USD)",           sub: "Midpoint of the researched range for each country — see the table below for full ranges." },
   wait:     { data: waitData,  label: "Average Wait Time (weeks)",         title: "Average Wait Time by Country (Weeks)",        sub: "Canada and USA patients wait 4–6× longer than patients treated in China." },
   products: { data: prodData,  label: "Number of Approved Products",       title: "Approved CAR-T Products by Country (2026)",   sub: "China leads globally with 9 approved products, including the world's first solid tumor CAR-T." },
 };
@@ -763,6 +772,73 @@ async function applyStats() {
   phaseChart.update();
 }
 applyStats();
+
+// ── Country comparison ───────────────────────────────────────────────────
+// data/country_comparison.json is MANUALLY maintained — costs and wait times
+// are researched figures, not computed from any dataset, and it is deliberately
+// NOT wired into the monthly Action. Its as_of date advances only when a human
+// has actually re-checked the numbers. The table markup is generated here so it
+// can never drift from the data the chart uses.
+const usd = n => "$" + Math.round(n / 1000) + "K";
+const wk  = (lo, hi) => (lo === hi ? `${lo} weeks` : `${lo}–${hi} weeks`);
+
+async function applyComparison() {
+  let c;
+  try {
+    const res = await fetch("data/country_comparison.json", { cache: "no-store" });
+    if (!res.ok) return;
+    c = await res.json();
+  } catch (e) {
+    return;   // keep the static fallback row markup and literals
+  }
+
+  document.querySelectorAll('[data-cmp="as_of"]').forEach(el => {
+    el.textContent = c.as_of;
+  });
+
+  const body = document.getElementById("compareBody");
+  if (body) {
+    body.innerHTML = c.countries.map(r => {
+      const hl    = r.highlight ? ' class="highlight"' : "";
+      const strong = v => (r.highlight
+        ? `<strong style="color:var(--china)">${v}</strong>` : v);
+      const prod  = r.approved_products
+        + (r.approved_products_note ? ` (${r.approved_products_note})` : "");
+      const solid = r.solid_tumor_cart
+        ? `<span class="badge new">${r.solid_tumor_label || "✅ Yes"}</span>`
+        : '<span class="badge no">Not yet</span>';
+      return `<tr${hl}>`
+        + `<td>${r.highlight ? `<strong>${r.flag} ${r.country}</strong>` : `${r.flag} ${r.country}`}</td>`
+        + `<td>${strong(usd(r.cost_low_usd) + "–" + usd(r.cost_high_usd))}</td>`
+        + `<td>${strong(wk(r.wait_low_weeks, r.wait_high_weeks))}</td>`
+        + `<td>${strong(prod)}</td>`
+        + `<td>${r.insurance}</td>`
+        + `<td>${solid}</td>`
+        + `</tr>`;
+    }).join("");
+  }
+
+  // Drive the metric chart off the same figures, so the chart and the table
+  // can't disagree the way they did when both were hand-written.
+  const mid = {};
+  c.countries.forEach(r => {
+    mid[r.country] = {
+      cost: (r.cost_low_usd + r.cost_high_usd) / 2,
+      wait: (r.wait_low_weeks + r.wait_high_weeks) / 2,
+      products: r.approved_products,
+    };
+  });
+  const pick = k => countries.map(n => (mid[n] ? mid[n][k] : null));
+  costData = pick("cost");
+  waitData = pick("wait");
+  prodData = pick("products");
+  metricConfigs.cost.data     = costData;
+  metricConfigs.wait.data     = waitData;
+  metricConfigs.products.data = prodData;
+  countryChart.data.datasets[0].data = metricConfigs[currentMetric].data;
+  countryChart.update();
+}
+applyComparison();
 </script>
 </body>
 </html>
