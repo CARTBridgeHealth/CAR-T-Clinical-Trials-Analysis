@@ -52,7 +52,10 @@ def derive(centers: pd.DataFrame) -> dict:
                 costs.extend(parsed)
             if pd.notna(r["wait_weeks"]):
                 waits.append(int(r["wait_weeks"]))
+        sourced = rows["source"].fillna("").str.strip().ne("") \
+            if "source" in rows else pd.Series(False, index=rows.index)
         entry = {"n_centers": int(len(rows)),
+                 "n_sourced": int(sourced.sum()),
                  "centers": sorted(rows["hospital"].tolist())}
         if costs:
             entry["cost_low_usd"], entry["cost_high_usd"] = min(costs), max(costs)
@@ -85,9 +88,27 @@ def main():
                 changes.append(f"  {name} {field}: {row.get(field)} -> {d[field]}")
                 row[field] = d[field]
         row["derived_from_centers"] = d["n_centers"]
+        row["centers_with_source"] = d["n_sourced"]
 
     comparison["centre_derived_countries"] = sorted(centre_derived)
     comparison["manual_countries"] = sorted(manual)
+
+    # Verification tally, so the page can state how much of this table has a
+    # documented source rather than leaving the reader to assume.
+    total_centres = int(len(centers))
+    sourced_centres = int(centers["source"].fillna("").str.strip().ne("").sum()) \
+        if "source" in centers else 0
+    researched_total = len(manual)
+    researched_sourced = sum(
+        1 for r in comparison["countries"]
+        if r["country"] in manual and str(r.get("source", "")).strip()
+    )
+    comparison["verification"] = {
+        "centres_total":      total_centres,
+        "centres_sourced":    sourced_centres,
+        "researched_total":   researched_total,
+        "researched_sourced": researched_sourced,
+    }
 
     with open(COMPARISON, "w", encoding="utf-8") as f:
         json.dump(comparison, f, indent=2, ensure_ascii=False)

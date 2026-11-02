@@ -339,14 +339,15 @@
       <div class="chart-title">Full Country Comparison</div>
       <div class="chart-sub">Solid tumor CAR-T refers to Satri-cel (gastric cancer), approved China June 22, 2026</div>
       <div class="chart-sub" style="margin-top:6px">
-        💰 <strong>Costs and wait times for <span data-cmp="derived_list">China, USA and Canada</span></strong>
-        are computed from the <span data-cmp="n_centers">10</span> treatment centres in our centre
-        survey — each figure is the range across named hospitals. Figures for
-        <span data-cmp="manual_list">Germany, India, Japan and UK</span>, and the approved-product,
-        insurance and solid-tumour columns throughout, are researched estimates.
-        <strong>None of it auto-updates</strong> — last reviewed
-        <span data-cmp="as_of">July 2026</span>. Costs are all-in and vary by centre and
-        complications. The trial charts above update monthly; this table does not.
+        💰 Costs and wait times for <span data-cmp="derived_list">China, USA and Canada</span>
+        are the range across <span data-cmp="n_centers">10</span> named hospitals in our centre
+        survey. <span data-cmp="manual_list">Germany, India, Japan and UK</span>, and the
+        approved-product, insurance and solid-tumour columns, are researched estimates.
+        Nothing here auto-updates — last reviewed <span data-cmp="as_of">July 2026</span>.
+        <br>
+        <strong data-cmp="verification">⚠ 0 of 14 figures currently have a documented source.</strong>
+        We are adding citations as each is re-verified; until then treat these as indicative,
+        and ask us for the basis of any figure you need to rely on.
       </div>
       <div style="overflow-x:auto; margin-top:16px">
         <table class="compare-table">
@@ -827,6 +828,21 @@ async function applyComparison() {
     manual_list:  list(c.manual_countries || []),
     n_centers:    String(c.countries.reduce(
                     (n, r) => n + (r.derived_from_centers || 0), 0)),
+    verification: (() => {
+      const v = c.verification;
+      if (!v) return "";
+      const done  = v.centres_sourced + v.researched_sourced;
+      const total = v.centres_total + v.researched_total;
+      if (done === 0) {
+        return `⚠ None of the ${total} underlying figures has a documented `
+             + `source yet.`;
+      }
+      if (done < total) {
+        return `${done} of ${total} underlying figures have a documented source; `
+             + `${total - done} are not yet verified.`;
+      }
+      return `All ${total} underlying figures have a documented source.`;
+    })(),
   };
   document.querySelectorAll("[data-cmp]").forEach(el => {
     const v = provenance[el.dataset.cmp];

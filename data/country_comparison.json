@@ -1,5 +1,5 @@
 {
-  "_comment": "MANUALLY MAINTAINED. Unlike site_stats.json, nothing here is computed from a dataset — these are researched figures. Update 'as_of' only when a human has actually re-checked the numbers; do NOT wire this into the monthly Action, or the page will claim a freshness that no one verified. Costs are all-in USD estimates (treatment, hospitalisation, monitoring) and vary by centre and complications.",
+  "_comment": "MANUALLY MAINTAINED. Nothing here is computed from a live source. China/USA/Canada cost and wait figures are derived by derive_country_costs.py from data/treatment_centers.csv; the rest are researched estimates typed in here. Fill the 'source' field on each researched country, and the 'source' column in treatment_centers.csv, as each figure is verified — the page reports how many are done. Update 'as_of' only when a human has actually re-checked the numbers.",
   "as_of": "July 2026",
   "source_note": "Manually researched from published pricing, national reimbursement schedules and centre quotes. Not auto-updated.",
   "countries": [
@@ -16,7 +16,8 @@
       "solid_tumor_cart": true,
       "solid_tumor_label": "✅ World First",
       "highlight": true,
-      "derived_from_centers": 5
+      "derived_from_centers": 5,
+      "centers_with_source": 0
     },
     {
       "country": "USA",
@@ -28,7 +29,8 @@
       "approved_products": 7,
       "insurance": "Partial",
       "solid_tumor_cart": false,
-      "derived_from_centers": 3
+      "derived_from_centers": 3,
+      "centers_with_source": 0
     },
     {
       "country": "Canada",
@@ -40,7 +42,8 @@
       "approved_products": 4,
       "insurance": "Provincial (limited)",
       "solid_tumor_cart": false,
-      "derived_from_centers": 2
+      "derived_from_centers": 2,
+      "centers_with_source": 0
     },
     {
       "country": "Germany",
@@ -51,7 +54,8 @@
       "wait_high_weeks": 8,
       "approved_products": 6,
       "insurance": "Yes (statutory)",
-      "solid_tumor_cart": false
+      "solid_tumor_cart": false,
+      "source": ""
     },
     {
       "country": "UK",
@@ -62,7 +66,8 @@
       "wait_high_weeks": 10,
       "approved_products": 5,
       "insurance": "NHS (limited)",
-      "solid_tumor_cart": false
+      "solid_tumor_cart": false,
+      "source": ""
     },
     {
       "country": "Japan",
@@ -73,7 +78,8 @@
       "wait_high_weeks": 6,
       "approved_products": 4,
       "insurance": "Yes (NHI)",
-      "solid_tumor_cart": false
+      "solid_tumor_cart": false,
+      "source": ""
     },
     {
       "country": "India",
@@ -84,7 +90,8 @@
       "wait_high_weeks": 4,
       "approved_products": 2,
       "insurance": "Limited",
-      "solid_tumor_cart": false
+      "solid_tumor_cart": false,
+      "source": ""
     }
   ],
   "centre_derived_countries": [
@@ -97,5 +104,11 @@
     "India",
     "Japan",
     "UK"
-  ]
+  ],
+  "verification": {
+    "centres_total": 10,
+    "centres_sourced": 0,
+    "researched_total": 4,
+    "researched_sourced": 0
+  }
 }

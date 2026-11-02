@@ -72,20 +72,20 @@ cost_comparison = [
 treatment_centers = [
 
     # China — Top centers accepting international patients
-    {"hospital": "Chinese PLA General Hospital (301)",       "country": "China",  "city": "Beijing",   "tier": "Top",      "intl_patients": True,  "cart_products": "9 NMPA-approved",  "est_cost_usd": "50,000-80,000",  "wait_weeks": 2,  "english_support": True},
-    {"hospital": "Peking University Cancer Hospital",        "country": "China",  "city": "Beijing",   "tier": "Top",      "intl_patients": True,  "cart_products": "Multiple CD19/BCMA","est_cost_usd": "55,000-85,000",  "wait_weeks": 3,  "english_support": True},
-    {"hospital": "Fudan University Cancer Hospital",         "country": "China",  "city": "Shanghai",  "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, BCMA, CLDN18.2","est_cost_usd": "60,000-90,000","wait_weeks": 3,  "english_support": True},
-    {"hospital": "Zhejiang University First Hospital",       "country": "China",  "city": "Hangzhou",  "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, CD22, BCMA", "est_cost_usd": "50,000-75,000",  "wait_weeks": 2,  "english_support": True},
-    {"hospital": "Shanghai Ruijin Hospital",                 "country": "China",  "city": "Shanghai",  "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, trials",     "est_cost_usd": "50,000-80,000",  "wait_weeks": 3,  "english_support": True},
+    {"hospital": "Chinese PLA General Hospital (301)",       "country": "China",  "city": "Beijing",   "tier": "Top",      "intl_patients": True,  "cart_products": "9 NMPA-approved",  "est_cost_usd": "50,000-80,000",  "wait_weeks": 2,  "english_support": True, "source": ""},
+    {"hospital": "Peking University Cancer Hospital",        "country": "China",  "city": "Beijing",   "tier": "Top",      "intl_patients": True,  "cart_products": "Multiple CD19/BCMA","est_cost_usd": "55,000-85,000",  "wait_weeks": 3,  "english_support": True, "source": ""},
+    {"hospital": "Fudan University Cancer Hospital",         "country": "China",  "city": "Shanghai",  "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, BCMA, CLDN18.2","est_cost_usd": "60,000-90,000","wait_weeks": 3,  "english_support": True, "source": ""},
+    {"hospital": "Zhejiang University First Hospital",       "country": "China",  "city": "Hangzhou",  "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, CD22, BCMA", "est_cost_usd": "50,000-75,000",  "wait_weeks": 2,  "english_support": True, "source": ""},
+    {"hospital": "Shanghai Ruijin Hospital",                 "country": "China",  "city": "Shanghai",  "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, trials",     "est_cost_usd": "50,000-80,000",  "wait_weeks": 3,  "english_support": True, "source": ""},
 
     # USA
-    {"hospital": "MD Anderson Cancer Center",                "country": "USA",    "city": "Houston TX","tier": "Top",      "intl_patients": True,  "cart_products": "All 7 FDA-approved","est_cost_usd": "450,000-650,000","wait_weeks": 12, "english_support": True},
-    {"hospital": "Memorial Sloan Kettering",                 "country": "USA",    "city": "New York NY","tier": "Top",     "intl_patients": True,  "cart_products": "All 7 FDA-approved","est_cost_usd": "430,000-620,000","wait_weeks": 10, "english_support": True},
-    {"hospital": "Fred Hutchinson Cancer Center",            "country": "USA",    "city": "Seattle WA","tier": "Top",      "intl_patients": True,  "cart_products": "All 7 FDA-approved","est_cost_usd": "400,000-580,000","wait_weeks": 8,  "english_support": True},
+    {"hospital": "MD Anderson Cancer Center",                "country": "USA",    "city": "Houston TX","tier": "Top",      "intl_patients": True,  "cart_products": "All 7 FDA-approved","est_cost_usd": "450,000-650,000","wait_weeks": 12, "english_support": True, "source": ""},
+    {"hospital": "Memorial Sloan Kettering",                 "country": "USA",    "city": "New York NY","tier": "Top",     "intl_patients": True,  "cart_products": "All 7 FDA-approved","est_cost_usd": "430,000-620,000","wait_weeks": 10, "english_support": True, "source": ""},
+    {"hospital": "Fred Hutchinson Cancer Center",            "country": "USA",    "city": "Seattle WA","tier": "Top",      "intl_patients": True,  "cart_products": "All 7 FDA-approved","est_cost_usd": "400,000-580,000","wait_weeks": 8,  "english_support": True, "source": ""},
 
     # Canada
-    {"hospital": "Princess Margaret Cancer Centre",          "country": "Canada", "city": "Toronto ON","tier": "Top",      "intl_patients": True,  "cart_products": "Health Canada approved","est_cost_usd": "250,000-350,000","wait_weeks": 16, "english_support": True},
-    {"hospital": "CancerCare Manitoba",                      "country": "Canada", "city": "Winnipeg MB","tier": "Regional","intl_patients": False, "cart_products": "Referral to Toronto","est_cost_usd": "Covered (wait list)","wait_weeks": 20, "english_support": True},
+    {"hospital": "Princess Margaret Cancer Centre",          "country": "Canada", "city": "Toronto ON","tier": "Top",      "intl_patients": True,  "cart_products": "Health Canada approved","est_cost_usd": "250,000-350,000","wait_weeks": 16, "english_support": True, "source": ""},
+    {"hospital": "CancerCare Manitoba",                      "country": "Canada", "city": "Winnipeg MB","tier": "Regional","intl_patients": False, "cart_products": "Referral to Toronto","est_cost_usd": "Covered (wait list)","wait_weeks": 20, "english_support": True, "source": ""},
 ]
 
 

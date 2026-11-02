@@ -1,11 +1,11 @@
-hospital,country,city,tier,intl_patients,cart_products,est_cost_usd,wait_weeks,english_support
-Chinese PLA General Hospital (301),China,Beijing,Top,True,9 NMPA-approved,"50,000-80,000",2,True
-Peking University Cancer Hospital,China,Beijing,Top,True,Multiple CD19/BCMA,"55,000-85,000",3,True
-Fudan University Cancer Hospital,China,Shanghai,Top,True,"CD19, BCMA, CLDN18.2","60,000-90,000",3,True
-Zhejiang University First Hospital,China,Hangzhou,Top,True,"CD19, CD22, BCMA","50,000-75,000",2,True
-Shanghai Ruijin Hospital,China,Shanghai,Top,True,"CD19, trials","50,000-80,000",3,True
-MD Anderson Cancer Center,USA,Houston TX,Top,True,All 7 FDA-approved,"450,000-650,000",12,True
-Memorial Sloan Kettering,USA,New York NY,Top,True,All 7 FDA-approved,"430,000-620,000",10,True
-Fred Hutchinson Cancer Center,USA,Seattle WA,Top,True,All 7 FDA-approved,"400,000-580,000",8,True
-Princess Margaret Cancer Centre,Canada,Toronto ON,Top,True,Health Canada approved,"250,000-350,000",16,True
-CancerCare Manitoba,Canada,Winnipeg MB,Regional,False,Referral to Toronto,Covered (wait list),20,True
+hospital,country,city,tier,intl_patients,cart_products,est_cost_usd,wait_weeks,english_support,source
+Chinese PLA General Hospital (301),China,Beijing,Top,True,9 NMPA-approved,"50,000-80,000",2,True,
+Peking University Cancer Hospital,China,Beijing,Top,True,Multiple CD19/BCMA,"55,000-85,000",3,True,
+Fudan University Cancer Hospital,China,Shanghai,Top,True,"CD19, BCMA, CLDN18.2","60,000-90,000",3,True,
+Zhejiang University First Hospital,China,Hangzhou,Top,True,"CD19, CD22, BCMA","50,000-75,000",2,True,
+Shanghai Ruijin Hospital,China,Shanghai,Top,True,"CD19, trials","50,000-80,000",3,True,
+MD Anderson Cancer Center,USA,Houston TX,Top,True,All 7 FDA-approved,"450,000-650,000",12,True,
+Memorial Sloan Kettering,USA,New York NY,Top,True,All 7 FDA-approved,"430,000-620,000",10,True,
+Fred Hutchinson Cancer Center,USA,Seattle WA,Top,True,All 7 FDA-approved,"400,000-580,000",8,True,
+Princess Margaret Cancer Centre,Canada,Toronto ON,Top,True,Health Canada approved,"250,000-350,000",16,True,
+CancerCare Manitoba,Canada,Winnipeg MB,Regional,False,Referral to Toronto,Covered (wait list),20,True,

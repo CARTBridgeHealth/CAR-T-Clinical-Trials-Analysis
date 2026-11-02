@@ -88,6 +88,22 @@ def _n_centers(c):
     return sum(r.get("derived_from_centers", 0) for r in c["countries"])
 
 
+def _verification(c):
+    v = c.get("verification")
+    if not v:
+        return ""
+    done = v["centres_sourced"] + v["researched_sourced"]
+    total = v["centres_total"] + v["researched_total"]
+    if done == 0:
+        return (f"⚠ **None of the {total} underlying figures has a documented source "
+                f"yet.** Citations are being added as each is re-verified; treat these "
+                f"as indicative until then.")
+    if done < total:
+        return (f"**{done} of {total} underlying figures have a documented source**; "
+                f"{total - done} are not yet verified.")
+    return f"All {total} underlying figures have a documented source."
+
+
 def comparison_block(c):
     def money(n):
         return f"${round(n / 1000)}K"
@@ -117,12 +133,13 @@ def comparison_block(c):
         + "\n".join(rows) + "\n"
         f"\n"
         f"> Costs and wait times for {_list(c.get('centre_derived_countries', []))} "
-        f"are computed from the {_n_centers(c)} treatment centres in "
-        f"`data/treatment_centers.csv` — each figure is the range across named "
-        f"hospitals. Figures for {_list(c.get('manual_countries', []))}, and the "
-        f"approved-product, insurance and solid-tumour columns throughout, are "
-        f"researched estimates. **None of it auto-updates** — last reviewed "
-        f"{c['as_of']}."
+        f"are the range across the {_n_centers(c)} named hospitals in "
+        f"`data/treatment_centers.csv`. {_list(c.get('manual_countries', []))}, "
+        f"and the approved-product, insurance and solid-tumour columns, are "
+        f"researched estimates. Nothing here auto-updates — last reviewed "
+        f"{c['as_of']}.\n"
+        f">\n"
+        f"> {_verification(c)}"
     )
 
 
