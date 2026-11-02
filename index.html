@@ -339,11 +339,14 @@
       <div class="chart-title">Full Country Comparison</div>
       <div class="chart-sub">Solid tumor CAR-T refers to Satri-cel (gastric cancer), approved China June 22, 2026</div>
       <div class="chart-sub" style="margin-top:6px">
-        💰 <strong>Every column in this table is manually researched</strong> — costs, wait times,
-        approved-product counts, insurance status and solid-tumour availability alike. None of it
-        auto-updates. Last reviewed <span data-cmp="as_of">July 2026</span>. Costs are all-in
-        estimates and vary by treatment centre and complications. The trial charts above update
-        monthly; this table does not.
+        💰 <strong>Costs and wait times for <span data-cmp="derived_list">China, USA and Canada</span></strong>
+        are computed from the <span data-cmp="n_centers">10</span> treatment centres in our centre
+        survey — each figure is the range across named hospitals. Figures for
+        <span data-cmp="manual_list">Germany, India, Japan and UK</span>, and the approved-product,
+        insurance and solid-tumour columns throughout, are researched estimates.
+        <strong>None of it auto-updates</strong> — last reviewed
+        <span data-cmp="as_of">July 2026</span>. Costs are all-in and vary by centre and
+        complications. The trial charts above update monthly; this table does not.
       </div>
       <div style="overflow-x:auto; margin-top:16px">
         <table class="compare-table">
@@ -816,8 +819,18 @@ async function applyComparison() {
     return;   // keep the static fallback row markup and literals
   }
 
-  document.querySelectorAll('[data-cmp="as_of"]').forEach(el => {
-    el.textContent = c.as_of;
+  const list = names => names.length < 2 ? (names[0] || "none")
+    : names.slice(0, -1).join(", ") + " and " + names[names.length - 1];
+  const provenance = {
+    as_of:        c.as_of,
+    derived_list: list(c.centre_derived_countries || []),
+    manual_list:  list(c.manual_countries || []),
+    n_centers:    String(c.countries.reduce(
+                    (n, r) => n + (r.derived_from_centers || 0), 0)),
+  };
+  document.querySelectorAll("[data-cmp]").forEach(el => {
+    const v = provenance[el.dataset.cmp];
+    if (v !== undefined) el.textContent = v;
   });
 
   // Hero stat strip: "<metric>:<country>", e.g. data-cmp="cost:China".

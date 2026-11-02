@@ -51,12 +51,12 @@ No manual steps required.
 
 | Country | All-In Cost | Wait Time | Approved Products |
 |---|---|---|---|
-| 🇨🇳 China | **$50K–$80K** | **2–3 weeks** | **9 (most globally)** |
-| 🇺🇸 USA | $488K–$760K | 8–12 weeks | 7 |
+| 🇨🇳 China | **$50K–$90K** | **2–3 weeks** | **9 (most globally)** |
+| 🇺🇸 USA | $400K–$650K | 8–12 weeks | 7 |
 | 🇨🇦 Canada | $250K–$350K | 16–20 weeks | 4 |
 | 🇩🇪 Germany | $320K–$360K | 8 weeks | 6 |
 
-> **Every column here is manually researched** — costs, wait times, approved-product counts, insurance and solid-tumour availability alike. None of it auto-updates. Last reviewed July 2026.
+> Costs and wait times for Canada, China and USA are computed from the 10 treatment centres in `data/treatment_centers.csv` — each figure is the range across named hospitals. Figures for Germany, India, Japan and UK, and the approved-product, insurance and solid-tumour columns throughout, are researched estimates. **None of it auto-updates** — last reviewed July 2026.
 <!-- END:COMPARISON -->
 
 🚨 **June 22, 2026**: China approved **Satri-cel / 恺力美®** — the world's first CAR-T therapy for solid tumors (gastric cancer). Not yet available in the USA, Canada, or Europe.

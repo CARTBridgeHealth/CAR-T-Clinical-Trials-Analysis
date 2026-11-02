@@ -78,6 +78,16 @@ def trials_block(s):
     )
 
 
+def _list(names):
+    if len(names) < 2:
+        return names[0] if names else "none"
+    return ", ".join(names[:-1]) + " and " + names[-1]
+
+
+def _n_centers(c):
+    return sum(r.get("derived_from_centers", 0) for r in c["countries"])
+
+
 def comparison_block(c):
     def money(n):
         return f"${round(n / 1000)}K"
@@ -106,9 +116,13 @@ def comparison_block(c):
         f"|---|---|---|---|\n"
         + "\n".join(rows) + "\n"
         f"\n"
-        f"> **Every column here is manually researched** — costs, wait times, "
-        f"approved-product counts, insurance and solid-tumour availability alike. "
-        f"None of it auto-updates. Last reviewed {c['as_of']}."
+        f"> Costs and wait times for {_list(c.get('centre_derived_countries', []))} "
+        f"are computed from the {_n_centers(c)} treatment centres in "
+        f"`data/treatment_centers.csv` — each figure is the range across named "
+        f"hospitals. Figures for {_list(c.get('manual_countries', []))}, and the "
+        f"approved-product, insurance and solid-tumour columns throughout, are "
+        f"researched estimates. **None of it auto-updates** — last reviewed "
+        f"{c['as_of']}."
     )
 
 

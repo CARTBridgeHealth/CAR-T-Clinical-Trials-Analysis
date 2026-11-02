@@ -7,7 +7,7 @@
       "country": "China",
       "flag": "🇨🇳",
       "cost_low_usd": 50000,
-      "cost_high_usd": 80000,
+      "cost_high_usd": 90000,
       "wait_low_weeks": 2,
       "wait_high_weeks": 3,
       "approved_products": 9,
@@ -15,18 +15,20 @@
       "insurance": "Partial (NRSS)",
       "solid_tumor_cart": true,
       "solid_tumor_label": "✅ World First",
-      "highlight": true
+      "highlight": true,
+      "derived_from_centers": 5
     },
     {
       "country": "USA",
       "flag": "🇺🇸",
-      "cost_low_usd": 488000,
-      "cost_high_usd": 760000,
+      "cost_low_usd": 400000,
+      "cost_high_usd": 650000,
       "wait_low_weeks": 8,
       "wait_high_weeks": 12,
       "approved_products": 7,
       "insurance": "Partial",
-      "solid_tumor_cart": false
+      "solid_tumor_cart": false,
+      "derived_from_centers": 3
     },
     {
       "country": "Canada",
@@ -37,7 +39,8 @@
       "wait_high_weeks": 20,
       "approved_products": 4,
       "insurance": "Provincial (limited)",
-      "solid_tumor_cart": false
+      "solid_tumor_cart": false,
+      "derived_from_centers": 2
     },
     {
       "country": "Germany",
@@ -83,5 +86,16 @@
       "insurance": "Limited",
       "solid_tumor_cart": false
     }
+  ],
+  "centre_derived_countries": [
+    "Canada",
+    "China",
+    "USA"
+  ],
+  "manual_countries": [
+    "Germany",
+    "India",
+    "Japan",
+    "UK"
   ]
 }
