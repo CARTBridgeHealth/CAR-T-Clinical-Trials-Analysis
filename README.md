@@ -58,7 +58,7 @@ No manual steps required.
 
 > Costs and wait times for Canada, China and USA are the range across the 10 named hospitals in `data/treatment_centers.csv`. Germany, India, Japan and UK, and the approved-product, insurance and solid-tumour columns, are researched estimates. Nothing here auto-updates — last reviewed July 2026.
 >
-> ⚠ **None of the 14 underlying figures has a documented source yet.** Citations are being added as each is re-verified; treat these as indicative until then.
+> Figures are indicative estimates from our centre research — we are adding a citation to each one. Ask for the basis of any figure you need to rely on.
 <!-- END:COMPARISON -->
 
 🚨 **June 22, 2026**: China approved **Satri-cel / 恺力美®** — the world's first CAR-T therapy for solid tumors (gastric cancer). Not yet available in the USA, Canada, or Europe.

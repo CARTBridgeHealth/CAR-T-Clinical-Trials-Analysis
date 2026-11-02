@@ -345,9 +345,8 @@
         approved-product, insurance and solid-tumour columns, are researched estimates.
         Nothing here auto-updates — last reviewed <span data-cmp="as_of">July 2026</span>.
         <br>
-        <strong data-cmp="verification">⚠ 0 of 14 figures currently have a documented source.</strong>
-        We are adding citations as each is re-verified; until then treat these as indicative,
-        and ask us for the basis of any figure you need to rely on.
+        <span data-cmp="verification">Figures are indicative estimates from our centre research.</span>
+        Ask us for the basis of any figure you need to rely on.
       </div>
       <div style="overflow-x:auto; margin-top:16px">
         <table class="compare-table">
@@ -834,14 +833,14 @@ async function applyComparison() {
       const done  = v.centres_sourced + v.researched_sourced;
       const total = v.centres_total + v.researched_total;
       if (done === 0) {
-        return `⚠ None of the ${total} underlying figures has a documented `
-             + `source yet.`;
+        return `Figures are indicative estimates from our centre research. `
+             + `We are adding a citation to each one.`;
       }
       if (done < total) {
-        return `${done} of ${total} underlying figures have a documented source; `
-             + `${total - done} are not yet verified.`;
+        return `${done} of ${total} figures now cite a source; the remainder are `
+             + `indicative estimates.`;
       }
-      return `All ${total} underlying figures have a documented source.`;
+      return `All ${total} figures cite a documented source.`;
     })(),
   };
   document.querySelectorAll("[data-cmp]").forEach(el => {

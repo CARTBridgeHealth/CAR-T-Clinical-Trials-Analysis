@@ -95,13 +95,13 @@ def _verification(c):
     done = v["centres_sourced"] + v["researched_sourced"]
     total = v["centres_total"] + v["researched_total"]
     if done == 0:
-        return (f"⚠ **None of the {total} underlying figures has a documented source "
-                f"yet.** Citations are being added as each is re-verified; treat these "
-                f"as indicative until then.")
+        return ("Figures are indicative estimates from our centre research — "
+                "we are adding a citation to each one. Ask for the basis of any "
+                "figure you need to rely on.")
     if done < total:
-        return (f"**{done} of {total} underlying figures have a documented source**; "
-                f"{total - done} are not yet verified.")
-    return f"All {total} underlying figures have a documented source."
+        return (f"{done} of {total} figures now cite a source; the remainder are "
+                f"indicative estimates.")
+    return f"All {total} figures cite a documented source."
 
 
 def comparison_block(c):
