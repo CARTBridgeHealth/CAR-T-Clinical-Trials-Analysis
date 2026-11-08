@@ -75,6 +75,8 @@ def main():
     # months, and it reached the website and the investor deck unchallenged.
     products = pd.read_csv(PRODUCTS)
     product_counts = products["country"].value_counts().to_dict()
+    # How many approvals carry a registry citation, so the page can say so.
+    sourced_products = int(products["source"].fillna("").str.strip().ne("").sum())         if "source" in products else 0
 
     with open(COMPARISON, encoding="utf-8") as f:
         comparison = json.load(f)
@@ -128,6 +130,8 @@ def main():
         "centres_sourced":    sourced_centres,
         "researched_total":   researched_total,
         "researched_sourced": researched_sourced,
+        "products_total":     int(len(products)),
+        "products_sourced":   sourced_products,
     }
 
     with open(COMPARISON, "w", encoding="utf-8") as f:

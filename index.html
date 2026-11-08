@@ -882,15 +882,19 @@ async function applyComparison() {
       if (!v) return "";
       const done  = v.centres_sourced + v.researched_sourced;
       const total = v.centres_total + v.researched_total;
+      const prod = v.products_sourced
+        ? ` Approved-product counts: ${v.products_sourced} of `
+          + `${v.products_total} entries cite an NMPA or FDA record.`
+        : "";
       if (done === 0) {
-        return `Figures are indicative estimates from our centre research. `
-             + `We are adding a citation to each one.`;
+        return `Costs and wait times are indicative estimates from our centre `
+             + `research; we are adding a citation to each one.` + prod;
       }
       if (done < total) {
-        return `${done} of ${total} figures now cite a source; the remainder are `
-             + `indicative estimates.`;
+        return `${done} of ${total} cost figures now cite a source; the `
+             + `remainder are indicative estimates.` + prod;
       }
-      return `All ${total} figures cite a documented source.`;
+      return `All ${total} cost figures cite a documented source.` + prod;
     })(),
   };
   document.querySelectorAll("[data-cmp]").forEach(el => {
