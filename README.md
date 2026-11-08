@@ -61,7 +61,7 @@ No manual steps required.
 > Figures are indicative estimates from our centre research — we are adding a citation to each one. Ask for the basis of any figure you need to rely on.
 <!-- END:COMPARISON -->
 
-🚨 **June 22, 2026**: China approved **Satri-cel / 恺力美®** — the world's first CAR-T therapy for solid tumors (gastric cancer). Not yet available in the USA, Canada, or Europe.
+🚨 **June 17, 2026**: China approved **Satri-cel / 恺力美®** — the world's first CAR-T therapy for solid tumors (gastric cancer). Not yet available in the USA, Canada, or Europe.
 
 ---
 
@@ -179,7 +179,7 @@ psql -U postgres -d cart_trials -f sql/queries.sql
 | U.S. FDA | Approved CAR-T products | fda.gov |
 | China NMPA | Approved CAR-T products | nmpa.gov.cn |
 | Medical literature | Treatment costs, outcomes | Published 2024–2026 |
-| CARsgen | Satri-cel / 恺力美® approval | Press release, June 22, 2026 |
+| China NMPA | Satri-cel / 恺力美® approval | 国药准字S20260044, approved 2026-06-17 |
 
 ---
 

@@ -44,7 +44,7 @@ approved_products = [
     {"product": "Ciltacabtagene autoleucel (Carvykti)",    "company": "Legend Biotech",             "country": "China", "approval_year": 2023, "target": "BCMA",  "indications": "Multiple Myeloma",            "us_price_usd": None,   "cn_price_usd": 158000, "solid_tumor": False, "cn_trade_name": "", "nmpa_approval_no": "", "nmpa_approval_date": "", "source": ""},
     {"product": "Zevorcabtagene autoleucel (Zevor-cel)",   "company": "Gracell / AZ",               "country": "China", "approval_year": 2024, "target": "BCMA",  "indications": "Multiple Myeloma",            "us_price_usd": None,   "cn_price_usd": 158000, "solid_tumor": False, "cn_trade_name": "", "nmpa_approval_no": "", "nmpa_approval_date": "", "source": ""},
     {"product": "Inaticabtagene autoleucel (Yuanruida)",   "company": "Juventas Cell Therapy",      "country": "China", "approval_year": 2023, "target": "CD19",  "indications": "Adult r/r B-ALL",             "us_price_usd": None,   "cn_price_usd": None,   "solid_tumor": False, "cn_trade_name": "源瑞达", "nmpa_approval_no": "国药准字S20230065", "nmpa_approval_date": "2023-11-07", "source": "NMPA CPP 津20250029号, Tianjin MPA, issued 2025-02-21; that CPP lapsed 2026-06-28 (export certificate expiry, not a withdrawal of the marketing approval)"},
-    {"product": "Satricabtagene autoleucel (Satri-cel)",   "company": "CARsgen",                    "country": "China", "approval_year": 2026, "target": "CLDN18.2", "indications": "Gastric/GEJ Cancer 🆕 World First Solid Tumor CAR-T", "us_price_usd": None, "cn_price_usd": None, "solid_tumor": True, "cn_trade_name": "", "nmpa_approval_no": "", "nmpa_approval_date": "", "source": ""},
+    {"product": "Satricabtagene autoleucel (Satri-cel)",   "company": "CARsgen Life Sciences",                    "country": "China", "approval_year": 2026, "target": "CLDN18.2", "indications": "Gastric/GEJ Cancer 🆕 World First Solid Tumor CAR-T", "us_price_usd": None, "cn_price_usd": None, "solid_tumor": True, "cn_trade_name": "恺力美", "nmpa_approval_no": "国药准字S20260044", "nmpa_approval_date": "2026-06-17", "source": "NMPA CPP 沪20260186号, Shanghai MPA, issued 2026-08-14, valid to 2029-08-13"},
 ]
 
 
@@ -116,7 +116,7 @@ print()
 print("Notes:")
 print(f"   - China {approved_by_country.get('China', 0)} approved products, "
       f"USA {approved_by_country.get('USA', 0)}")
-print("   - Satri-cel (CLDN18.2, gastric/GEJ) approved in China June 22, 2026 —")
+print("   - Satri-cel (CLDN18.2, gastric/GEJ) approved in China 2026-06-17 —")
 print("     the first approved CAR-T for a solid tumour anywhere")
 print("   - Country cost figures come from country_comparison.json; see")
 print("     derive_country_costs.py for how they are built")
