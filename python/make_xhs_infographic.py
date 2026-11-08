@@ -43,6 +43,7 @@ PEACH   = "#f7cdb4"            # muted series fill
 GREY    = "#b0a09a"            # warm grey, de-emphasised text
 INK     = "#2e211d"
 BODY    = "#4a3a35"
+ROSE_LT = "#cf87a1"            # ~75% strength ROSE on white
 WARN_BG = "#fff3e4"
 WARN_ED = "#e09a4e"
 
@@ -138,8 +139,6 @@ def main():
     fig.text(0.5, 0.936, f"全球{total}项CAR-T试验，说明了什么",
              ha="center", va="center", fontsize=27, fontweight="bold",
              color="#ffffff", zorder=3)
-    fig.text(0.5, 0.880, "小红书 · Post 01", ha="center", va="center",
-             fontsize=14, fontweight="bold", color=DEEP)
 
     col_w, row_h = 0.445, 0.253
     left, right = 0.040, 0.515
@@ -171,8 +170,8 @@ def main():
     # ── Panel ② approved, mature in blood cancers ──
     px, py, pw, ph = panel(fig, right, 0.598, col_w, row_h,
                            "②", f"{n_prod}款已获批上市", ROSE)
-    fig.text(px + pw / 2, py + 0.158, f"{n_prod}", ha="center", va="center",
-             fontsize=52, fontweight="bold", color=ROSE, zorder=4)
+    fig.text(px + pw / 2, py + 0.148, f"{n_prod}", ha="center", va="center",
+             fontsize=52, fontweight="bold", color=ROSE_LT, zorder=4)
     fig.text(px + pw / 2, py + 0.112, f"中国 {n_cn} 款 · 美国 {n_us} 款",
              ha="center", va="center", fontsize=15, color=INK, zorder=4)
     body_text(fig, px, py + 0.084, pw,
