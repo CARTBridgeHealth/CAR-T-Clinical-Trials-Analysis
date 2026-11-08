@@ -1,10 +1,12 @@
 {
-  "generated_utc": "2026-11-02T15:24:50Z",
+  "generated_utc": "2026-11-08T23:15:58Z",
   "data_month": "November 2026",
   "total_trials": 2975,
   "recruiting": 992,
   "recruiting_pct": 33,
   "missing_country": 203,
+  "in_china_or_usa": 2384,
+  "in_china_or_usa_pct": 80,
   "status": {
     "labels": [
       "Recruiting",

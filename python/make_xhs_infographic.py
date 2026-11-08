@@ -17,6 +17,7 @@ Output: xhs_cards/post01_infographic.png
 import json
 import os
 
+import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -25,6 +26,7 @@ from matplotlib.patches import FancyBboxPatch, Polygon
 
 BASE    = os.path.join(os.path.dirname(__file__), "..")
 FIGURES = os.path.join(BASE, "data", "trial_figures.json")
+PRODUCTS = os.path.join(BASE, "data", "approved_products.csv")
 OUT_DIR = os.path.join(BASE, "xhs_cards")
 
 SIZE_IN, DPI = 9, 120          # 1080 x 1080
@@ -117,7 +119,16 @@ def main():
                + dis.get("Blood cancer, unspecified", 0))
     blood_pct = round(100 * blood / total)
     solid, auto = dis.get("Solid tumour", 0), dis.get("Autoimmune disease", 0)
+    cn_us     = s.get("in_china_or_usa", 0)
+    cn_us_pct = s.get("in_china_or_usa_pct", 0)
     month = month_zh(s["data_month"])
+
+    # Approved products are counted from approved_products.csv — the same
+    # source the website uses, so the card cannot disagree with the site.
+    prods = pd.read_csv(PRODUCTS)
+    n_prod = int(len(prods))
+    n_cn   = int((prods["country"] == "China").sum())
+    n_us   = int((prods["country"] == "USA").sum())
 
     fig = plt.figure(figsize=(SIZE_IN, SIZE_IN), dpi=DPI)
     fig.patch.set_facecolor(BG)
@@ -132,19 +143,15 @@ def main():
 
     col_w, row_h = 0.445, 0.253
     left, right = 0.040, 0.515
-    top_y, bot_y = 0.598, 0.330
 
-    # ── Panel ① growth ──
-    px, py, pw, ph = panel(fig, left, top_y, col_w, row_h,
-                           "①", f"{total}项，登记在册", DEEP)
+    # ── Panel ① scale and concentration ──
+    px, py, pw, ph = panel(fig, left, 0.598, col_w, row_h,
+                           "①", f"{total}项试验登记在册", DEEP)
     ax = lift(fig.add_axes([px + 0.028, py + 0.112, pw - 0.056, 0.082]))
-    # Stop at the last COMPLETE year. Plotting the current year alongside full
-    # ones draws a fall that is only an artefact of the year not being over —
-    # exactly the kind of true-but-misleading figure this account should avoid.
     this_year = int(s["generated_utc"][:4])
     pairs = [(y, v) for y, v in zip(s["growth"]["years"],
                                     s["growth"]["trials"]) if y < this_year]
-    yrs, vals = [p[0] for p in pairs], [p[1] for p in pairs]
+    yrs, vals = [q[0] for q in pairs], [q[1] for q in pairs]
     ax.bar(yrs, vals, color=[PEACH] * (len(yrs) - 1) + [DEEP], width=0.75)
     ax.annotate(f"{vals[-1]}", (yrs[-1], vals[-1]), textcoords="offset points",
                 xytext=(0, 4), ha="center", fontsize=10.5,
@@ -156,76 +163,53 @@ def main():
     for sp in ax.spines.values():
         sp.set_visible(False)
     ax.tick_params(length=0)
-    ax.set_facecolor(PANEL)
-    body_text(fig, px, py + 0.092,  pw,
-              [f"这是截至{month}，全球公开登记的",
-               f"CAR-T临床试验总数。图为各年新启动",
-               f"试验数（截至{yrs[-1]}年完整年度）。"])
-
-    # ── Panel ② recruiting ──
-    px, py, pw, ph = panel(fig, right, top_y, col_w, row_h,
-                           "②", f"{recruit}项正在招募（{pct}%）", ROSE)
-    ax = lift(fig.add_axes([px + 0.178, py + 0.108, 0.090, 0.090]))
-    ax.pie([pct, 100 - pct], colors=[ROSE, "#f0e2da"], startangle=90,
-           counterclock=False, wedgeprops={"linewidth": 0})
-    ax.text(0, 0, f"{pct}%", ha="center", va="center",
-            fontsize=13, fontweight="bold", color="#ffffff")
-    ax.set_aspect("equal")
     body_text(fig, px, py + 0.092, pw,
-              ["三分之一的试验还在招人，说明这个",
-               "领域目前仍在快速扩张，不是停滞",
-               "状态。"])
+              [f"研究规模很大，且高度集中：约 {cn_us_pct}%",
+               f"（{cn_us}项）在中国和美国开展。",
+               f"图为各年新启动试验数（至{yrs[-1]}年）。"])
 
-    # ── Panel ③ phase funnel ──
-    px, py, pw, ph = panel(fig, left, bot_y, col_w, row_h,
-                           "③", f"{early_pct}%处于一期或更早", DEEP)
-    ax = lift(fig.add_axes([px + 0.028, py + 0.112, pw - 0.056, 0.082]))
-    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
-    ax.set_facecolor(PANEL)
-    # Funnel: width falls as phase advances — the shape is the argument.
-    segs = [(0.00, 0.56, DEEP, f"一期或更早\n{early_pct}%", 0.50, "#ffffff"),
-            (0.58, 0.24, ORANGE, "二期", 0.33, "#ffffff"),
-            (0.84, 0.16, PEACH, "三期", 0.22, "#ffffff")]
-    for x0, w, colour, label, half, txt_col in segs:
-        ax.add_patch(Polygon([[x0, 0.5 - half], [x0 + w, 0.5 - half * 0.72],
-                              [x0 + w, 0.5 + half * 0.72], [x0, 0.5 + half]],
-                             closed=True, facecolor=colour, edgecolor="none"))
-        ax.text(x0 + w / 2, 0.5, label, ha="center", va="center",
-                fontsize=10.5, fontweight="bold", color=txt_col,
-                linespacing=1.4)
-    body_text(fig, px, py + 0.092, pw,
-              ["一期临床主要是探索安全性和剂量，",
-               "不是验证疗效。数量看起来很多，但",
-               "大部分还没走到「证明有效」那一步。"])
+    # ── Panel ② approved, mature in blood cancers ──
+    px, py, pw, ph = panel(fig, right, 0.598, col_w, row_h,
+                           "②", f"{n_prod}款已获批上市", ROSE)
+    fig.text(px + pw / 2, py + 0.158, f"{n_prod}", ha="center", va="center",
+             fontsize=52, fontweight="bold", color=ROSE, zorder=4)
+    fig.text(px + pw / 2, py + 0.112, f"中国 {n_cn} 款 · 美国 {n_us} 款",
+             ha="center", va="center", fontsize=15, color=INK, zorder=4)
+    body_text(fig, px, py + 0.084, pw,
+              ["在血液肿瘤领域，CAR-T 已是获批的",
+               "成熟疗法，不是实验性治疗——覆盖",
+               "白血病、淋巴瘤、多发性骨髓瘤。"])
 
-    # ── Panel ④ disease split ──
-    px, py, pw, ph = panel(fig, right, bot_y, col_w, row_h,
-                           "④", f"{blood}项针对血液肿瘤", ROSE)
-    ax = lift(fig.add_axes([px + 0.028, py + 0.150, pw - 0.056, 0.044]))
+    # ── Panel ③ expanding, recruiting (full width) ──
+    px, py, pw, ph = panel(fig, left, 0.330, 0.920, row_h,
+                           "③", "正在扩展到血液肿瘤以外，并大量招募", DEEP)
+    ax = lift(fig.add_axes([px + 0.030, py + 0.148, pw - 0.060, 0.044]))
     ax.set_xlim(0, total); ax.set_ylim(0, 1); ax.axis("off")
     ax.barh([0.5], [blood], color=DEEP, height=1.0)
     ax.barh([0.5], [solid], left=blood, color=ORANGE, height=1.0)
     ax.barh([0.5], [auto], left=blood + solid, color=PINK, height=1.0)
     ax.barh([0.5], [total - blood - solid - auto], left=blood + solid + auto,
             color=PEACH, height=1.0)
-    ax.text(blood / 2, 0.5, f"血液肿瘤 {blood_pct}%", ha="center", va="center",
-            fontsize=10, fontweight="bold", color="#ffffff")
+    ax.text(blood / 2, 0.5, f"血液肿瘤 {blood}项 · {blood_pct}%",
+            ha="center", va="center", fontsize=11,
+            fontweight="bold", color="#ffffff")
 
-    legend = [(ORANGE, f"实体瘤 {solid}项"),
-              (PINK, f"自身免疫病 {auto}项")]
     lx = px + 0.032
-    for colour, label in legend:
+    for colour, label in ((ORANGE, f"实体瘤 {solid}项"),
+                          (PINK, f"自身免疫病 {auto}项"),
+                          (PEACH, "其他 / 未分类")):
         fig.patches.append(FancyBboxPatch(
-            (lx, py + 0.118), 0.013, 0.013, transform=fig.transFigure,
+            (lx, py + 0.116), 0.013, 0.013, transform=fig.transFigure,
             boxstyle="round,pad=0.002,rounding_size=0.004",
             facecolor=colour, edgecolor="none", zorder=4))
-        fig.text(lx + 0.021, py + 0.124, label, ha="left", va="center",
-                 fontsize=11, color=BODY, zorder=4)
-        lx += 0.205
-    body_text(fig, px, py + 0.092, pw,
-              ["白血病、淋巴瘤、骨髓瘤仍是主战场。",
-               "但实体瘤与自身免疫病增长很快——",
-               "CAR-T正在走出传统的血液科。"])
+        fig.text(lx + 0.021, py + 0.122, label, ha="left", va="center",
+                 fontsize=11.5, color=BODY, zorder=4)
+        lx += 0.235
+    body_text(fig, px, py + 0.090, pw,
+              [f"实体瘤已有 {solid} 项、自身免疫病 {auto} 项，这两个方向增长很快。"
+               f"全球 {recruit} 项（{pct}%）正在招募，",
+               f"其中新方向多数仍处于早期阶段——{early_pct}% 的试验在一期或更早，"
+               "以探索安全性与适应症边界为主。"])
 
     # ── Caution box ──
     rounded(fig, 0.040, 0.128, 0.920, 0.168, WARN_BG, edge=WARN_ED, lw=1.6, z=2)

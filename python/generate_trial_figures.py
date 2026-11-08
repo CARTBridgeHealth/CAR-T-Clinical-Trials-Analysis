@@ -118,6 +118,12 @@ def build(df: pd.DataFrame) -> dict:
     disease_labels.append("Other / unspecified")
     disease_counts.append(int(unassigned.sum()))
 
+    # Trials involving China or the USA, counted once each. Used to state the
+    # field's geographic concentration without ranking the two against each
+    # other — a registration count evidences neither quality nor access.
+    in_cn_us = int((countries_col.str.contains("China", regex=False)
+                    | countries_col.str.contains("United States", regex=False)).sum())
+
     recruiting = int(counts.get("RECRUITING", 0))
     return {
         "generated_utc":   pd.Timestamp.now("UTC").strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -126,6 +132,8 @@ def build(df: pd.DataFrame) -> dict:
         "recruiting":      recruiting,
         "recruiting_pct":  round(100 * recruiting / total),
         "missing_country": missing_country,
+        "in_china_or_usa": in_cn_us,
+        "in_china_or_usa_pct": round(100 * in_cn_us / total),
         "status":          {"labels": STATUS_LABELS, "data": status},
         "phase":           {"labels": PHASE_LABELS,
                             "counts": phase_counts,
