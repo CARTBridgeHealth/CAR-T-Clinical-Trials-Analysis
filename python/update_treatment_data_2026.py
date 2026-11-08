@@ -40,6 +40,7 @@ approved_products = [
     {"product": "Equecabtagene autoleucel (Fucaso)",       "company": "ICTC",                       "country": "China", "approval_year": 2023, "target": "BCMA",  "indications": "Multiple Myeloma",            "us_price_usd": None,   "cn_price_usd": 160000, "solid_tumor": False},
     {"product": "Ciltacabtagene autoleucel (Carvykti)",    "company": "Legend Biotech",             "country": "China", "approval_year": 2023, "target": "BCMA",  "indications": "Multiple Myeloma",            "us_price_usd": None,   "cn_price_usd": 158000, "solid_tumor": False},
     {"product": "Zevorcabtagene autoleucel (Zevor-cel)",   "company": "Gracell / AZ",               "country": "China", "approval_year": 2024, "target": "BCMA",  "indications": "Multiple Myeloma",            "us_price_usd": None,   "cn_price_usd": 158000, "solid_tumor": False},
+    {"product": "Inaticabtagene autoleucel (Yuanruida)",   "company": "Juventas Cell Therapy",      "country": "China", "approval_year": 2023, "target": "CD19",  "indications": "Adult r/r B-ALL",             "us_price_usd": None,   "cn_price_usd": None,   "solid_tumor": False},
     {"product": "Satricabtagene autoleucel (Satri-cel)",   "company": "CARsgen",                    "country": "China", "approval_year": 2026, "target": "CLDN18.2", "indications": "Gastric/GEJ Cancer 🆕 World First Solid Tumor CAR-T", "us_price_usd": None, "cn_price_usd": None, "solid_tumor": True},
 ]
 
@@ -68,11 +69,20 @@ cost_comparison = [
 ]
 
 
+# Approved-product counts are COUNTED from the list above, never typed.
+# A hand-entered "9" for China sat in this file from the first commit while the
+# list held six entries, and propagated to the website, the investor deck and
+# the patient guide before anyone compared the two.
+approved_by_country = {}
+for _p in approved_products:
+    approved_by_country[_p["country"]] = approved_by_country.get(_p["country"], 0) + 1
+
+
 # ── 3. Top Treatment Centers (2026) ──────────────────────────────────────────
 treatment_centers = [
 
     # China — Top centers accepting international patients
-    {"hospital": "Chinese PLA General Hospital (301)",       "country": "China",  "city": "Beijing",   "tier": "Top",      "intl_patients": True,  "cart_products": "9 NMPA-approved",  "est_cost_usd": "50,000-80,000",  "wait_weeks": 2,  "english_support": True, "source": ""},
+    {"hospital": "Chinese PLA General Hospital (301)",       "country": "China",  "city": "Beijing",   "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, BCMA, CLDN18.2",  "est_cost_usd": "50,000-80,000",  "wait_weeks": 2,  "english_support": True, "source": ""},
     {"hospital": "Peking University Cancer Hospital",        "country": "China",  "city": "Beijing",   "tier": "Top",      "intl_patients": True,  "cart_products": "Multiple CD19/BCMA","est_cost_usd": "55,000-85,000",  "wait_weeks": 3,  "english_support": True, "source": ""},
     {"hospital": "Fudan University Cancer Hospital",         "country": "China",  "city": "Shanghai",  "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, BCMA, CLDN18.2","est_cost_usd": "60,000-90,000","wait_weeks": 3,  "english_support": True, "source": ""},
     {"hospital": "Zhejiang University First Hospital",       "country": "China",  "city": "Hangzhou",  "tier": "Top",      "intl_patients": True,  "cart_products": "CD19, CD22, BCMA", "est_cost_usd": "50,000-75,000",  "wait_weeks": 2,  "english_support": True, "source": ""},
@@ -94,13 +104,16 @@ pd.DataFrame(approved_products).to_csv(os.path.join(OUTPUT_DIR, "approved_produc
 pd.DataFrame(cost_comparison).to_csv(os.path.join(OUTPUT_DIR, "cost_comparison.csv"), index=False)
 pd.DataFrame(treatment_centers).to_csv(os.path.join(OUTPUT_DIR, "treatment_centers.csv"), index=False)
 
-print("✅ Updated 3 datasets with July 2026 data:")
-print(f"   approved_products.csv  — {len(approved_products)} products (China: 9, USA: 7)")
+print("Updated 3 datasets:")
+print(f"   approved_products.csv  — {len(approved_products)} products "
+      f"({', '.join(f'{k}: {v}' for k, v in sorted(approved_by_country.items()))})")
 print(f"   cost_comparison.csv    — {len(cost_comparison)} countries")
 print(f"   treatment_centers.csv  — {len(treatment_centers)} hospitals")
 print()
-print("🚨 Key updates:")
-print("   - China now has 9 NMPA-approved products (more than USA's 7)")
-print("   - Satri-cel: World's first solid tumor CAR-T approved June 22, 2026")
-print("   - China total cost: $50,000-$80,000 vs USA $488,000-$760,000")
-print("   - China manufacturing time now only 7-21 days")
+print("Notes:")
+print(f"   - China {approved_by_country.get('China', 0)} approved products, "
+      f"USA {approved_by_country.get('USA', 0)}")
+print("   - Satri-cel (CLDN18.2, gastric/GEJ) approved in China June 22, 2026 —")
+print("     the first approved CAR-T for a solid tumour anywhere")
+print("   - Country cost figures come from country_comparison.json; see")
+print("     derive_country_costs.py for how they are built")

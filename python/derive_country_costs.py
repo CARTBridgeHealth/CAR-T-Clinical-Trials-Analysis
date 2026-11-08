@@ -29,6 +29,7 @@ import pandas as pd
 
 BASE       = os.path.join(os.path.dirname(__file__), "..")
 CENTERS    = os.path.join(BASE, "data", "treatment_centers.csv")
+PRODUCTS   = os.path.join(BASE, "data", "approved_products.csv")
 COMPARISON = os.path.join(BASE, "data", "country_comparison.json")
 
 COST_RE = re.compile(r"([\d,]+)\s*-\s*([\d,]+)")
@@ -69,12 +70,31 @@ def main():
     centers = pd.read_csv(CENTERS)
     derived = derive(centers)
 
+    # Approved-product counts are counted from approved_products.csv, not typed
+    # into the JSON. China carried a hand-entered 9 against a six-row list for
+    # months, and it reached the website and the investor deck unchallenged.
+    products = pd.read_csv(PRODUCTS)
+    product_counts = products["country"].value_counts().to_dict()
+
     with open(COMPARISON, encoding="utf-8") as f:
         comparison = json.load(f)
 
     changes, centre_derived, manual = [], [], []
     for row in comparison["countries"]:
         name = row["country"]
+
+        counted = product_counts.get(name)
+        if counted is not None and row.get("approved_products") != counted:
+            changes.append(
+                f"  {name} approved_products: {row.get('approved_products')} "
+                f"-> {counted}")
+            row["approved_products"] = counted
+        # "most globally" only holds while China leads outright.
+        if name == "China" and counted is not None:
+            top = max(product_counts.values())
+            if counted < top or list(product_counts.values()).count(top) > 1:
+                row.pop("approved_products_note", None)
+
         d = derived.get(name)
         if not d or "cost_low_usd" not in d:
             manual.append(name)

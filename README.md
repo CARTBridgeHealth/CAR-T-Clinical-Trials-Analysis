@@ -51,7 +51,7 @@ No manual steps required.
 
 | Country | All-In Cost | Wait Time | Approved Products |
 |---|---|---|---|
-| 🇨🇳 China | **$50K–$90K** | **2–3 weeks** | **9 (most globally)** |
+| 🇨🇳 China | **$50K–$90K** | **2–3 weeks** | **7** |
 | 🇺🇸 USA | $400K–$650K | 8–12 weeks | 7 |
 | 🇨🇦 Canada | $250K–$350K | 16–20 weeks | 4 |
 | 🇩🇪 Germany | $320K–$360K | 8 weeks | 6 |

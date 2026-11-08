@@ -584,8 +584,8 @@ body.en .cn-only { display: none; }
       <div class="big g">9</div>
       <h3 class="en-only">China's solution</h3>
       <h3 class="cn-only">中国的解决方案</h3>
-      <p class="en-only">NMPA-approved products — more than any other country. <span data-cmp="cost:China">$50–90K</span> all-in. <span data-cmp="wait:China">2–3 wks</span> wait. World's first solid tumor CAR-T approved June 2026.</p>
-      <p class="cn-only">NMPA 已批准产品数量，全球最多。全包 <span data-cmp="cost_cn:China">5万–9万美元</span>，等待 <span data-cmp="wait_cn:China">2–3 周</span>。2026 年 6 月批准全球首个实体瘤 CAR-T。</p>
+      <p class="en-only">NMPA-approved products — 7, level with the USA. <span data-cmp="cost:China">$50–90K</span> all-in. <span data-cmp="wait:China">2–3 wks</span> wait. World's first solid tumor CAR-T approved June 2026.</p>
+      <p class="cn-only">NMPA 已批准 7 款产品，与美国持平。全包 <span data-cmp="cost_cn:China">5万–9万美元</span>，等待 <span data-cmp="wait_cn:China">2–3 周</span>。2026 年 6 月批准全球首个实体瘤 CAR-T。</p>
     </div>
   </div>
 
@@ -606,7 +606,7 @@ body.en .cn-only { display: none; }
           <td>🇨🇳 China / 中国</td>
           <td style="color:#0d9488;font-weight:700" data-cmp="costfull:China">$50K–$90K</td>
           <td style="color:#0d9488;font-weight:700">2–3 weeks / 周</td>
-          <td style="color:#0d9488;font-weight:700">9 (most globally / 全球最多)</td>
+          <td style="color:#0d9488;font-weight:700" data-cmp="products:China">7</td>
           <td><span class="badge-new">World First / 全球首创</span></td>
         </tr>
         <tr><td>🇺🇸 USA / 美国</td><td data-cmp="costfull:USA">$400K–$650K</td><td>8–12 weeks / 周</td><td>7</td><td><span class="badge-no">Not yet / 未批准</span></td></tr>
@@ -1305,6 +1305,7 @@ const invWaitChart = new Chart(document.getElementById("waitChart"), {
     wait_cn:  r => r.wait_low_weeks === r.wait_high_weeks
                      ? `${r.wait_low_weeks} 周`
                      : `${r.wait_low_weeks}–${r.wait_high_weeks} 周`,
+    products: r => String(r.approved_products),
   };
   document.querySelectorAll("[data-cmp]").forEach(el => {
     const [metric, country] = el.dataset.cmp.split(":");

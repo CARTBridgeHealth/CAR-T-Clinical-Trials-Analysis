@@ -1,5 +1,5 @@
 hospital,country,city,tier,intl_patients,cart_products,est_cost_usd,wait_weeks,english_support,source
-Chinese PLA General Hospital (301),China,Beijing,Top,True,9 NMPA-approved,"50,000-80,000",2,True,
+Chinese PLA General Hospital (301),China,Beijing,Top,True,"CD19, BCMA, CLDN18.2","50,000-80,000",2,True,
 Peking University Cancer Hospital,China,Beijing,Top,True,Multiple CD19/BCMA,"55,000-85,000",3,True,
 Fudan University Cancer Hospital,China,Shanghai,Top,True,"CD19, BCMA, CLDN18.2","60,000-90,000",3,True,
 Zhejiang University First Hospital,China,Hangzhou,Top,True,"CD19, CD22, BCMA","50,000-75,000",2,True,
