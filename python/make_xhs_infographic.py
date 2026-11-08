@@ -29,15 +29,20 @@ OUT_DIR = os.path.join(BASE, "xhs_cards")
 
 SIZE_IN, DPI = 9, 120          # 1080 x 1080
 
-BG      = "#e9eef5"            # page
+# Warm palette — orange through rose, read as forward-looking rather than
+# clinical. Deep shades carry white header text; lighter ones are series fills.
+BG      = "#fdf4ee"            # page, warm off-white
 PANEL   = "#ffffff"
-NAVY    = "#17386b"            # headers, primary series
-TEAL    = "#15787c"            # secondary headers
-GREY    = "#9aa7b5"
-INK     = "#1f2d3d"
-BODY    = "#33414f"
-WARN_BG = "#fdf6e3"
-WARN_ED = "#e0a63c"
+DEEP    = "#9e3b2e"            # primary headers, primary series
+ROSE    = "#b94a6e"            # secondary headers
+ORANGE  = "#ef7f45"            # accent series
+PINK    = "#e8718f"            # second accent — hue-separated from ORANGE
+PEACH   = "#f7cdb4"            # muted series fill
+GREY    = "#b0a09a"            # warm grey, de-emphasised text
+INK     = "#2e211d"
+BODY    = "#4a3a35"
+WARN_BG = "#fff3e4"
+WARN_ED = "#e09a4e"
 
 CJK = next((n for n in ("Microsoft YaHei", "Microsoft JhengHei", "SimHei")
             if any(f.name == n for f in font_manager.fontManager.ttflist)), None)
@@ -118,12 +123,12 @@ def main():
     fig.patch.set_facecolor(BG)
 
     # ── Title banner ──
-    rounded(fig, 0.040, 0.905, 0.920, 0.062, NAVY, z=2)
+    rounded(fig, 0.040, 0.905, 0.920, 0.062, DEEP, z=2)
     fig.text(0.5, 0.936, f"全球{total}项CAR-T试验，说明了什么",
              ha="center", va="center", fontsize=27, fontweight="bold",
              color="#ffffff", zorder=3)
     fig.text(0.5, 0.880, "小红书 · Post 01", ha="center", va="center",
-             fontsize=14, fontweight="bold", color=NAVY)
+             fontsize=14, fontweight="bold", color=DEEP)
 
     col_w, row_h = 0.445, 0.253
     left, right = 0.040, 0.515
@@ -131,7 +136,7 @@ def main():
 
     # ── Panel ① growth ──
     px, py, pw, ph = panel(fig, left, top_y, col_w, row_h,
-                           "①", f"{total}项，登记在册", NAVY)
+                           "①", f"{total}项，登记在册", DEEP)
     ax = lift(fig.add_axes([px + 0.028, py + 0.112, pw - 0.056, 0.082]))
     # Stop at the last COMPLETE year. Plotting the current year alongside full
     # ones draws a fall that is only an artefact of the year not being over —
@@ -140,10 +145,10 @@ def main():
     pairs = [(y, v) for y, v in zip(s["growth"]["years"],
                                     s["growth"]["trials"]) if y < this_year]
     yrs, vals = [p[0] for p in pairs], [p[1] for p in pairs]
-    ax.bar(yrs, vals, color=["#c3cedd"] * (len(yrs) - 1) + [NAVY], width=0.75)
+    ax.bar(yrs, vals, color=[PEACH] * (len(yrs) - 1) + [DEEP], width=0.75)
     ax.annotate(f"{vals[-1]}", (yrs[-1], vals[-1]), textcoords="offset points",
                 xytext=(0, 4), ha="center", fontsize=10.5,
-                fontweight="bold", color=NAVY)
+                fontweight="bold", color=DEEP)
     ax.set_ylim(0, max(vals) * 1.30)
     ax.set_xticks([yrs[0], yrs[-1]])
     ax.set_xticklabels([str(yrs[0]), f"{yrs[-1]}年"], fontsize=9.5, color=GREY)
@@ -159,9 +164,9 @@ def main():
 
     # ── Panel ② recruiting ──
     px, py, pw, ph = panel(fig, right, top_y, col_w, row_h,
-                           "②", f"{recruit}项正在招募（{pct}%）", TEAL)
+                           "②", f"{recruit}项正在招募（{pct}%）", ROSE)
     ax = lift(fig.add_axes([px + 0.178, py + 0.108, 0.090, 0.090]))
-    ax.pie([pct, 100 - pct], colors=[TEAL, "#d6dde5"], startangle=90,
+    ax.pie([pct, 100 - pct], colors=[ROSE, "#f0e2da"], startangle=90,
            counterclock=False, wedgeprops={"linewidth": 0})
     ax.text(0, 0, f"{pct}%", ha="center", va="center",
             fontsize=13, fontweight="bold", color="#ffffff")
@@ -173,14 +178,14 @@ def main():
 
     # ── Panel ③ phase funnel ──
     px, py, pw, ph = panel(fig, left, bot_y, col_w, row_h,
-                           "③", f"{early_pct}%处于一期或更早", NAVY)
+                           "③", f"{early_pct}%处于一期或更早", DEEP)
     ax = lift(fig.add_axes([px + 0.028, py + 0.112, pw - 0.056, 0.082]))
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
     ax.set_facecolor(PANEL)
     # Funnel: width falls as phase advances — the shape is the argument.
-    segs = [(0.00, 0.56, NAVY, f"一期或更早\n{early_pct}%", 0.50, "#ffffff"),
-            (0.58, 0.24, TEAL, "二期", 0.33, "#ffffff"),
-            (0.84, 0.16, GREY, "三期", 0.22, "#ffffff")]
+    segs = [(0.00, 0.56, DEEP, f"一期或更早\n{early_pct}%", 0.50, "#ffffff"),
+            (0.58, 0.24, ORANGE, "二期", 0.33, "#ffffff"),
+            (0.84, 0.16, PEACH, "三期", 0.22, "#ffffff")]
     for x0, w, colour, label, half, txt_col in segs:
         ax.add_patch(Polygon([[x0, 0.5 - half], [x0 + w, 0.5 - half * 0.72],
                               [x0 + w, 0.5 + half * 0.72], [x0, 0.5 + half]],
@@ -195,19 +200,19 @@ def main():
 
     # ── Panel ④ disease split ──
     px, py, pw, ph = panel(fig, right, bot_y, col_w, row_h,
-                           "④", f"{blood}项针对血液肿瘤", TEAL)
+                           "④", f"{blood}项针对血液肿瘤", ROSE)
     ax = lift(fig.add_axes([px + 0.028, py + 0.150, pw - 0.056, 0.044]))
     ax.set_xlim(0, total); ax.set_ylim(0, 1); ax.axis("off")
-    ax.barh([0.5], [blood], color=NAVY, height=1.0)
-    ax.barh([0.5], [solid], left=blood, color="#e07a52", height=1.0)
-    ax.barh([0.5], [auto], left=blood + solid, color="#e3b23c", height=1.0)
+    ax.barh([0.5], [blood], color=DEEP, height=1.0)
+    ax.barh([0.5], [solid], left=blood, color=ORANGE, height=1.0)
+    ax.barh([0.5], [auto], left=blood + solid, color=PINK, height=1.0)
     ax.barh([0.5], [total - blood - solid - auto], left=blood + solid + auto,
-            color="#d6dde5", height=1.0)
+            color=PEACH, height=1.0)
     ax.text(blood / 2, 0.5, f"血液肿瘤 {blood_pct}%", ha="center", va="center",
             fontsize=10, fontweight="bold", color="#ffffff")
 
-    legend = [("#e07a52", f"实体瘤 {solid}项"),
-              ("#e3b23c", f"自身免疫病 {auto}项")]
+    legend = [(ORANGE, f"实体瘤 {solid}项"),
+              (PINK, f"自身免疫病 {auto}项")]
     lx = px + 0.032
     for colour, label in legend:
         fig.patches.append(FancyBboxPatch(
@@ -242,7 +247,7 @@ def main():
              ha="left", va="center", fontsize=11, color=GREY)
     fig.text(0.960, 0.066, f"下一期聊：这{total}项试验，具体都在治什么病？→",
              ha="right", va="center", fontsize=12, fontweight="bold",
-             color=NAVY)
+             color=DEEP)
 
     path = os.path.join(OUT_DIR, "post01_infographic.png")
     fig.savefig(path, facecolor=BG)
