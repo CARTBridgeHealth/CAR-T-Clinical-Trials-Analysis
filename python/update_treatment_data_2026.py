@@ -26,13 +26,13 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 approved_products = [
 
     # USA — FDA Approved (7 products as of 2026)
-    {"product": "Tisagenlecleucel (Kymriah)",              "company": "Novartis",                   "country": "USA", "approval_year": 2017, "target": "CD19",      "indications": "Pediatric ALL, DLBCL",         "us_price_usd": 475000, "cn_price_usd": None,   "solid_tumor": False, "source": ""},
-    {"product": "Axicabtagene ciloleucel (Yescarta)",      "company": "Kite/Gilead",                "country": "USA", "approval_year": 2017, "target": "CD19",      "indications": "DLBCL, FL, PMBCL",            "us_price_usd": 373000, "cn_price_usd": 165000, "solid_tumor": False, "source": ""},
-    {"product": "Brexucabtagene autoleucel (Tecartus)",    "company": "Kite/Gilead",                "country": "USA", "approval_year": 2020, "target": "CD19",      "indications": "MCL, B-ALL",                  "us_price_usd": 373000, "cn_price_usd": None,   "solid_tumor": False, "source": ""},
-    {"product": "Lisocabtagene maraleucel (Breyanzi)",     "company": "Bristol Myers Squibb",       "country": "USA", "approval_year": 2021, "target": "CD19",      "indications": "DLBCL, CLL, MCL, FL",         "us_price_usd": 410300, "cn_price_usd": None,   "solid_tumor": False, "source": ""},
-    {"product": "Idecabtagene vicleucel (Abecma)",         "company": "Bristol Myers Squibb",       "country": "USA", "approval_year": 2021, "target": "BCMA",      "indications": "Multiple Myeloma",            "us_price_usd": 419500, "cn_price_usd": None,   "solid_tumor": False, "source": ""},
-    {"product": "Ciltacabtagene autoleucel (Carvykti)",    "company": "Janssen / Legend Biotech",   "country": "USA", "approval_year": 2022, "target": "BCMA",      "indications": "Multiple Myeloma",            "us_price_usd": 465000, "cn_price_usd": 158000, "solid_tumor": False, "source": ""},
-    {"product": "Obe-cel (Aucatzyl)",                      "company": "Autolus",                    "country": "USA", "approval_year": 2024, "target": "CD19",      "indications": "Adult B-ALL",                 "us_price_usd": 450000, "cn_price_usd": None,   "solid_tumor": False, "source": ""},
+    {"product": "Tisagenlecleucel (Kymriah)",              "company": "Novartis",                   "country": "USA", "approval_year": 2017, "target": "CD19",      "indications": "Pediatric ALL, DLBCL",         "us_price_usd": 475000, "cn_price_usd": None,   "solid_tumor": False, "source": "FDA CBER licence STN 125646, original approval 2017-08-30, licence holder Novartis Pharmaceuticals (fda.gov approved cellular and gene therapy products)"},
+    {"product": "Axicabtagene ciloleucel (Yescarta)",      "company": "Kite/Gilead",                "country": "USA", "approval_year": 2017, "target": "CD19",      "indications": "DLBCL, FL, PMBCL",            "us_price_usd": 373000, "cn_price_usd": 165000, "solid_tumor": False, "source": "FDA CBER licence STN BL 125643, original approval 2017-10-18, licence holder Kite Pharma (fda.gov approved cellular and gene therapy products)"},
+    {"product": "Brexucabtagene autoleucel (Tecartus)",    "company": "Kite/Gilead",                "country": "USA", "approval_year": 2020, "target": "CD19",      "indications": "MCL, B-ALL",                  "us_price_usd": 373000, "cn_price_usd": None,   "solid_tumor": False, "source": "FDA CBER licence STN BL 125703, original approval 2020-07-24, licence holder Kite Pharma (fda.gov approved cellular and gene therapy products)"},
+    {"product": "Lisocabtagene maraleucel (Breyanzi)",     "company": "Bristol Myers Squibb",       "country": "USA", "approval_year": 2021, "target": "CD19",      "indications": "DLBCL, CLL, MCL, FL",         "us_price_usd": 410300, "cn_price_usd": None,   "solid_tumor": False, "source": "FDA CBER licence BLA 125714, original approval 2021-02-05, licence holder Juno Therapeutics (BMS) (fda.gov approved cellular and gene therapy products)"},
+    {"product": "Idecabtagene vicleucel (Abecma)",         "company": "Bristol Myers Squibb",       "country": "USA", "approval_year": 2021, "target": "BCMA",      "indications": "Multiple Myeloma",            "us_price_usd": 419500, "cn_price_usd": None,   "solid_tumor": False, "source": "FDA CBER licence BLA 125736, original approval 2021-03-26, licence holder Celgene (BMS) (fda.gov approved cellular and gene therapy products)"},
+    {"product": "Ciltacabtagene autoleucel (Carvykti)",    "company": "Janssen / Legend Biotech",   "country": "USA", "approval_year": 2022, "target": "BCMA",      "indications": "Multiple Myeloma",            "us_price_usd": 465000, "cn_price_usd": 158000, "solid_tumor": False, "source": "FDA CBER licence STN 125746, original approval 2022-02-28, licence holder Janssen Biotech (fda.gov approved cellular and gene therapy products)"},
+    {"product": "Obe-cel (Aucatzyl)",                      "company": "Autolus",                    "country": "USA", "approval_year": 2024, "target": "CD19",      "indications": "Adult B-ALL",                 "us_price_usd": 450000, "cn_price_usd": None,   "solid_tumor": False, "source": "FDA CBER licence STN 125813, original approval 2024-11-08, licence holder Autolus Limited (fda.gov approved cellular and gene therapy products)"},
 
     # China — NMPA Approved (9 products as of July 2026)
     # VERIFIED against the NMPA record. Marketing authorisation holder is
@@ -71,6 +71,14 @@ cost_comparison = [
     for r in _comparison["countries"]
 ]
 
+
+# NOT counted: TECELRA (afamitresgene autoleucel, Adaptimmune, STN 125789,
+# approved 2024-08-01). It sits beside the CAR-T products on the FDA's cellular
+# therapy list and shares the "-autoleucel" suffix, but its label requires the
+# patient to be HLA-A*02 positive and the tumour to express MAGE-A4. That HLA
+# restriction makes it a TCR-T: a chimeric antigen receptor binds surface
+# antigen directly and is HLA-independent. The FDA page does not state the
+# mechanism, so the indication text is the evidence.
 
 # Approved-product counts are COUNTED from the list above, never typed.
 # A hand-entered "9" for China sat in this file from the first commit while the
