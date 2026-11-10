@@ -1,5 +1,5 @@
 country,cost_low_usd,cost_high_usd,wait_low_weeks,wait_high_weeks,approved_products,solid_tumor_cart,insurance,as_of
-China,50000,90000,2,3,7,True,Partial (NRSS),July 2026
+China,50000,90000,2,3,10,True,Partial (NRSS),July 2026
 USA,400000,650000,8,12,7,False,Partial,July 2026
 Canada,250000,350000,16,20,4,False,Provincial (limited),July 2026
 Germany,320000,360000,8,8,6,False,Yes (statutory),July 2026

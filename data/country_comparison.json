@@ -10,7 +10,7 @@
       "cost_high_usd": 90000,
       "wait_low_weeks": 2,
       "wait_high_weeks": 3,
-      "approved_products": 7,
+      "approved_products": 10,
       "insurance": "Partial (NRSS)",
       "solid_tumor_cart": true,
       "solid_tumor_label": "✅ World First",
@@ -109,7 +109,7 @@
     "centres_sourced": 0,
     "researched_total": 4,
     "researched_sourced": 0,
-    "products_total": 14,
-    "products_sourced": 14
+    "products_total": 17,
+    "products_sourced": 17
   }
 }
