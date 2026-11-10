@@ -1,0 +1,6 @@
+# Pinned to the versions the pipeline is run with locally.
+# Update deliberately: change a version here, re-run the pipeline, and diff data/.
+requests==2.34.2
+pandas==3.0.5
+numpy==2.5.2
+matplotlib==3.11.2
