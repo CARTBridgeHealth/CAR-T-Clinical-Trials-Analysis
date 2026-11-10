@@ -142,8 +142,8 @@ def build(lang="zh"):
     # ── Title banner ──
     rounded(fig, 0.040, 0.905, 0.920, 0.062, DEEP, z=2)
     fig.text(0.5, 0.936,
-             (f"{total:,} CAR-T trials: what the data shows" if EN
-              else f"全球{total}项CAR-T试验，说明了什么"),
+             (f"Global CAR-T trial landscape: {total:,} studies" if EN
+              else f"全球CAR-T临床研究全景：{total}项注册试验"),
              ha="center", va="center", fontsize=21 if EN else 27,
              fontweight="bold", color="#ffffff", zorder=3)
 
@@ -155,7 +155,7 @@ def build(lang="zh"):
 
     # ── Panel ① scale and concentration ──
     px, py, pw, ph = panel(fig, left, 0.598, col_w, row_h,
-                           "①", (f"{total:,} trials registered" if EN else f"{total}项试验登记在册"), DEEP)
+                           "①", (f"{total:,} registered trials" if EN else f"注册试验 {total} 项"), DEEP)
     ax = lift(fig.add_axes([px + 0.028, py + 0.112, pw - 0.056, 0.082]))
     this_year = int(s["generated_utc"][:4])
     pairs = [(y, v) for y, v in zip(s["growth"]["years"],
@@ -174,33 +174,33 @@ def build(lang="zh"):
         sp.set_visible(False)
     ax.tick_params(length=0)
     body_text(fig, px, py + 0.092, pw,
-              ([f"Large and highly concentrated:",
-                f"~{cn_us_pct}% ({cn_us:,}) involve China or the USA.",
-                f"Chart: new trials per year, to {yrs[-1]}."]
+              ([f"Large in scale and highly concentrated:",
+                f"~{cn_us_pct}% ({cn_us:,}) involve China or the US.",
+                f"Chart: annual trial starts through {yrs[-1]}."]
                if EN else
-               [f"研究规模很大，且高度集中：",
-                f"约 {cn_us_pct}%（{cn_us}项）在中美开展。",
-                f"图为各年新启动试验数，至{yrs[-1]}年。"]))
+               [f"研究体量大，地域分布高度集中：",
+                f"约 {cn_us_pct}%（{cn_us} 项）有中国或美国中心参与。",
+                f"柱状图：历年新启动试验数（截至{yrs[-1]}年）"]))
 
     # ── Panel ② approved, mature in blood cancers ──
     px, py, pw, ph = panel(fig, right, 0.598, col_w, row_h,
-                           "②", (f"{n_prod} products approved" if EN else f"{n_prod}款已获批上市"), ROSE)
+                           "②", (f"{n_prod} approved products" if EN else f"获批上市产品 {n_prod} 款"), ROSE)
     fig.text(px + pw / 2, py + 0.148, f"{n_prod}", ha="center", va="center",
              fontsize=52, fontweight="bold", color=ROSE_LT, zorder=4)
     fig.text(px + pw / 2, py + 0.112, (f"China {n_cn} · USA {n_us}" if EN else f"中国 {n_cn} 款 · 美国 {n_us} 款"),
              ha="center", va="center", fontsize=15, color=INK, zorder=4)
     body_text(fig, px, py + 0.084, pw,
-              (["In blood cancers CAR-T is approved",
-                "and established — not experimental.",
-                "Leukaemia, lymphoma, myeloma."]
+              (["An established option for relapsed or",
+                "refractory leukaemia, lymphoma, myeloma;",
+                "first solid-tumour approval in 2026."]
                if EN else
-               ["在血液肿瘤领域，CAR-T 已是获批",
-                "的成熟疗法，不是实验性治疗。",
-                "覆盖白血病、淋巴瘤、骨髓瘤。"]))
+               ["CAR-T 已是复发/难治性血液肿瘤的",
+                "标准治疗选择之一，适应症覆盖白血病、",
+                "淋巴瘤、多发性骨髓瘤，并首次拓展至胃癌。"]))
 
     # ── Panel ③ expanding, recruiting (full width) ──
     px, py, pw, ph = panel(fig, left, 0.330, 0.920, row_h,
-                           "③", ("Expanding beyond blood cancers, and recruiting" if EN else "正在扩展到血液肿瘤以外，并大量招募"), DEEP)
+                           "③", ("Expansion into solid tumours and autoimmune disease" if EN else "适应症向实体瘤与自身免疫病拓展"), DEEP)
     ax = lift(fig.add_axes([px + 0.030, py + 0.148, pw - 0.060, 0.044]))
     ax.set_xlim(0, total); ax.set_ylim(0, 1); ax.axis("off")
     ax.barh([0.5], [blood], color=DEEP, height=1.0)
@@ -228,29 +228,29 @@ def build(lang="zh"):
                  fontsize=11.5, color=BODY, zorder=4)
         lx += 0.235
     body_text(fig, px, py + 0.090, pw,
-              ([f"Solid tumours now account for {solid} trials and autoimmune disease for {auto} — both growing fast.",
-                f"{recruit:,} trials ({pct}%) are recruiting. These newer directions stay largely early-phase:",
-                f"{early_pct}% of all trials are Phase 1 or earlier, exploring safety and where indications end."]
+              ([f"Solid tumours ({solid} trials) and autoimmune disease ({auto}) are the fastest-growing areas.",
+                f"{recruit:,} trials ({pct}%) are recruiting. Newer indications remain predominantly early-phase:",
+                f"{early_pct}% of all trials are Phase 1 or earlier, assessing safety and the scope of indications."]
                if EN else
-               [f"实体瘤已有 {solid} 项、自身免疫病 {auto} 项，这两个方向增长很快。"
-                f"全球 {recruit} 项（{pct}%）正在招募，",
-                f"其中新方向多数仍处于早期阶段——{early_pct}% 的试验在一期或更早，"
-                "以探索安全性与适应症边界为主。"]))
+               [f"实体瘤（{solid} 项）与自身免疫病（{auto} 项）增长最快。"
+                f"全球 {recruit} 项（{pct}%）处于招募阶段；",
+                f"新方向仍以早期研究为主——{early_pct}% 的试验为 I 期或更早，"
+                "重点评估安全性与适应症边界。"]))
 
     # ── Caution box ──
     rounded(fig, 0.040, 0.128, 0.920, 0.168, WARN_BG, edge=WARN_ED, lw=1.6, z=2)
     fig.text(0.064, 0.272, "※", ha="left", va="center",
              fontsize=17, fontweight="bold", color=WARN_ED, zorder=4)
-    fig.text(0.092, 0.272, ("One thing worth saying" if EN else "想特别说一句"), ha="left", va="center",
+    fig.text(0.092, 0.272, ("Important note" if EN else "重要提示"), ha="left", va="center",
              fontsize=15.5, fontweight="bold", color=INK, zorder=4)
     caution = ([
-        "Trial count is not the same as access. Enrolment criteria are usually strict —",
-        "disease stage, prior lines of therapy, organ function. If you or a family member",
-        "are considering this, talk to your treating oncologist about eligibility first."]
+        "Trial volume does not equate to patient access. Eligibility criteria are strict —",
+        "disease stage, prior lines of therapy, organ function. If you are considering",
+        "CAR-T, discuss eligibility with the treating oncologist first."]
         if EN else [
-        "试验数量 ≠ 可及性。临床试验的入组条件通常很严格（分期、既往治疗线数、",
-        "器官功能等），不是想参加就能参加。如果你或家人正考虑这个方向，",
-        "请先和主治医生讨论，由医生判断是否符合条件。"])
+        "试验数量不等同于可及性。临床试验设有严格的入排标准（疾病分期、既往治疗线数、",
+        "器官功能等），并非所有患者均可入组。如您或家人正在考虑相关治疗，",
+        "请先咨询主治医生，由其评估是否符合入组条件。"])
     for i, line in enumerate(caution):
         fig.text(0.064, 0.232 - i * 0.030, line, ha="left", va="center",
                  fontsize=12.5, color=BODY, zorder=4)
@@ -258,9 +258,9 @@ def build(lang="zh"):
     # ── Footer ──
     fig.text(0.040, 0.082, (f"Source: ClinicalTrials.gov, {month}" if EN else f"数据来源：ClinicalTrials.gov，{month}"),
              ha="left", va="center", fontsize=11, color=BODY)
-    fig.text(0.040, 0.052, ("Educational information only. Not medical advice." if EN else "本内容仅供科普参考，不构成医疗建议。"),
+    fig.text(0.040, 0.052, ("For educational purposes only; not medical advice." if EN else "本内容仅供医学科普，不构成诊疗建议。"),
              ha="left", va="center", fontsize=11, color=GREY)
-    fig.text(0.960, 0.066, (f"Next: what diseases are these {total:,} trials treating? →" if EN else f"下一期聊：这{total}项试验，具体都在治什么病？→"),
+    fig.text(0.960, 0.066, ("Next: approved CAR-T — indications and efficacy →" if EN else "下期：已上市 CAR-T 的适应症与疗效 →"),
              ha="right", va="center", fontsize=12, fontweight="bold",
              color=DEEP)
 
