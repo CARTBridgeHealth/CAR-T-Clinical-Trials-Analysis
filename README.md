@@ -3,7 +3,7 @@
 [![Monthly Data Update](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/monthly_update.yml/badge.svg)](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/monthly_update.yml)
 [![Deploy to Pages](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/CARTBridgeHealth/CAR-T-Clinical-Trials-Analysis/actions/workflows/pages/pages-build-deployment)
 
-An end-to-end data pipeline analyzing **2,975 real-world CAR-T clinical trials** and **global treatment availability** across 7 countries — combining SQL database design, Python data engineering, Power BI visualization, and interactive web publishing. Data is refreshed automatically every month via GitHub Actions.
+An end-to-end data pipeline analyzing **2,405 real-world CAR-T clinical trials** and **global treatment availability** across 7 countries — combining SQL database design, Python data engineering, Power BI visualization, and interactive web publishing. Data is refreshed automatically every month via GitHub Actions.
 
 ---
 
@@ -35,15 +35,15 @@ No manual steps required.
 ## Key Findings
 
 <!-- BEGIN:TRIALS -->
-### Clinical Trials · 2,975 records · November 2026
+### Clinical Trials · 2,405 records · November 2026
 
-- CAR-T trial starts grew from 5 in 2010 to **430 in 2025**
-- **China leads globally** with 1,450 trials; USA follows with 945
-- Phase 1 trials dominate (1,147 trials) — field still largely pre-commercial
-- **33% of trials actively recruiting** — rapid expansion continuing
+- CAR-T trial starts grew from 5 in 2010 to **360 in 2025**
+- **China leads globally** with 1,352 trials; USA follows with 694
+- Phase 1 trials dominate (1,082 trials) — field still largely pre-commercial
+- **32% of trials actively recruiting** — rapid expansion continuing
 
 > Counts above are regenerated from `data/trial_figures.json` on every monthly refresh.
-> 203 trials (7%) list no country, so country counts are a lower bound.
+> 159 trials (7%) list no country, so country counts are a lower bound.
 <!-- END:TRIALS -->
 
 <!-- BEGIN:COMPARISON -->
@@ -51,7 +51,7 @@ No manual steps required.
 
 | Country | All-In Cost | Wait Time | Approved Products |
 |---|---|---|---|
-| 🇨🇳 China | **$50K–$90K** | **2–3 weeks** | **7** |
+| 🇨🇳 China | **$50K–$90K** | **2–3 weeks** | **10** |
 | 🇺🇸 USA | $400K–$650K | 8–12 weeks | 7 |
 | 🇨🇦 Canada | $250K–$350K | 16–20 weeks | 4 |
 | 🇩🇪 Germany | $320K–$360K | 8 weeks | 6 |
@@ -175,7 +175,7 @@ psql -U postgres -d cart_trials -f sql/queries.sql
 
 | Source | Data | URL |
 |---|---|---|
-| ClinicalTrials.gov | 2,975 trial records (auto-updated monthly) | clinicaltrials.gov |
+| ClinicalTrials.gov | 2,405 trial records (auto-updated monthly) | clinicaltrials.gov |
 | U.S. FDA | Approved CAR-T products | fda.gov |
 | China NMPA | Approved CAR-T products | nmpa.gov.cn |
 | Medical literature | Treatment costs, outcomes | Published 2024–2026 |

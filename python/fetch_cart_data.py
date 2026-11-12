@@ -3,18 +3,31 @@ fetch_cart_data.py
 ------------------
 Step 1: Pull CAR-T clinical trial data from ClinicalTrials.gov API v2
 Saves raw JSON and a cleaned CSV to the /data folder.
+
+The registry search is full-text, so it also returns studies that only mention
+CAR-T in passing. Each record is therefore classified (classify_cart_trials.py)
+and only trials that actually administer a CAR-T product are written to
+cart_trials_clean.csv. Everything else goes to cart_trials_excluded.csv with
+the reason it was left out.
+
+Run with --no-fetch to re-classify the saved raw JSON without calling the API,
+e.g. after editing data/cart_scope_overrides.csv.
 """
 
 import requests
 import pandas as pd
 import json
+import sys
 import time
 import os
+
+from classify_cart_trials import classify, load_overrides
 
 # ── Config ──────────────────────────────────────────────────────────────────
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 RAW_JSON   = os.path.join(OUTPUT_DIR, "cart_trials_raw.json")
 CLEAN_CSV  = os.path.join(OUTPUT_DIR, "cart_trials_clean.csv")
+EXCLUDED_CSV = os.path.join(OUTPUT_DIR, "cart_trials_excluded.csv")
 
 BASE_URL   = "https://clinicaltrials.gov/api/v2/studies"
 SEARCH_TERM = "CAR-T OR CAR T-cell OR chimeric antigen receptor T-cell"
@@ -40,6 +53,19 @@ FIELDS = [
     "Gender",
     "PrimaryOutcomeMeasure",
     "ResultsFirstSubmitDate",
+    # Read only by the classifier, to see WHERE in a record CAR-T is named.
+    "StudyType",
+    "OfficialTitle",
+    "BriefSummary",
+    "DetailedDescription",
+    "InterventionDescription",
+    "InterventionOtherName",
+    "ArmGroupLabel",
+    "ArmGroupDescription",
+    "Keyword",
+    "PrimaryOutcomeDescription",
+    "SecondaryOutcomeMeasure",
+    "SecondaryOutcomeDescription",
 ]
 
 
@@ -63,12 +89,14 @@ def fetch_all_trials():
             params["pageToken"] = next_token
 
         try:
-            resp = requests.get(BASE_URL, params=params, timeout=30)
+            resp = requests.get(BASE_URL, params=params, timeout=180)
             resp.raise_for_status()
             data = resp.json()
         except requests.RequestException as e:
-            print(f"  Request error on page {page}: {e}")
-            break
+            # A partial fetch would silently shrink every count on the site,
+            # so stop here and keep last month's files instead.
+            sys.exit(f"  Request error on page {page}: {e}\n"
+                     "  Aborting; existing data left untouched.")
 
         studies = data.get("studies", [])
         all_studies.extend(studies)
@@ -163,8 +191,25 @@ def save_raw(studies: list):
 
 # ── Step 4: Build and save clean CSV ────────────────────────────────────────
 def save_clean(studies: list):
-    rows = [extract_fields(s) for s in studies]
+    overrides = load_overrides()
+    rows, excluded = [], []
+    for s in studies:
+        scope, basis = classify(s, overrides)
+        row = extract_fields(s)
+        if scope == "product":
+            rows.append(row)
+        else:
+            excluded.append({"trial_id": row["trial_id"], "scope": scope,
+                             "basis": basis, "title": row["title"],
+                             "status": row["status"]})
     df   = pd.DataFrame(rows)
+
+    ex = pd.DataFrame(excluded).sort_values(["scope", "trial_id"])
+    ex.to_csv(EXCLUDED_CSV, index=False, encoding="utf-8")
+    print(f"Search returned {len(studies)} studies: {len(rows)} administer a "
+          f"CAR-T product, {len(excluded)} excluded")
+    print(ex["scope"].value_counts().to_string())
+    print(f"Excluded list saved → {EXCLUDED_CSV}\n")
 
     # Basic cleaning
     df["enrollment"]  = pd.to_numeric(df["enrollment"], errors="coerce")
@@ -197,8 +242,15 @@ def save_clean(studies: list):
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    studies = fetch_all_trials()
-    save_raw(studies)
+    if "--no-fetch" in sys.argv:
+        with open(RAW_JSON, encoding="utf-8") as f:
+            studies = json.load(f)
+        print(f"Re-classifying {len(studies)} saved records (no API call)\n")
+    else:
+        studies = fetch_all_trials()
+        if not studies:
+            sys.exit("No studies fetched; leaving existing data untouched.")
+        save_raw(studies)
     df = save_clean(studies)
     print("\nStep 1 complete. Check /data folder for:")
     print("  cart_trials_raw.json  — original API response")

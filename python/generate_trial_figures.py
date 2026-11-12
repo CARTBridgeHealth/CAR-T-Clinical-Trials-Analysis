@@ -39,9 +39,19 @@ DISEASE_GROUPS = [
     ("Leukaemia",          r"leukemia|leukaemia|\bALL\b|\bAML\b|\bCLL\b|\bCML\b"
                            r"|lymphoblastic"),
     ("Lymphoma",           r"lymphoma|DLBCL|hodgkin|follicular|mantle cell"),
-    ("Autoimmune disease", r"lupus|sclerosis|myositis|arthritis|nephropathy"
-                           r"|myasthenia|autoimmune|sj[öo]gren|pemphigus"
-                           r"|vasculitis|crohn|colitis"),
+    # Broadened November 2026: the shorter list missed immune thrombocytopenia,
+    # NMOSD, IgG4-related disease, nephrotic syndrome, scleroderma and the
+    # British spelling "myasthaenia", which left ~30 trials in "Other".
+    ("Autoimmune disease", r"lupus|sclerosis|scleroderma|myositis|myopath"
+                           r"|antisynthetase|arthritis|nephropathy|nephrotic"
+                           r"|nephritis|myasth|autoimmun|sj[öo]gren|pemphig"
+                           r"|vasculitis|crohn|colitis|inflammatory bowel"
+                           r"|neuromyelitis|immune thrombocytop"
+                           r"|thrombocytopenic purpura|immune cytopenia"
+                           r"|hemolytic an|IgG4|antiphospholipid"
+                           r"|immune-mediated|stiff[- ]person|CIDP"
+                           r"|polyneuropathy|encephalitis|MOG antibody"
+                           r"|still'?s disease|beh[cç]et|hidradenitis"),
     ("Solid tumour",       r"solid tumou?r|carcinoma|sarcoma|glioma|glioblastoma"
                            r"|melanoma|pancrea|ovarian|breast|colorectal|gastric"
                            r"|hepatocellular|lung|prostate|renal|neuroblastoma"

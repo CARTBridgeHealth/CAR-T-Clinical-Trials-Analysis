@@ -1,0 +1,178 @@
+trial_id,scope,note,rule_would_say
+NCT03029273,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",related
+NCT03882840,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT05138458,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT05618925,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT05639972,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT05700630,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT06334991,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT06389305,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT06435910,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",related
+NCT06572631,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",related
+NCT06773091,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT06865352,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",related
+NCT07307053,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT07334119,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT07553390,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT07560865,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",product
+NCT07906080,other_modality,"read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",related
+NCT00019136,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT00085930,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT00466531,product,read by hand: a CAR-T product is given under the protocol,related
+NCT00621452,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT01044069,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT01212887,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT01355965,product,read by hand: a CAR-T product is given under the protocol,related
+NCT01493453,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT01722149,product,read by hand: a CAR-T product is given under the protocol,related
+NCT01723306,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT02439788,product,read by hand: a CAR-T product is given under the protocol,other_modality
+NCT02937844,product,read by hand: a CAR-T product is given under the protocol,related
+NCT03651128,product,read by hand: a CAR-T product is given under the protocol,related
+NCT03927261,product,read by hand: a CAR-T product is given under the protocol,related
+NCT03980691,product,read by hand: a CAR-T product is given under the protocol,other_modality
+NCT04538599,product,read by hand: a CAR-T product is given under the protocol,other_modality
+NCT04690192,product,read by hand: a CAR-T product is given under the protocol,related
+NCT05164666,product,read by hand: a CAR-T product is given under the protocol,related
+NCT05360238,product,read by hand: a CAR-T product is given under the protocol,related
+NCT05631912,product,read by hand: a CAR-T product is given under the protocol,related
+NCT05666700,product,read by hand: a CAR-T product is given under the protocol,related
+NCT05893693,product,read by hand: a CAR-T product is given under the protocol,related
+NCT06193486,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT06193902,product,read by hand: a CAR-T product is given under the protocol,related
+NCT06279611,product,read by hand: a CAR-T product is given under the protocol,related
+NCT06364852,product,read by hand: a CAR-T product is given under the protocol,related
+NCT06644118,product,read by hand: a CAR-T product is given under the protocol,related
+NCT06678282,product,read by hand: a CAR-T product is given under the protocol,related
+NCT06689917,product,read by hand: a CAR-T product is given under the protocol,related
+NCT06732492,product,read by hand: a CAR-T product is given under the protocol,other_modality
+NCT06743503,product,read by hand: a CAR-T product is given under the protocol,related
+NCT06849401,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07004647,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07086404,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07131254,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT07185477,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07257419,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07332663,product,read by hand: a CAR-T product is given under the protocol,unrelated
+NCT07407010,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07537049,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07628595,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07746453,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07790575,product,read by hand: a CAR-T product is given under the protocol,related
+NCT07910708,product,read by hand: a CAR-T product is given under the protocol,related
+NCT02445222,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT02446457,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT02735083,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT03186118,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT03423706,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT03628612,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT03954106,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT04082910,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT04134325,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT04136756,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT04169022,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT04280133,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT04295096,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT04488354,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT04853277,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05064787,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05099237,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05176275,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05199961,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05201781,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05362331,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05364424,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05385263,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05422521,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05514327,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05576220,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05675982,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05763563,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05801939,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05852717,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT05893940,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06045910,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06066346,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06071871,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06271057,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06290622,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06352242,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06430736,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06458439,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06508775,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06552572,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06575374,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06610344,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06652633,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06665295,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06703216,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06764537,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06788964,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT06918912,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07051525,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07169487,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07296120,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07453095,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07455500,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07542678,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07612787,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07616271,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07638982,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07648264,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07724457,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07763210,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07852377,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT07911540,related,"read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",product
+NCT01354145,unrelated,read by hand: not a CAR-T study,product
+NCT01492985,unrelated,read by hand: not a CAR-T study,related
+NCT01800019,unrelated,read by hand: not a CAR-T study,product
+NCT01889992,unrelated,read by hand: not a CAR-T study,product
+NCT02290951,unrelated,read by hand: not a CAR-T study,related
+NCT02303821,unrelated,read by hand: not a CAR-T study,product
+NCT02343042,unrelated,read by hand: not a CAR-T study,related
+NCT02478632,unrelated,read by hand: not a CAR-T study,related
+NCT02482532,unrelated,read by hand: not a CAR-T study,related
+NCT02727803,unrelated,read by hand: not a CAR-T study,other_modality
+NCT02997761,unrelated,read by hand: not a CAR-T study,product
+NCT03112174,unrelated,read by hand: not a CAR-T study,product
+NCT03181126,unrelated,read by hand: not a CAR-T study,product
+NCT03383783,unrelated,read by hand: not a CAR-T study,product
+NCT03448250,unrelated,read by hand: not a CAR-T study,product
+NCT03648372,unrelated,read by hand: not a CAR-T study,related
+NCT04530565,unrelated,read by hand: not a CAR-T study,related
+NCT04538313,unrelated,read by hand: not a CAR-T study,other_modality
+NCT04827745,unrelated,read by hand: not a CAR-T study,product
+NCT04920617,unrelated,read by hand: not a CAR-T study,product
+NCT04952272,unrelated,read by hand: not a CAR-T study,product
+NCT05206357,unrelated,read by hand: not a CAR-T study,product
+NCT05237440,unrelated,read by hand: not a CAR-T study,product
+NCT05464329,unrelated,read by hand: not a CAR-T study,related
+NCT05635591,unrelated,read by hand: not a CAR-T study,related
+NCT05674266,unrelated,read by hand: not a CAR-T study,product
+NCT05748171,unrelated,read by hand: not a CAR-T study,product
+NCT05753501,unrelated,read by hand: not a CAR-T study,product
+NCT05789303,unrelated,read by hand: not a CAR-T study,related
+NCT05823701,unrelated,read by hand: not a CAR-T study,related
+NCT05882305,unrelated,read by hand: not a CAR-T study,related
+NCT06026046,unrelated,read by hand: not a CAR-T study,product
+NCT06097793,unrelated,read by hand: not a CAR-T study,related
+NCT06251076,unrelated,read by hand: not a CAR-T study,product
+NCT06370026,unrelated,read by hand: not a CAR-T study,related
+NCT06370403,unrelated,read by hand: not a CAR-T study,product
+NCT06395103,unrelated,read by hand: not a CAR-T study,product
+NCT06399107,unrelated,read by hand: not a CAR-T study,related
+NCT06626867,unrelated,read by hand: not a CAR-T study,product
+NCT06643221,unrelated,read by hand: not a CAR-T study,related
+NCT06681285,unrelated,read by hand: not a CAR-T study,product
+NCT06708936,unrelated,read by hand: not a CAR-T study,product
+NCT06752473,unrelated,read by hand: not a CAR-T study,related
+NCT06925022,unrelated,read by hand: not a CAR-T study,related
+NCT06985485,unrelated,read by hand: not a CAR-T study,related
+NCT07066436,unrelated,read by hand: not a CAR-T study,other_modality
+NCT07254637,unrelated,read by hand: not a CAR-T study,product
+NCT07255963,unrelated,read by hand: not a CAR-T study,related
+NCT07426315,unrelated,read by hand: not a CAR-T study,related
+NCT07441083,unrelated,read by hand: not a CAR-T study,product
+NCT07646873,unrelated,read by hand: not a CAR-T study,related
+NCT07749976,unrelated,read by hand: not a CAR-T study,related
+NCT07831395,unrelated,read by hand: not a CAR-T study,related

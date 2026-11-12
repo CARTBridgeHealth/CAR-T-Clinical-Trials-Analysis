@@ -1,0 +1,582 @@
+trial_id,scope,basis,title,status
+NCT03029273,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",NY-ESO-1 TCR （TAEST16001）for Patients With Advanced NSCLC,UNKNOWN
+NCT03648697,other_modality,rule: title names another cell therapy,EBV-TCR-T（YT-E001）for Patients With EBV-positive Recurrent or Metastatic NPC,UNKNOWN
+NCT03882840,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Induced-T Cell Like NK Cellular Immunotherapy for Cancer Lack of MHC-I,RECRUITING
+NCT04324996,other_modality,rule: title names another cell therapy,A Phase I/II Study of Universal Off-the-shelf NKG2D-ACE2 CAR-NK Cells for Therapy of COVID-19,UNKNOWN
+NCT04639739,other_modality,rule: title names another cell therapy,Anti-CD19 CAR NK Cell Therapy for R/R Non-Hodgkin Lymphoma.,UNKNOWN
+NCT04747093,other_modality,rule: title names another cell therapy,Induced-T Cell Like NK Cells for B Cell Malignancies,UNKNOWN
+NCT04796675,other_modality,rule: title names another cell therapy,Cord Blood Derived Anti-CD19 CAR-Engineered NK Cells for B Lymphoid Malignancies,UNKNOWN
+NCT04847466,other_modality,rule: title names another cell therapy,Immunotherapy Combination: Irradiated PD-L1 CAR-NK Cells Plus Pembrolizumab Plus N-803 for Subjects With Recurrent/Metastatic Gastric or Head and Neck Cancer,COMPLETED
+NCT05008575,other_modality,rule: title names another cell therapy,Anti-CD33 CAR NK Cells in the Treatment of Relapsed/Refractory Acute Myeloid Leukemia,UNKNOWN
+NCT05035407,other_modality,rule: title names another cell therapy,"T Cell Receptor Gene Therapy Targeting KK-LC-1 for Gastric, Breast, Cervical, Lung and Other KK-LC-1 Positive Epithelial Cancers",TERMINATED
+NCT05092451,other_modality,rule: title names another cell therapy,Phase I/II Study of CAR.70- Engineered IL15-transduced Cord Blood-derived NK Cells in Conjunction With Lymphodepleting Chemotherapy for the Management of Relapse/Refractory Hematological Malignances,RECRUITING
+NCT05110742,other_modality,rule: title names another cell therapy,Phase I/II Study of CD5 CAR Engineered IL15-Transduced Cord Blood-Derived NK Cells in Conjunction With Lymphodepleting Chemotherapy for the Management of Relapsed/Refractory Hematological Malignances,RECRUITING
+NCT05138458,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",A Study of MT-101 in Subjects With CD5+ Relapsed/Refractory TCL,SUSPENDED
+NCT05483491,other_modality,rule: title names another cell therapy,"KK-LC-1 TCR-T Cell Therapy for Gastric, Breast, Cervical, and Lung Cancer",RECRUITING
+NCT05618925,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Study for Subjects With Relapsed/Refractory Non- Hodgkin Lymphoma,RECRUITING
+NCT05631886,other_modality,rule: title names another cell therapy,Combination of CAR-DC Vaccine and ICIs in Malignant Tumors,RECRUITING
+NCT05631899,other_modality,rule: title names another cell therapy,CAR-DC Vaccine and ICIs in Local Advanced/Metastatic Solid Tumors,ACTIVE_NOT_RECRUITING
+NCT05639972,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",E7 T-cell Receptor (TCR) -T Cell Induction Therapy for Locoregionally Advanced HPV-associated Cancers,RECRUITING
+NCT05665075,other_modality,rule: title names another cell therapy,Natural Killer (NK) Cell Therapy Targeting CD33 in Acute Myeloid Leukemia,UNKNOWN
+NCT05686226,other_modality,rule: title names another cell therapy,E7 TCR-T Cell Immunotherapy for Human Papillomavirus (HPV) Associated Cancers,RECRUITING
+NCT05700630,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Ph1 Study of FT538 Alone and With Vorinostat for Persistent Low-Level HIV Viremia,WITHDRAWN
+NCT06006403,other_modality,rule: title names another cell therapy,Safety and Efficacy of CD123-targeted CAR-NK for Relapsed/Refractory Acute Myeloid Leukemia or Blastic Plasmacytoid Dendritic Cell Neoplasm,COMPLETED
+NCT06242249,other_modality,rule: title names another cell therapy,Anti-BCMA CAR-NK Therapy in Relapsed or Refractory Multiple Myeloma,UNKNOWN
+NCT06307054,other_modality,rule: title names another cell therapy,CLL-1 CAR-NK Cells for Relapsed/Refractory AML,RECRUITING
+NCT06334991,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Study for Participants With Relapsed/Refractory Non-Hodgkin Lymphoma,ACTIVE_NOT_RECRUITING
+NCT06379451,other_modality,rule: title names another cell therapy,An Clinical Study of NKG2D-CAR-NK Cells for the Treatment of Refractory Recurrent Multiple Myeloma,UNKNOWN
+NCT06389305,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",CIK Cell Therapy for Relapsed or Refractory Acute B-Lymphoblastic Leukemia: Prognostic Impact on Patients With Early CAR-T Cell Dysfunction,RECRUITING
+NCT06435910,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Engineered Dendritic Cell Vaccines for Multiple Myeloma,NOT_YET_RECRUITING
+NCT06530303,other_modality,rule: title names another cell therapy,Biological Tumor Infiltrating Lymphocytes Therapy With Immunotherapy for Colon and Rectum Cancer,RECRUITING
+NCT06532799,other_modality,rule: title names another cell therapy,TIL Therapy Combined With Pembrolizumab for Advanced or Metastatic Refractory Stomach and Esophageal Cancer,RECRUITING
+NCT06532812,other_modality,rule: title names another cell therapy,TIL Gean Therapy Combined With Immunotherapy for Advanced or Metastatic Refractory Breast Cancer,RECRUITING
+NCT06538012,other_modality,rule: title names another cell therapy,TIL Therapy Combined With Pembrolizumab for Advanced or Metastatic Refractory Lung Cancer,RECRUITING
+NCT06572631,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Multi-antigen Specific CD8+ T Cells With Decitabine and Lymphodepleting Chemotherapy for the Treatment of Patients With Relapsed or Refractory AML or MDS Following an Allogeneic Hematopoietic Cell Transplantation From a Matched Donor,WITHDRAWN
+NCT06631040,other_modality,rule: title names another cell therapy,Cell Therapy with Anti-CD19 CAR-NK Cells in Patients with Relapsed or Resistant B-ALL,NOT_YET_RECRUITING
+NCT06640582,other_modality,rule: title names another cell therapy,TIL Therapy Combined With Pembrolizumab for Advanced Brain Cancer Including Gliomas and Meningiomas,RECRUITING
+NCT06696846,other_modality,rule: title names another cell therapy,CD70-CAR-NK Cell Therapy for T Cell Lymphoma and Acute Myeloid Leukemia,RECRUITING
+NCT06727383,other_modality,rule: title names another cell therapy,CAR-NK Cells Production and Expansion From Patients With Lympho or Myeloproliferative Disorders and From Healthy Donors,UNKNOWN
+NCT06773091,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",A Phase I Study of NK042 Cell Injection in Advanced Solid Tumors,RECRUITING
+NCT06865352,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Safety and Preliminary Efficacy of Donor-derived Anti-leukemia Cytotoxic T Lymphocytes for the Prevention of Leukemia Relapse in Children Given Haploidentical Hematopoietic Stem Cell Transplantation,COMPLETED
+NCT06909474,other_modality,rule: title names another cell therapy,Clinical Trial of CD5-targeted CAR-NK Therapy for Relapse/Refractory T-Cell Hematologic Malignancies,RECRUITING
+NCT07117175,other_modality,rule: title names another cell therapy,A Clinical Study to Evaluate the Safety and Efficacy of Anti-human CD 7 CAR-NK Cell Injection in Subjects With Relapsed and Refractory CD7-positive Hematological Malignancy,NOT_YET_RECRUITING
+NCT07137481,other_modality,rule: title names another cell therapy,Phase II Study of CD5 CAR Engineered IL15-transduced Cord Blood-derived NK Cells in Conjunction With Lymphodepleting Chemotherapy for the Management of Aggressive T Cell Hematological Malignancies,NOT_YET_RECRUITING
+NCT07164560,other_modality,rule: title names another cell therapy,Exploratory Study of Umbilical Cord Blood-Derived CAR-NK Cell Therapy Targeting TRBC1/2 for Relapsed/Refractory T-Cell Lymphoma,RECRUITING
+NCT07307053,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Rare Tumor Focused Platform Study of Innovative Therapies and Technologies (PLATFORM2),NOT_YET_RECRUITING
+NCT07329959,other_modality,rule: title names another cell therapy,CAR-DC for End-Stage IPF,NOT_YET_RECRUITING
+NCT07334119,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)","Safety, Pharmacokinetics, Pharmacodynamics and Preliminary Efficacy of MT-304 in Adults With Advanced HER2-Expressing Solid Tumors",RECRUITING
+NCT07410494,other_modality,rule: title names another cell therapy,Biomarker-Guided Allogeneic Single-Target or Dual-Target CAR-NK Cell Therapy for Advanced Solid Tumors,RECRUITING
+NCT07410676,other_modality,rule: title names another cell therapy,EBNK-001 Allogeneic NK Cells With Low-Dose IL-15 ± Pembrolizumab in Advanced Solid Tumors,RECRUITING
+NCT07444632,other_modality,rule: title names another cell therapy,Phase1 Basket Trial Of CAR.70-Engineered IL15-Transduced With TGFBR2 Knock Out Cord Blood-Derived NK Cells For Relapsed/Refractory Lymphoid Malignancies,RECRUITING
+NCT07454122,other_modality,rule: title names another cell therapy,CD5CAR-NK Cells for Refractory Invasive Mold Disease,NOT_YET_RECRUITING
+NCT07504289,other_modality,rule: title names another cell therapy,CAR-NK Therapy for Cardiac Amyloidosis,NOT_YET_RECRUITING
+NCT07553390,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Phase 1b Study Of TRICK-NK In Combination With T-Dxd In Treatment-Refractory Breast Cancers,NOT_YET_RECRUITING
+NCT07560865,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",First-in Cancer-Type Phase I Study of FT536 for Recurrent WHO Grade 4 Astrocytoma,RECRUITING
+NCT07577986,other_modality,rule: title names another cell therapy,A Safety and Efficacy Trial of Chidamide Combined With NKG2D CAR-NK Cell Therapy for Reducing the HIV Viral Reservoir,NOT_YET_RECRUITING
+NCT07865832,other_modality,rule: title names another cell therapy,A Study of CA9-Targeted CAR Macrophage Therapy in Advanced Clear Cell Renal Cell Carcinoma,NOT_YET_RECRUITING
+NCT07906080,other_modality,"manual: read by hand: a different cell therapy (CAR-NK, CAR-M, CAR-DC, TCR-T, TIL or CIK)",Study to Evaluate the Feasibility and Safety of Autologous Cytokine-Induced Killer Cells (CIK_D332) in Combination With Tafasitamab and Lenalidomide in Patients With Relapsed or Refractory Diffuse Large B-Cell Lymphoma,NOT_YET_RECRUITING
+NCT01166009,related,rule: observational study of CAR-T,CIBMTR Research Database,RECRUITING
+NCT02315599,related,rule: observational study of CAR-T,Follow-Up Evaluation for Gene-Therapy-Related Delayed Adverse Events After Participation in Pediatric Oncology Branch Clinical Trials,ENROLLING_BY_INVITATION
+NCT02388828,related,rule: observational study of CAR-T,CART-meso Long-term Follow-up,COMPLETED
+NCT02445222,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",CAR-T Long Term Follow Up (LTFU) Study,RECRUITING
+NCT02446457,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Rituximab and Pembrolizumab With or Without Lenalidomide in Treating Patients With Relapsed Follicular Lymphoma and Diffuse Large B-Cell Lymphoma,ACTIVE_NOT_RECRUITING
+NCT02473757,related,rule: observational study of CAR-T,Gene Therapy Follow-up Protocol for People Previously Enrolled in CAR-T Cell Studies,ENROLLING_BY_INVITATION
+NCT02650999,related,"rule: CAR-T mentioned, not an intervention",Pembrolizumab in Patients Failing to Respond to or Relapsing After CAR T Cell Therapy for Relapsed or Refractory Lymphomas,COMPLETED
+NCT02666248,related,rule: observational study of CAR-T,Long-term Follow-up of Subjects Exposed to Lentiviral-based CART-EGFRvIII Gene-modified Cellular Therapy Products in Cancer Studies,COMPLETED
+NCT02735083,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",A Study to Evaluate the Long-term Safety of Patients With Advanced Lymphoid Leukemia Who Have Been Previously Administered With UCART19,ACTIVE_NOT_RECRUITING
+NCT02813252,related,rule: observational study of CAR-T,Long-Term Follow-up Study for Patients Previously Treated With JCAR015,COMPLETED
+NCT02828358,related,"rule: CAR-T mentioned, not an intervention",Azacitidine and Combination Chemotherapy in Treating Infants With Acute Lymphoblastic Leukemia and KMT2A Gene Rearrangement,COMPLETED
+NCT02842320,related,"rule: CAR-T mentioned, not an intervention",Targeting Leukemic Stem Cell Expressing the IL-1RAP Protein in Chronic Myelogenous Leukemia (CML),COMPLETED
+NCT02981628,related,"rule: CAR-T mentioned, not an intervention",Inotuzumab Ozogamicin in Treating Younger Patients With B-Lymphoblastic Lymphoma or Relapsed or Refractory CD22 Positive B Acute Lymphoblastic Leukemia,ACTIVE_NOT_RECRUITING
+NCT03117751,related,"rule: CAR-T mentioned, not an intervention",Total Therapy XVII for Newly Diagnosed Patients With Acute Lymphoblastic Leukemia and Lymphoma,ACTIVE_NOT_RECRUITING
+NCT03186118,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Pilot Study of T-APCs Following CAR T Cell Immunotherapy for CD19+ Leukemia,ACTIVE_NOT_RECRUITING
+NCT03226704,related,rule: observational study of CAR-T,Leukapheresis for CAR or Adoptive Cell Therapy Manufacturing,ENROLLING_BY_INVITATION
+NCT03336567,related,rule: observational study of CAR-T,Perceptions of Cell and Gene Therapies (CGT) for the Treatment of Cancer,COMPLETED
+NCT03375619,related,rule: observational study of CAR-T,Long-term Follow-up Study of Patients Receiving CAR-T Cells,RECRUITING
+NCT03423706,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Clinical Studies of New Model Haploidentical Hematopoietic Stem Cell Transplantation,UNKNOWN
+NCT03435796,related,"rule: CAR-T mentioned, not an intervention",Long-Term Follow-up Protocol for Participants Treated With Gene-Modified T Cells,RECRUITING
+NCT03436771,related,rule: observational study of CAR-T,Long-term Follow-up Study for Patients Previously Treated With a Juno CAR T-Cell Product,TERMINATED
+NCT03624686,related,rule: observational study of CAR-T,Production of Clinical-grade Anti-CD19 Chimeric Antigen Receptor T Cells for Refractory B-cell Malignancies,UNKNOWN
+NCT03628612,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Long-term Follow-up of Patients Treated With Genetically Modified Autologous T Cells,ENROLLING_BY_INVITATION
+NCT03680677,related,rule: observational study of CAR-T,Frailty Phenotype Assessments to Optimize Treatment Strategies for Older Patients With Hematologic Malignancies,RECRUITING
+NCT03741127,related,"rule: CAR-T mentioned, not an intervention",Long-Term Follow-Up Study for Subjects Treated With P-BCMA-101,ACTIVE_NOT_RECRUITING
+NCT03827343,related,rule: observational study of CAR-T,Retrospective Study of Immunotherapy Related Toxicities and Factors Impacting Outcomes in Children and Adults With Cancer,ACTIVE_NOT_RECRUITING
+NCT03837873,related,"rule: CAR-T mentioned, not an intervention",DLCL002 Protocol for Patients With High Risk Aggressive B-cell Lymphoma,UNKNOWN
+NCT03954106,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",A Safety and Efficacy Study of Defibrotide in the Prevention of Chimeric Antigen Receptor-T-cell-associated Neurotoxicity,TERMINATED
+NCT04013802,related,"rule: CAR-T mentioned, not an intervention","TETRAVI Multivirus CTL for Treatment of EBV, CMV, Adenovirus, and BK Infections Post Allogeneic SCT.",RECRUITING
+NCT04026737,related,rule: observational study of CAR-T,Cardiovascular Effects of CART Cell Therapy,COMPLETED
+NCT04048434,related,"rule: CAR-T mentioned, not an intervention",Extracorporeal Cytokine Adsorption as Additive Treatment of CAR-T Associated Cytokine Release Syndrome (CRS),UNKNOWN
+NCT04082910,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Metoprolol Treatment for Cytokine Release Syndrome in Patients Treated With Chimeric Antigen Receptor T Cells,UNKNOWN
+NCT04107285,related,rule: observational study of CAR-T,Looking at Cognitive and Brain Changes in People With Lymphoma Receiving CAR-T Therapy,RECRUITING
+NCT04134325,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Study of PD-1 Inhibitors After CD30.CAR T Cell Therapy in Relapsed/Refractory Hodgkin Lymphoma,ACTIVE_NOT_RECRUITING
+NCT04136756,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",NKTR-255 in Relapsed/Refractory Multiple Myeloma & Non-Hodgkin Lymphoma,COMPLETED
+NCT04148430,related,"rule: CAR-T mentioned, not an intervention",A Study of Anakinra to Prevent or Treat Severe Side Effects for Patients Receiving CAR-T Cell Therapy,ACTIVE_NOT_RECRUITING
+NCT04158011,related,rule: observational study of CAR-T,A Retrospective Study of Patients With Leukemia Relapse in the CNS Treated With CAR T Cells,UNKNOWN
+NCT04169022,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",AML Cell Immunotherapy Using Chimeric Antigen Receptor T-cells,COMPLETED
+NCT04203459,related,rule: observational study of CAR-T,The Mechanism of Enhancing the Anti-tumor Effects of CAR-T on PC by Gut Microbiota Regulation,UNKNOWN
+NCT04205409,related,"rule: CAR-T mentioned, not an intervention","Nivolumab for Relapsed, Refractory, or Detectable Disease Post Chimeric Antigen Receptor T-cell Treatment in Patients With Hematologic Malignancies",COMPLETED
+NCT04209829,related,rule: observational study of CAR-T,Response to Chimeric Antigen Receptor (CAR)-T Cells Therapy in Patients With Hematologic Malignancies Depending on Tumor Characteristics,NOT_YET_RECRUITING
+NCT04275154,related,rule: observational study of CAR-T,"Immunological Parameters, Neurocognitive Changes, Activity, & Driving Fitness in Patients Undergoing CAR-T Cell Therapy",WITHDRAWN
+NCT04279470,related,rule: observational study of CAR-T,Chimeric Antigen Receptor T-cell and Cellular Therapies for the Treatment of cAncer or BLood Diseases: Evaluation of Reporting of Adverse Events,COMPLETED
+NCT04280133,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",CAR T-CELL Therapy Educational Video Trial,UNKNOWN
+NCT04287309,related,rule: observational study of CAR-T,CAR-T Cellular Therapy for B Cell Malignancies Involved in CNS,UNKNOWN
+NCT04290000,related,rule: observational study of CAR-T,Collection of Biological Samples From Patients Treated With CAR-T Cells for Hematological Malignancies,RECRUITING
+NCT04295096,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Collection of PBMCs From Healthy Subjects for the Development of Cellular Immunotherapy Product,UNKNOWN
+NCT04300998,related,rule: observational study of CAR-T,Study of CAR-T Therapy in Older Patients,RECRUITING
+NCT04319237,related,rule: observational study of CAR-T,Axicabtagene Ciloleucel:Neurocognitive and Patient-Reported Outcomes,COMPLETED
+NCT04328298,related,rule: observational study of CAR-T,French Register Of Patients With Hemopathy Eligible For CAR-T Cell Treatment (DESCAR-T),RECRUITING
+NCT04337606,related,"rule: CAR-T mentioned, not an intervention",Chidamide in Combination With Decitabine in Non-Hodgkin's Lymphoma Relapsed After Chimeric Antigen Receptor,UNKNOWN
+NCT04359784,related,"rule: CAR-T mentioned, not an intervention",Anakinra for the Prevention of Cytokine Release Syndrome and Neurotoxicity in Patients With B-Cell Non-Hodgkin Lymphoma Receiving CD19-Targeted CAR-T Cell Therapy,COMPLETED
+NCT04390542,related,"rule: CAR-T mentioned, not an intervention",Intervention for Caregivers of Patients Undergoing HSCT or CAR T-cell Therapy,WITHDRAWN
+NCT04409314,related,rule: observational study of CAR-T,Hypoxia-Specific Imaging to Predict Outcomes of Chimeric Antigen Receptor T-cell Therapy,COMPLETED
+NCT04410900,related,"rule: CAR-T mentioned, not an intervention",Vaccine Responsiveness After CAR-T Cell Therapy,COMPLETED
+NCT04442022,related,"rule: CAR-T mentioned, not an intervention",A Study of Rituximab-Gemcitabine-Dexamethasone-Platinum (R-GDP) With or Without Selinexor in Patients With Relapsed/Refractory Diffuse Large B-cell Lymphoma,ACTIVE_NOT_RECRUITING
+NCT04473937,related,"rule: CAR-T mentioned, not an intervention",Radiation Post-CAR T in Refractory Lymphoma,TERMINATED
+NCT04474067,related,rule: observational study of CAR-T,COVID-19 - Cytokine Storm,UNKNOWN
+NCT04488354,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Long-term Follow-up Study for Patients Treated With CLBR001 CAR-T,COMPLETED
+NCT04503538,related,"rule: CAR-T mentioned, not an intervention",Telemedicine for Early Detection of Cytokine Release Syndrome and Neurotoxicity,WITHDRAWN
+NCT04514029,related,"rule: CAR-T mentioned, not an intervention",Neurotoxicity Prophylaxis With Intrathecal Dexamethasone and Simvastatin Post Axi-Cel,ACTIVE_NOT_RECRUITING
+NCT04601831,related,"rule: CAR-T mentioned, not an intervention",'Re-Priming' RT After Incomplete Response to CAR-T in R/R NHL,COMPLETED
+NCT04614987,related,rule: observational study of CAR-T,Serum Neurofilament Light (NfL) as a Marker for Brain Injury in Individuals Undergoing Chimeric Antigen Receptor-modified T Therapy,TERMINATED
+NCT04691284,related,"rule: CAR-T mentioned, not an intervention",Microbiome in Cancer Patients With High Dose Chemotherapy With Stem Cell Transplantation,RECRUITING
+NCT04703686,related,"rule: CAR-T mentioned, not an intervention",Treatment by a Bispecific CD3xCD20 Antibody for Relapse/Refractory Lymphomas After CAR T-cells Therapy,COMPLETED
+NCT04724642,related,rule: observational study of CAR-T,"COVID-19 Vaccine in Patients After Allogeneic HCT, CAR-T Therapy and With Primary Immune Deficiency",UNKNOWN
+NCT04822974,related,"rule: CAR-T mentioned, not an intervention",TORQUETENOVIRUS IN CAR-T THERAPY: PREDICTION OF THE CRS,UNKNOWN
+NCT04833504,related,rule: observational study of CAR-T,Clinical Follow-up Study of CD19 CAR-T Expressing IL7 and CCL19 for Relapsed or Refractory B Cell Lymphoma,COMPLETED
+NCT04848493,related,rule: observational study of CAR-T,"National Project on Vaccines, COVID-19 and Frail Patients",COMPLETED
+NCT04853277,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Patient Reported Outcomes and Patient Education in Cellular Therapy Patients,COMPLETED
+NCT04870853,related,rule: observational study of CAR-T,Cardiovascular Events Among Adults Patients With Relapsed or Refractory Aggressive B-Cell Lymphoma Treated With Standard of Care Chimeric Antigen Receptor T Cell Therapy,UNKNOWN
+NCT04888338,related,rule: observational study of CAR-T,Outcomes After Chimeric Antigen Receptor Therapy and Radiation Therapy for Hematologic Malignancies,RECRUITING
+NCT04889716,related,"rule: CAR-T mentioned, not an intervention",CAR-T Followed by Bispecific Antibodies,ACTIVE_NOT_RECRUITING
+NCT04892433,related,rule: observational study of CAR-T,Tissue Study in Patients Undergoing CAR-T Cell Therapy (CAR_21_01),RECRUITING
+NCT04911478,related,rule: observational study of CAR-T,Long-term Follow-up Study of Allogeneic Gamma Delta (γδ) CAR T Cells,ACTIVE_NOT_RECRUITING
+NCT04914091,related,rule: observational study of CAR-T,Quality Of Life and Drug Use in Patients With CAR-T Cells,RECRUITING
+NCT04923789,related,rule: observational study of CAR-T,A Study of ASCT Bridging CART Cell Therapy in Relapsed/Refractory B-cell Lymphoma,COMPLETED
+NCT04930055,related,rule: observational study of CAR-T,Immune Responses in Oncology Patients to Novel Coronavirus Vaccines (IROC),TERMINATED
+NCT04975555,related,"rule: CAR-T mentioned, not an intervention",Study to Evaluate the Role of Siltuximab in Treatment of Cytokine Release Syndrome (CRS) and Immune Effector Cell Associated Neurotoxicity (ICANS) Related to CAR-T Cell Therapy,COMPLETED
+NCT04981119,related,rule: observational study of CAR-T,Solid Tumor Analysis for HLA Loss of Heterozygosity (LOH) and Apheresis for CAR T- Cell Manufacturing,RECRUITING
+NCT05018208,related,rule: observational study of CAR-T,Remote Monitoring in Cancer Care: A Platform Study,COMPLETED
+NCT05024175,related,rule: observational study of CAR-T,Long-term Follow-up of Subjects Treated With CAR T Cells,RECRUITING
+NCT05041309,related,rule: observational study of CAR-T,Long-Term Follow-Up Study After Gene-Modified Cell Treatment in Kite Studies,ENROLLING_BY_INVITATION
+NCT05064787,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Evaluating the Feasibility of a Digital Health Coaching Program for Individuals Following CAR T Therapy,COMPLETED
+NCT05096234,related,"rule: CAR-T mentioned, not an intervention",18F-F-AraG PET Imaging to Evaluate Immunological Response to CAR T Cell Therapy in Lymphoma,TERMINATED
+NCT05097443,related,"rule: CAR-T mentioned, not an intervention","Orelabrutinib, Rituximab and Combination Chemotherapy in Newly-diagnosed Aggressive B-cell Non-Hodgkin Lymphoma",UNKNOWN
+NCT05099237,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Enhanced Monitoring for Better Recovery and Cancer Experience in Greater Manchester,UNKNOWN
+NCT05117008,related,"rule: CAR-T mentioned, not an intervention",Maintenance Belantamab Mafodotin (Blenrep®) After B-cell Maturation Antigen-Directed Chimeric Antigen Receptor T-cell Therapy in Patients With Relapsed and/or Refractory Multiple Myeloma,TERMINATED
+NCT05123001,related,rule: observational study of CAR-T,Wearable Sensors and Molecular Omics to Detect and Mitigate Cell Therapy Adverse Events,COMPLETED
+NCT05130489,related,rule: observational study of CAR-T,CAR T Cell Therapy Related Cardiovascular Outcomes,COMPLETED
+NCT05164770,related,"rule: CAR-T mentioned, not an intervention","Study of Zanubrutinib, Rituximab and Combination Chemotherapy in Newly-diagnosed Aggressive B-cell Non-Hodgkin Lymphoma",UNKNOWN
+NCT05176275,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",PET / CT Imaging and Safety in Patients With Lymphoma Treated With CD19 Car-t Cells,UNKNOWN
+NCT05179603,related,"rule: CAR-T mentioned, not an intervention",A Study of SAR444245 With or Without Other Anticancer Therapies for the Treatment of Adults and Adolescents With Relapsed or Refractory B Cell Lymphoma (Master Protocol) [Pegathor Lymphoma 205],TERMINATED
+NCT05180838,related,rule: observational study of CAR-T,Remote Temperature Data for Early Detection of Febrile Neutropenia,COMPLETED
+NCT05190653,related,"rule: CAR-T mentioned, not an intervention",Early Integration of Palliative and Supportive Care in Cellular Therapy,UNKNOWN
+NCT05191472,related,"rule: CAR-T mentioned, not an intervention",Pembrolizumab for the Treatment of Relapsed or Refractory Multiple Myeloma After Anti-BCMA CAR-T Therapies,TERMINATED
+NCT05199961,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Quality of Life of Adults With Diffuse Large B-cell Lymphoma Treated With Tisagenlecleucel,TERMINATED
+NCT05201781,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",A Long-term Study for Participants Previously Treated With Ciltacabtagene Autoleucel,RECRUITING
+NCT05204160,related,"rule: CAR-T mentioned, not an intervention",Pembrolizumab as Salvage Therapy for the Treatment of Multiple Myeloma in Patients Progressing on CAR-T Cell Therapy,WITHDRAWN
+NCT05237986,related,rule: observational study of CAR-T,Cognitive Aftereffects of Neurotoxicity in Children and Young Adults With Relapsed/Refractory Hematologic Malignancies Who Receive CAR T-cell Therapy,RECRUITING
+NCT05256641,related,"rule: CAR-T mentioned, not an intervention",Acalabrutinib Maintenance for the Treatment of Patients With Large B-cell Lymphoma,RECRUITING
+NCT05270096,related,rule: observational study of CAR-T,International Leukemia Target Board,RECRUITING
+NCT05286164,related,"rule: CAR-T mentioned, not an intervention",Eltrombopag Treatment in Patients With Prolonged BM Toxicity After CART,UNKNOWN
+NCT05306080,related,"rule: CAR-T mentioned, not an intervention",Tadekinig Alfa (IL-18BP) Rescue Therapy for CAR T Cell Related Cytokine Release Syndrome (CRS) and HLH-like Syndrome,RECRUITING
+NCT05332054,related,rule: observational study of CAR-T,Long-Term Follow-up Study,ENROLLING_BY_INVITATION
+NCT05336383,related,"rule: CAR-T mentioned, not an intervention",Phase II Study of Salvage Radiation Treatment After B-cell Maturation Antigen Chimeric Antigen Receptor T-cell Therapy for Relapsed Refractory Multiple Myeloma,ACTIVE_NOT_RECRUITING
+NCT05349201,related,rule: observational study of CAR-T,CAR T Cells Real World Evidence Study Based on the French Hospital Claims Data Source (PMSI),COMPLETED
+NCT05354973,related,rule: observational study of CAR-T,ePRO for the Timely Detection of Side Effects in Cancer Patients Undergoing CAR T Immunotherapy,UNKNOWN
+NCT05362331,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Companion for CAR-T Web App During Chimeric Antigen Receptor T-cell Therapy,WITHDRAWN
+NCT05364424,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product","A Study Evaluating the Efficacy, Safety, and Pharmacokinetics of Glofitamab in Combination With Rituximab Plus Ifosfamide, Carboplatin Etoposide Phosphate in Participants With Relapsed/Refractory Transplant or CAR-T Therapy Eligible Diffuse B-Cell Lymphoma",COMPLETED
+NCT05366257,related,rule: observational study of CAR-T,Real-world Resource Use and Costs of CAR-T Therapies in Diffuse Large B-cell Lymphoma (DLBCL),COMPLETED
+NCT05366569,related,rule: observational study of CAR-T,Bio-CAR-T BS Study,RECRUITING
+NCT05371132,related,"rule: CAR-T mentioned, not an intervention",Study to Evaluate CD8 PET Imaging as a Marker of Immune Response to Stereotactic Body Radiation Therapy (ELIXR),RECRUITING
+NCT05379569,related,"rule: CAR-T mentioned, not an intervention",Comparative Study of BFC and BuCy Conditioning Regimen for Allo-PBSCT in Acute B-cell ALL,UNKNOWN
+NCT05385263,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Addition of Nivolumab to Anti-CD-19 CAR-T Cells in Patients With Stable/Progressive DLBCL at Lymphodepletion,UNKNOWN
+NCT05390671,related,rule: observational study of CAR-T,CAR-T Cell Therapy in Patients With Hematological Malignancies,COMPLETED
+NCT05397132,related,rule: observational study of CAR-T,Mechanisms of Disease R/R in CAR-T for Hematologic Malignancies,COMPLETED
+NCT05401318,related,rule: observational study of CAR-T,Tailoring Treatment in Colorectal Cancer,ACTIVE_NOT_RECRUITING
+NCT05404048,related,"rule: CAR-T mentioned, not an intervention",PD-L1 PET-imaging During CAR T-cell Therapy,ACTIVE_NOT_RECRUITING
+NCT05414162,related,rule: observational study of CAR-T,Multiparametric Cardiac MRI in Patients Under CAR T-cell Therapy,UNKNOWN
+NCT05416554,related,"rule: CAR-T mentioned, not an intervention","Long-term Cognitive, Neuropsychiatric and Functional Outcomes in Adults Who Have Received Chimeric Antigen-Receptor T-Cell (CAR-T) Therapy for Aggressive Lymphoma at Stanford",WITHDRAWN
+NCT05422521,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Radiomics and Metabolomics in the Follow-up of CAR T-cells for Refractory or Relapsed Non-Hodgkin's Lymphoma,COMPLETED
+NCT05440409,related,rule: observational study of CAR-T,CAR-Multicenter Analysis (CAR-MA): Retrospective Study to Characterize CAR T-cell Outcomes and Related Toxicities in Children and Young Adults With B-ALL,COMPLETED
+NCT05458297,related,"rule: CAR-T mentioned, not an intervention",A Study of Zilovertamab Vedotin (MK-2140) as Monotherapy and in Combination in Participants With Aggressive and Indolent B-cell Malignancies (MK-2140-006),ACTIVE_NOT_RECRUITING
+NCT05461378,related,rule: observational study of CAR-T,PREP (Pre-Exposure Prophylaxis) of COVID-19,COMPLETED
+NCT05464719,related,"rule: CAR-T mentioned, not an intervention",A Phase II Study of Loncastuximab Tesirine as Consolidation Strategy in Patients With LBCL in PR After CAR T-cell Therapy,RECRUITING
+NCT05509855,related,rule: observational study of CAR-T,A Long-Term Safety Follow-Up Study for Patients Treat With WU-CART-007,ENROLLING_BY_INVITATION
+NCT05510596,related,"rule: CAR-T mentioned, not an intervention",Magnetic Resonance Imaging in Immune Effector Cell-Associated Neurotoxicity Syndrome,COMPLETED
+NCT05514327,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",A Study of Ultra-fraction Radiotherapy Bridging CART in R/R DLBCL,RECRUITING
+NCT05532761,related,rule: observational study of CAR-T,"Multidimensional Assessment of Quality of Life, Social and Professional Life and Care Utilization in Patients With Diffuse Large Cell B-cell Lymphoma Treated With CAR-T Cells",UNKNOWN
+NCT05535244,related,"rule: CAR-T mentioned, not an intervention",A Study Evaluating the Efficacy and Safety of Cevostamab in Prior B Cell Maturation Antigen (BCMA)-Exposed Participants With Relapsed/Refractory Multiple Myeloma,ACTIVE_NOT_RECRUITING
+NCT05576220,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Remote Temperature Monitoring of Adult Subjects Undergoing Outpatient Stem Cell Transplant or CAR-T Cell Therapy,UNKNOWN
+NCT05621291,related,"rule: CAR-T mentioned, not an intervention",A Multicenter Study to Evaluate Next-Generation Sequencing (NGS) Testing and Monitoring of B-Cell Recovery to Guide Management Following Chimeric Antigen Receptor T-cell (CART) Induced Remission in Children and Young Adults With B Lineage Acute Lymph...,RECRUITING
+NCT05626322,related,"rule: CAR-T mentioned, not an intervention","Effects of Maplirpacept (PF-07901801),Tafasitamab, and Lenalidomide in People With Relapsed or Refractory Diffuse Large B-cell Lymphoma",TERMINATED
+NCT05626764,related,rule: observational study of CAR-T,"QUALITOP - Monitoring Multidimensional Aspects of QUAlity of Life After Cancer ImmunoTherapy, an Open Smart Digital Platform for Personalized Prevention and Patient Management",UNKNOWN
+NCT05640271,related,"rule: CAR-T mentioned, not an intervention",Tocilizumab for Acute Chest Syndrome,RECRUITING
+NCT05645744,related,rule: observational study of CAR-T,Long-term Follow-up Study in Patients Previously Treated With a Mustang Bio CAR-T Cell Investigational Product.,TERMINATED
+NCT05664217,related,"rule: CAR-T mentioned, not an intervention",NKTR-255 vs Placebo Following CD19-directed CAR-T Therapy in Patients With Relapsed/Refractory Large B-cell Lymphoma,TERMINATED
+NCT05665725,related,"rule: CAR-T mentioned, not an intervention",Siltuximab for the Prevention of CAR T Cell Related Cytokine Release Syndrome in Patients With CD19 Positive Non-Hodgkin Lymphoma,COMPLETED
+NCT05675982,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Real-Time Monitoring of Circulating Tumor DNA and Study of Prognostic Factors in Patients Treated With CAR-T Cells,ACTIVE_NOT_RECRUITING
+NCT05725720,related,rule: observational study of CAR-T,Role of the Gut Microbiome in the Outcome of Diffuse Large B-Cell Lymphoma Patients Treated With CAR-T Cell Therapy,ACTIVE_NOT_RECRUITING
+NCT05763563,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Exercise Prehabilitation Among Older Patients With Hematological Malignancies Preparing For CAR-T Cell Immunotherapy,COMPLETED
+NCT05784415,related,rule: observational study of CAR-T,Observational Study of People Living With HIV Treated With CD19-directed CAR T Cell,COMPLETED
+NCT05801939,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Cevostamab Following CAR T Cell Therapy for RRMM,ACTIVE_NOT_RECRUITING
+NCT05802992,related,"rule: CAR-T mentioned, not an intervention",The Efficacy and Safety of Colchicine Combined With Conventional Therapy in Multiple Myeloma Patients,UNKNOWN
+NCT05807789,related,rule: observational study of CAR-T,Molecular-genetic Characterization in Patients Undergoing CAR-T Cell Infusion,RECRUITING
+NCT05809284,related,rule: observational study of CAR-T,Determining the Mechanisms of Loss of CAR T Cell Persistence,RECRUITING
+NCT05811117,related,rule: observational study of CAR-T,Multicenter Study Using IMC to Analyze the Impact of ICANS on Microglia,COMPLETED
+NCT05822427,related,rule: observational study of CAR-T,Long-term Follow-up of Study Participants Who Received an Allogeneic Chimeric Antigen Receptor T-Cell Product in an Imugene Ltd. Clinical Study,RECRUITING
+NCT05852717,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product","Safety and Efficacy of Epcoritamab With Gemcitabine, Dexamethasone, and Cisplatin (GDP) Salvage Chemotherapy in Relapsed Refractory Large B-cell Lymphoma",RECRUITING
+NCT05865301,related,rule: observational study of CAR-T,Outcomes in Pediatric and Young Adult B-Cell Malignancies After Commercially Available Immunotherapy,RECRUITING
+NCT05883709,related,rule: observational study of CAR-T,A Real-world Study of Tafasitamab in Combination With Lenalidomide in Patients withR/R DLBCL,UNKNOWN
+NCT05891197,related,rule: observational study of CAR-T,A Biomarker Screening Protocol for Participants With Solid Tumors,TERMINATED
+NCT05893940,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Low-Intensity Mechanical Stimulation for Hematologic Malignancy Patients,RECRUITING
+NCT05896163,related,"rule: CAR-T mentioned, not an intervention",A Study to Learn About the Effects of Two Study Medicines (Maplirpacept [PF-07901801] And Glofitamab) When Given Together In People With Relapsed Or Refractory Diffuse Large B Cell Lymphoma.,TERMINATED
+NCT05905328,related,"rule: CAR-T mentioned, not an intervention",Study of CTO1681 for the Prevention and Treatment of CRS in Patients Receiving CAR T-Cell Therapy,RECRUITING
+NCT05918809,related,rule: observational study of CAR-T,Real-world Resource Use and Costs of CAR-T Therapies in Diffuse Large B-cell Lymphoma (DLBCL): Inpatient and Outpatient Settings,COMPLETED
+NCT05936229,related,"rule: CAR-T mentioned, not an intervention",Interferon-Beta-1a (FP-1201) to Prevent Toxicities After CD19-Directed CAR T-Cell Therapy,WITHDRAWN
+NCT05969002,related,rule: observational study of CAR-T,Pilot Prospective Study for PET-CT Imaging in Participants With Relapsed/Refractory Acute Leukemias,COMPLETED
+NCT05987527,related,rule: observational study of CAR-T,Long-Term Follow-Up of TX200-TR101 (STEADFAST Long Term),ACTIVE_NOT_RECRUITING
+NCT06004167,related,"rule: CAR-T mentioned, not an intervention",Adaptive Bridging RT in R/R B-cell Lymphoma (Pre-CAR T),COMPLETED
+NCT06015880,related,"rule: CAR-T mentioned, not an intervention","Testing the Combination of Anti-cancer Drugs Mosunetuzumab, Polatuzumab Vedotin, and Lenalidomide for the Treatment of Relapsed/Refractory Diffuse Large B-Cell Lymphoma",RECRUITING
+NCT06026644,related,rule: observational study of CAR-T,Health-Related Quality of Life Outcomes in Patients With Aggressive B-Cell Lymphomas Treated With CAR-T Cell Therapy in Real Life,COMPLETED
+NCT06041815,related,rule: observational study of CAR-T,Correlation Between Gut Microbiota and Clinical Response to CAR-T Treatment for Hematological Malignancies,UNKNOWN
+NCT06045910,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",A Phase I/II Trial of ALETA-001 for the Treatment of Participants With B-cell Malignancies,RECRUITING
+NCT06048250,related,"rule: CAR-T mentioned, not an intervention",Mezigdomide (CC-92480) Post Idecabtagene Vicleucel in Treating Patients With Relapsed Multiple Myeloma,ACTIVE_NOT_RECRUITING
+NCT06049381,related,rule: observational study of CAR-T,Tumor Microenvironment Mechanism of LY007 for r/r B-NHL and the Exploration of Novel CAR-T Translational Research,UNKNOWN
+NCT06052826,related,"rule: CAR-T mentioned, not an intervention","Geriatric Assessment Guided Interventions to Accelerate Functional Recovery After CAR-T Therapy for Patients 60 Years and Older With B-cell Non-Hodgkin Lymphoma or Multiple Myeloma, GOCART Study",RECRUITING
+NCT06058858,related,rule: observational study of CAR-T,"Incidence and Risks Factors of CMV Reactivation in Patients Receiving of CAR-T Cells for Acute Leukemia and Lymphoma Relapse, a Cohort Study Analysis",UNKNOWN
+NCT06066346,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",A Study of Talquetamab for People With Multiple Myeloma Who Have Received BCMA CAR T-Cell Therapy,RECRUITING
+NCT06071871,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product","A Trial of Polatuzumab Vedotin, Obinutuzumab and Glofitamab As a Peri-CAR-T Cell Treatment Strategy in Large B-cell Lymphoma",RECRUITING
+NCT06073951,related,"rule: CAR-T mentioned, not an intervention",Evaluation of a Couple-Based Physical Activity Intervention,COMPLETED
+NCT06106776,related,rule: observational study of CAR-T,CAR-T Cell Induced Cardiac Dysfunction: A Prospective Study,UNKNOWN
+NCT06116032,related,rule: observational study of CAR-T,Immune Profiling for Cancer Immunotherapy Response,RECRUITING
+NCT06116110,related,rule: observational study of CAR-T,Lentiviral Gene Therapy (Zamtocabtagene Autoleucel) LTFU,RECRUITING
+NCT06126341,related,rule: observational study of CAR-T,A Study to Identify Barriers to Cellular Therapies for People With Plasma Cell Disorders,ACTIVE_NOT_RECRUITING
+NCT06142175,related,rule: observational study of CAR-T,Relmacabtagene Autoleucel in Patients With LBCL,UNKNOWN
+NCT06142188,related,rule: observational study of CAR-T,Relmacabtagene Autoleucel in Hematologic Malignancies,NOT_YET_RECRUITING
+NCT06144151,related,rule: observational study of CAR-T,A Pilot Study for Pupillary Assessment to Predict CAR-T Related Neurotoxicity,RECRUITING
+NCT06156774,related,rule: observational study of CAR-T,SARcopenia and Simplified Geriatric Assessment in Lymphoma Patients Undergoing CAR-T Cell Therapy: the FIL_SAR-CAR Project,RECRUITING
+NCT06167785,related,"rule: CAR-T mentioned, not an intervention",A Study to Evaluate Zanubrutinib and Tislelizumab in Progressive Lymphoma Post CAR-T,RECRUITING
+NCT06179888,related,"rule: CAR-T mentioned, not an intervention",Iberdomide Versus Observation Off Therapy After Idecabtagene Vicleucel CAR-T for Multiple Myeloma,SUSPENDED
+NCT06208878,related,rule: observational study of CAR-T,A Long-term Follow-up Study of Subjects Who Received CRISPR CAR T Cellular Therapies,ENROLLING_BY_INVITATION
+NCT06209619,related,"rule: CAR-T mentioned, not an intervention",CC-99282 + Rituximab Early Post CART for Non-Hodgkin's Lymphoma,RECRUITING
+NCT06238648,related,"rule: CAR-T mentioned, not an intervention",Epcoritamab Compared to Observation for Treating B-cell Lymphoma Patients Not in Complete Remission After CD19-directed CAR-T Therapy,RECRUITING
+NCT06242834,related,"rule: CAR-T mentioned, not an intervention",Pembrolizumab and Tazemetostat to Overcome Immune Tolerance Following ASCT or CAR T-cell Therapy in Patients With Aggressive B-Cell Non-Hodgkin's Lymphoma,ACTIVE_NOT_RECRUITING
+NCT06251115,related,"rule: CAR-T mentioned, not an intervention",Clinical Study on the Safety and Efficacy of QY-1-T in the Treatment of HBV-associated Advanced HCC,RECRUITING
+NCT06271057,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Golcadomide Post-CAR T-cell in R/R Aggressive Large B-cell Lymphoma Patients With High Risk of Relapse,RECRUITING
+NCT06271369,related,rule: observational study of CAR-T,"Real-World HRU and Costs in DLBCL Pts With Tisa-cel and Axi-cel, a Medicare Study.",COMPLETED
+NCT06285825,related,"rule: CAR-T mentioned, not an intervention",A Pilot Study of Emapalumab for the Treatment of CAR T-Cell Therapy-Associated Prolonged Cytopenia,RECRUITING
+NCT06290622,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product","PD-1, LAG-3 and TIM-3 Checkpoint Blockade in DLBCL",WITHDRAWN
+NCT06317662,related,"rule: CAR-T mentioned, not an intervention",Testing the Addition of the Anti-cancer Drug Venetoclax and/or the Anti-cancer Immunotherapy Blinatumomab to the Usual Chemotherapy Treatment for Infants With Newly Diagnosed KMT2A-rearranged or KMT2A-non-rearranged Leukemia,RECRUITING
+NCT06333275,related,rule: observational study of CAR-T,Restoration of Immunity to Vaccine Preventable Diseases After CART-T Cell Therapy,RECRUITING
+NCT06336395,related,"rule: CAR-T mentioned, not an intervention",Ma-Spore ALL 2020 Study,RECRUITING
+NCT06339255,related,rule: observational study of CAR-T,Italian Observational Study on CAR-T Therapy for Lymphoma,RECRUITING
+NCT06350994,related,rule: observational study of CAR-T,Early Assessment of Cardiac Function After Treatment With CAR-T Cells,RECRUITING
+NCT06352242,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Is Trogocytosis a Predictive Marker of CAR-T Cell Response in Diffuse Large B-cell Lymphoma?,RECRUITING
+NCT06369389,related,rule: observational study of CAR-T,Real-life Management of Patients Eligible for CAR-T Cell Therapy,RECRUITING
+NCT06369935,related,rule: observational study of CAR-T,A Real World Study of Equecabtagene Autoleucel in Subjects With Relapsed and Refractory Multiple Myeloma.,NOT_YET_RECRUITING
+NCT06377202,related,rule: observational study of CAR-T,Long-Term Follow-Up Safety Study of Subjects Treated with SynKIR-110 in Cancer Studies,WITHDRAWN
+NCT06392763,related,rule: observational study of CAR-T,Care Pathway and Associated Costs of Patients Treated With CAR T-cells Based on SNDS Data,COMPLETED
+NCT06414148,related,"rule: CAR-T mentioned, not an intervention",MRD-Directed Consolidation With Epcor-only or Epcor-R2 Post Anti-CD19 CAR TCell Therapy for Large B-Cell Lymphoma,RECRUITING
+NCT06415656,related,"rule: CAR-T mentioned, not an intervention",VitalTraq for the Detection of CRS,COMPLETED
+NCT06430736,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",PRONTO Trial (PRophylactic Versus ON-demand Use of TOcilizumab),RECRUITING
+NCT06439173,related,rule: observational study of CAR-T,Study of the Hematopoietic Niche and the Role of Inflammation in the Pathophysiology of Cytopenias After CAR-T Cell Therapy: Potential of Therapies Directed to Repair the Bone Marrow Microenvironment,RECRUITING
+NCT06458439,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Epcoritamab-CAR T Cells for Large B-cell Lymphomas,RECRUITING
+NCT06506396,related,rule: observational study of CAR-T,Rehabilitation Needs for Hematologic Cancer Candidate for Hematopoietic Stem Cell Transplantation or CAR T-Cell Therapy,UNKNOWN
+NCT06508346,related,rule: observational study of CAR-T,Study of Therapeutic Efficacy of Anti-CD19 CAR-T Cells in Children With Refractory Refractory AAV,WITHDRAWN
+NCT06508775,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Long-Term Follow-up of Patients Treated With Miltenyi Cell and Gene Therapies,RECRUITING
+NCT06522932,related,"rule: CAR-T mentioned, not an intervention",PET Imaging Study of 64Cu-GRIP B for Patients Receiving CD19-directed CAR-T Therapy,RECRUITING
+NCT06523621,related,"rule: CAR-T mentioned, not an intervention",Nivolumab in Multiple Myeloma Patients After Idecabtagene Vicleucel,ACTIVE_NOT_RECRUITING
+NCT06541327,related,rule: observational study of CAR-T,Cellular Immunotherapy for Relapsed or Refractory Lymphoma Data Collection,RECRUITING
+NCT06552572,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Glofitamab in Relapsed or Refractory Diffuse Large B-cell Lymphoma After CD19 Chimeric Antigen Receptor T-cell Therapy,ACTIVE_NOT_RECRUITING
+NCT06554951,related,rule: observational study of CAR-T,Study of Extracellular Vesicles (EV) in Patients Undergoing CAR-T Cell Therapies,RECRUITING
+NCT06575374,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Single Arm Pilot Trial of Letermovir for CMV Prophy in CAR T Cell,RECRUITING
+NCT06575712,related,"rule: CAR-T mentioned, not an intervention",Coping Skills Training for Symptom Management and Daily Steps (Step Up),RECRUITING
+NCT06579469,related,rule: observational study of CAR-T,Prospective Evaluation Of Delayed Effects Of Pediatric Car T Cell Therapy,RECRUITING
+NCT06589089,related,"rule: CAR-T mentioned, not an intervention",Autologous Hematopoietic Stem Cell Boost Study After CAR-T Therapy,UNKNOWN
+NCT06607289,related,rule: observational study of CAR-T,National Longitudinal Cohort of Hematological Diseases (NICHE) - CART,RECRUITING
+NCT06610344,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",BHB & CAR-T for Lymphomas,RECRUITING
+NCT06630104,related,"rule: CAR-T mentioned, not an intervention",Understanding the Mechanisms of Clonal and Non-clonal Cytopenia Following CAR-T Therapy for Multiple Myeloma or CD19+ Lymphoproliferative Disorder (LPD),RECRUITING
+NCT06652633,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Long-term Follow-up of Participants Treated With Galapagos Chimeric Antigen Receptor (CAR) T-cell Therapies,RECRUITING
+NCT06659588,related,rule: observational study of CAR-T,Study of Populations at Risk of Developing Chronic Hepatitis Linked to Chronic Enteric Virus Infection in Patients With Primary Immunodeficiency and Secondary Humoral Deficiency,COMPLETED
+NCT06659770,related,rule: observational study of CAR-T,A Real-World Observational Study: Zevorcabtagene Autoleucel Injection in Patients with Relapsed/Refractory Multiple Myeloma,NOT_YET_RECRUITING
+NCT06665295,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",THRIVE-CAR-T Digital App,RECRUITING
+NCT06701201,related,rule: observational study of CAR-T,A Long-Term Follow-Up Basket Study for Participants Treated With SynKIR Chimeric Antigen Receptor (CAR) T Cell Product,ENROLLING_BY_INVITATION
+NCT06703216,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Pre-emptive Anakinra for Cytokine Event Reduction,WITHDRAWN
+NCT06706102,related,"rule: CAR-T mentioned, not an intervention",Temporal Characterization of Extracellular Vesicles During Cellular Therapy Using CAR-T Cells and During the Occurrence of Immune Effector Cell-Associated Neurotoxicity Syndrome,RECRUITING
+NCT06713811,related,"rule: CAR-T mentioned, not an intervention",Evaluation of the Impact of Electronic Monitoring on Patient Compliance in Hematology,RECRUITING
+NCT06720701,related,rule: observational study of CAR-T,Development of Prognostic Models for Response and Toxicity to CAR-T Cell Therapy in Patients with Relapsed/refractory Non Hodgkin's Lymphoma.,NOT_YET_RECRUITING
+NCT06721598,related,rule: observational study of CAR-T,An Extension Study to Evaluate the Safety and Efficacy of an Anti-CD19 CAR-T Product in Patients with B-cell Lymphoproliferative Disorders,NOT_YET_RECRUITING
+NCT06738082,related,rule: observational study of CAR-T,Influenza Vaccine Elicited Immune Response in Immunocompromised Patients,COMPLETED
+NCT06755775,related,rule: observational study of CAR-T,PET Imaging Targeting Granzyme B Predicts Immunotherapy Efficacy in Diffuse Large B-cell Lymphoma,RECRUITING
+NCT06760936,related,rule: observational study of CAR-T,Pixantrone as Bridging Therapy to Allogenic Transplant or CAR-T Cell Therapy in DLBCL Patients,ACTIVE_NOT_RECRUITING
+NCT06764537,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Evaluation of in Vitro Antitumor Activity of GD2 CAR-T Cells in Glioblastoma,NOT_YET_RECRUITING
+NCT06767956,related,"rule: CAR-T mentioned, not an intervention",Golcadomide and Nivolumab in Patients With Non-Hodgkin Lymphoma With Refractory Disease After Chimeric Antigen T-cell Therapy,WITHDRAWN
+NCT06784167,related,rule: observational study of CAR-T,Vaccine Responses in Patient With Multiple Myeloma and Non-Hodgkin Lymphoma After CAR-T Treatment,RECRUITING
+NCT06788964,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Loncastuximab Tesirine and Rituximab as Bridging Therapy Before Standard-of-care CAR-T Therapy in Patients With Large B-cell Lymphoma (CORAL),RECRUITING
+NCT06796517,related,rule: observational study of CAR-T,Immunotherapy in Lymphoma,RECRUITING
+NCT06827860,related,"rule: CAR-T mentioned, not an intervention",Subcutaneous Talquetamab in Elderly Patients With Multiple Myeloma in Early Relapse,RECRUITING
+NCT06861348,related,"rule: CAR-T mentioned, not an intervention",Effectiveness and Safety of InO±DLI for Relapsed B-ALL/LBL After Allo-HSCT,NOT_YET_RECRUITING
+NCT06867536,related,"rule: CAR-T mentioned, not an intervention",Hypofractionation Radiotherapy in Combination With Glofitamab in Relapsed/Refractory Diffuse B-cell Lymphoma With Baseline High Tumor Burden,RECRUITING
+NCT06882317,related,rule: observational study of CAR-T,Long Term Follow-up Study for Subjects Administered CLBR001,ENROLLING_BY_INVITATION
+NCT06885424,related,rule: observational study of CAR-T,A Long-Term Follow-Up Study of Participants Treated With A2 Biotherapeutics (A2 Bio) Gene Therapy (GT) Products,ENROLLING_BY_INVITATION
+NCT06888856,related,rule: observational study of CAR-T,"Multiple Myeloma is a Hematologic Malignancy Characterized by the Accumulation of Malignant Plasma Cells in the Bone Marrow. Despite Advances in Treatment, Many Patients Experience Disease Relapse. Bispecific Antibodies Offer an Innovative Therapeutic Approach, But Approximately 30%-40% of Patients",NOT_YET_RECRUITING
+NCT06888960,related,"rule: CAR-T mentioned, not an intervention",Safety Study of CC312 in Autoimmune Disease Patients,RECRUITING
+NCT06890091,related,rule: observational study of CAR-T,"Study of the Association Between Fatigue Experienced by Patients and the Specific Side Effects of CART Cells, During the First Month After Administration for Non-Hodgkin's Lymphoma",NOT_YET_RECRUITING
+NCT06895473,related,"rule: CAR-T mentioned, not an intervention","Intrathecal Cytarabine, Methotrexate, and Hydrocortisone for the Prevention of High-Grade Chimeric Antigen Receptor T-Cell-Associated Neurotoxicity Syndrome",RECRUITING
+NCT06898905,related,"rule: CAR-T mentioned, not an intervention",Hyperfractionated Dual Equivalent Fractionated Radiation Therapy,RECRUITING
+NCT06906380,related,rule: observational study of CAR-T,A Long-term Follow-up Study of Patients With ARD103 CAR-T Cell Therapies,RECRUITING
+NCT06918912,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Study of Loncastuximab Tesirine in Patients With Relapsed/Refractory Diffuse Large B-Cell Lymphoma (DLBCL) or High-Grade B-Cell Lymphoma (HGBCL) Following CAR-T Therapy Failure,RECRUITING
+NCT06925685,related,rule: observational study of CAR-T,Follow-Up for Study Participants Treated With an Allogeneic CAR T Cell Product,ENROLLING_BY_INVITATION
+NCT06985576,related,rule: observational study of CAR-T,Long-term Study to Evaluate Safety and Persistence of GF-CART01,ENROLLING_BY_INVITATION
+NCT06988085,related,rule: observational study of CAR-T,Impact of Lymphodepletion Regimen on the Response to CAR T-cells in Patients With With Relapsed/Refractory Large B-cell Lymphoma,NOT_YET_RECRUITING
+NCT06989541,related,rule: observational study of CAR-T,Immunoglobulin for Hypogammaglobulinemia Due to Chimeric Antigen Receptor T Cell Therapy,RECRUITING
+NCT06992934,related,"rule: CAR-T mentioned, not an intervention",Immunological Impact of a Post Cell Therapy Treatment With FLT3 Inhibitors,NOT_YET_RECRUITING
+NCT06993766,related,rule: observational study of CAR-T,The Predictability of CD19 Expression Across Primitive Cellular Fractions of Relapsed B-ALL on Outcomes of CD19-targeted CAR T-cells,NOT_YET_RECRUITING
+NCT06994169,related,rule: observational study of CAR-T,Glofitamab in Real Life,RECRUITING
+NCT06999967,related,rule: observational study of CAR-T,Stanford-Lucidify EEG Delirium Study,NOT_YET_RECRUITING
+NCT07003295,related,"rule: CAR-T mentioned, not an intervention","Testing the Anti-cancer Drug, Glofitamab, in Patients With Mantle Cell Lymphoma (A Type of Blood Cancer) Whose Disease Returned After CAR-T Cell Therapy",RECRUITING
+NCT07009899,related,"rule: CAR-T mentioned, not an intervention",BCMA Bispecific Antibody Therapy for Post-BCMA CAR T-Cell Therapy Relapse (RECLAIM),RECRUITING
+NCT07040982,related,"rule: CAR-T mentioned, not an intervention",Asciminib as Maintenance Treatment After Cellular Therapies for Adults With Philadelphia Chromosome Positive Acute Lymphoblastic Leukemia,RECRUITING
+NCT07045727,related,"rule: CAR-T mentioned, not an intervention",Prehabilitation With Aerobic and Resistance Exercise for Improving Physical Fitness and Quality of Life Outcomes in Older Patients Undergoing CAR-T Therapy for Relapsed or Refractory Multiple Myeloma,TERMINATED
+NCT07048535,related,rule: observational study of CAR-T,"CAR T-cell Long-Term Follow-Up, Quality of Life and Adverse Reactions",RECRUITING
+NCT07049432,related,"rule: CAR-T mentioned, not an intervention",N-803 Maintenance Therapy Post CAR T-cell Therapy in Patients With Relapsed or Refractory B-cell Non-Hodgkin Lymphomas,WITHDRAWN
+NCT07051525,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Early Versus Late Stopping of Antibiotics in Adults With High-risk Hematological Malignancies/Receiving Cellular Therapies and Fever,RECRUITING
+NCT07051850,related,rule: observational study of CAR-T,Quality of Life and Treatment Outcomes in RRMM Patients Receiving Advanced vs. Conventional Immunotherapies,RECRUITING
+NCT07075523,related,rule: observational study of CAR-T,Neuroimaging and Biomarkers of Neurotoxicity After Chimeric Antigen Receptor T-Cell Therapy,RECRUITING
+NCT07101913,related,rule: observational study of CAR-T,Occurrence of Acute Kidney Injury After CAR-T Cells Treatments in B-cell Lymphoma.,ACTIVE_NOT_RECRUITING
+NCT07106671,related,"rule: CAR-T mentioned, not an intervention",A Phase II Study of Siltuximab for CRS/ICANs After CAR-T in Multiple Myeloma,RECRUITING
+NCT07127289,related,"rule: CAR-T mentioned, not an intervention",Autologous Hematopoietic Stem Cell Infusion for Prolonged Cytopenia After CAR-T Cell Therapy,RECRUITING
+NCT07139600,related,rule: observational study of CAR-T,Multi-omics Profiling of Patients With Aplastic Anemia Before and After CD7-CAR-T Therapy,ACTIVE_NOT_RECRUITING
+NCT07169487,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Adjunctive Methylene Blue for Immunotherapy-related CRS and ICANS: Phase I Study,RECRUITING
+NCT07173166,related,"rule: CAR-T mentioned, not an intervention",Non-Pharmacological Interventions for Neurotoxicity in Hematologic Patients Receiving CAR-T Therapy,RECRUITING
+NCT07173322,related,rule: observational study of CAR-T,The Impact of CAR-T Cell Therapy on Fertility; A Patient Survey,RECRUITING
+NCT07179484,related,rule: observational study of CAR-T,To Evaluate the Efficacy of CT041 in Sequential Treatment After First-line Treatment of Advanced Gastric/Esophagogastric Junction Adenocarcinoma,RECRUITING
+NCT07186192,related,"rule: CAR-T mentioned, not an intervention",Digital Health Intervention for Self-Management and Telemonitoring in Chimeric Antigen Receptor (CAR-T) Therapy,RECRUITING
+NCT07197307,related,"rule: CAR-T mentioned, not an intervention",Combining Loncastuximab Tesirine and Epcoritamab in Relapsed/Refractory Diffuse Large B-cell Lymphoma (DLBCL),RECRUITING
+NCT07198373,related,rule: observational study of CAR-T,Exploratory Study on the Efficacy of Zebutinib as Maintenance Therapy Following CAR-T Cell Therapy in Patients With Non-Hodgkin B-Cell Lymphoma,NOT_YET_RECRUITING
+NCT07200089,related,"rule: CAR-T mentioned, not an intervention",Recombinant Human IL-7 (NT-I7) in Relapsed/Refractory Multiple Myeloma Following BCMA CAR-T Therapy (Cilta-cel),RECRUITING
+NCT07200102,related,"rule: CAR-T mentioned, not an intervention",Selinexor Maintenance Post CAR-T Cell Therapy for Multiple Myeloma,RECRUITING
+NCT07212335,related,"rule: CAR-T mentioned, not an intervention",Safety and Efficacy of Umbilical Cord Blood-Derived Mesenchymal Stem Cells in the Treatment of Long-Term Cytopenia After CAR-T Therapy,RECRUITING
+NCT07236203,related,rule: observational study of CAR-T,Predictive Factors for the Efficacy of CD19 CAR-T Therapy in Relapsed/Refractory Large B-Cell Lymphoma: A Clinical Study,RECRUITING
+NCT07249528,related,rule: observational study of CAR-T,A Study of Voice as a Way to Monitor for Side Effects in People Receiving CAR T-Cell Therapy,RECRUITING
+NCT07250087,related,"rule: CAR-T mentioned, not an intervention",Asciminib Maintenance Therapy Following alloHCT or CAR T to Prevent Relapse in Adults With Ph+ALL,RECRUITING
+NCT07289087,related,rule: observational study of CAR-T,Patient-Reported Outcomes in Allogeneic Stem Cell Transplantation and CAR-T Therapy,NOT_YET_RECRUITING
+NCT07296120,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",RSV Vaccine Response in Stem Cell and CAR-T Therapy Recipients,NOT_YET_RECRUITING
+NCT07309497,related,rule: observational study of CAR-T,Pragmatic Geriatric Assessment Before CAR-T or Bispecific Antibody Therapy to Predict Side Effects and Outcomes in Older Patients (GA-ACT Trial),RECRUITING
+NCT07342179,related,"rule: CAR-T mentioned, not an intervention",CAR-T Immunomonitoring in Multiple Myeloma (CART I5M),RECRUITING
+NCT07349836,related,"rule: CAR-T mentioned, not an intervention",Application of mRNA Immunotherapy Technology in EB Virus Related Diseases,NOT_YET_RECRUITING
+NCT07375628,related,rule: observational study of CAR-T,Neurological and Cognitive Dysfunction Following CAR-T Treatment. ICANS and Beyond,NOT_YET_RECRUITING
+NCT07377435,related,"rule: CAR-T mentioned, not an intervention",DC/MM Fusion Vaccine With BCMA CAR-T in R/R MM,RECRUITING
+NCT07387848,related,"rule: CAR-T mentioned, not an intervention",Glofitamab as a Bridge to and/or Consolidation Post Autologous Stem Cell Transplant in Patients With Relapsed B Cell Lymphomas,RECRUITING
+NCT07390071,related,"rule: CAR-T mentioned, not an intervention",Multimodal Telerehabilitation in Patients Undergoing CAR-T Cell Immunotherapy,RECRUITING
+NCT07403812,related,"rule: CAR-T mentioned, not an intervention",Assessing DCog Short for Neurotoxicity in CAR-T,RECRUITING
+NCT07424222,related,"rule: CAR-T mentioned, not an intervention",Ruxolitinib for Immune Effector Cell Associated Hemophagocytic Lymphohistiocytosis-like Syndrome (RISE),RECRUITING
+NCT07453095,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Study With Glofitamab in Patients With MCL and Inadequate Response or Relapse Following CAR T-cell Therapy,RECRUITING
+NCT07455500,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Study of an Innovative Therapy Using CAR-T Cells Targeting IL-1RAP in Patients With High-Risk Myelodysplastic Syndromes (MDS,NOT_YET_RECRUITING
+NCT07463781,related,rule: observational study of CAR-T,Neurocognitive Assessment in Adults Undergoing CD19 Targeted CAR-T Cell Therapy,NOT_YET_RECRUITING
+NCT07464483,related,"rule: CAR-T mentioned, not an intervention",Multi-omic Characterization of Pediatric and Adult Patients Undergoing Hematopoietic Stem Cell Transplantation and Advanced Cell Therapies,RECRUITING
+NCT07472972,related,rule: observational study of CAR-T,Dynamic Individualized Risk Profiling of Patients With Relapsed/Refractory Lymphoid Malignancies and CD19-CAR T Cell Therapy (INTeRCePT 2.0),RECRUITING
+NCT07474051,related,rule: observational study of CAR-T,Long-Term Follow-Up of AvenCell Sponsored CAR-T Cell Clinical Trials,ENROLLING_BY_INVITATION
+NCT07479927,related,"rule: CAR-T mentioned, not an intervention","Telematic Cognitive Training and Mindfulness in Pediatric Patients After CAR-T Cell Therapy, Single Hematopoietic Allogeneic Transplant or Chemotherapy",RECRUITING
+NCT07485855,related,"rule: CAR-T mentioned, not an intervention",Influenza Vaccination Strategy for Patients With Hematologic Malignancy,RECRUITING
+NCT07499128,related,"rule: CAR-T mentioned, not an intervention","Continuous Temperature Monitoring (CTM) for Cytokine Release Syndrome (CRS), an Immune-Related Adverse Event",ENROLLING_BY_INVITATION
+NCT07509450,related,"rule: CAR-T mentioned, not an intervention",Fecal Microbiota Transplantation in Patients Undergoing Chimeric Antigen Receptor T-cell Therapy and Allogeneic Stem Cell Transplant: A Pilot Study,RECRUITING
+NCT07524816,related,rule: observational study of CAR-T,Real World Practice With Academic Anti CD19 CAR-T Cell Therapy in Relapse/Refractory B-cell Lymphoma,RECRUITING
+NCT07532525,related,"rule: CAR-T mentioned, not an intervention",Pomalidomide After CAR T-cell Therapy for the Treatment of Relapsed or Refractory CD19+ B-cell Leukemia or Lymphoma,RECRUITING
+NCT07538856,related,rule: observational study of CAR-T,Safety and Efficacy of CT0494BCP in Participants With Advanced Gastric/Esophagogastric Junction Adenocarcinoma,NOT_YET_RECRUITING
+NCT07542678,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Double-T - Improving Outcomes in High-risk 2nd Line Relapsed/Refractory Large B-Cell Lymphoma Patients Eligible for CAR-T-cell Therapy With a Glofitamab-based Induction and Consolidation Concept,NOT_YET_RECRUITING
+NCT07564219,related,"rule: CAR-T mentioned, not an intervention",BEAM-MM - β-Hydroxybutyrate-Enhanced Adaptive Immunity in Multiple Myeloma,RECRUITING
+NCT07577583,related,rule: observational study of CAR-T,Long-term Follow-up (LTFU) of Participants Who Received Azer-Cel,RECRUITING
+NCT07594496,related,rule: observational study of CAR-T,Prevalence and Clinical Manifestations of Cannabis Withdrawal in Hospitalized Patients With Hematological Malignancies Undergoing Bone Marrow Transplant (BMT) or Chimeric Antigen Receptor T-Cell (CAR-T) Therapy,ENROLLING_BY_INVITATION
+NCT07602322,related,"rule: CAR-T mentioned, not an intervention",LME-Guided Precision Combination Therapy in B-cell Lymphoma Patients After CD19 CAR-T Failure,NOT_YET_RECRUITING
+NCT07609030,related,"rule: CAR-T mentioned, not an intervention",A Cognitive Training Intervention for Improving Cognitive and Neurological Outcomes in Patients Undergoing Treatment for Relapsed or Refractory Multiple Myeloma or B-cell Non-Hodgkin Lymphoma,RECRUITING
+NCT07609485,related,rule: observational study of CAR-T,Identifying Cellular and Molecular Determinants of Efficacy and Resistance in Patients Undergoing CAR-T Therapy,RECRUITING
+NCT07612787,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",A Multicenter Study of Belantamab Mafodotin and Mezigdomide in Patients With Relapsed Multiple Myeloma,NOT_YET_RECRUITING
+NCT07616271,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Study on the Effect of Oral Diammonium Glycyrrhizinate in Attenuating Toxicity and Enhancing Efficacy of CAR-T Cell Therapy,NOT_YET_RECRUITING
+NCT07623655,related,rule: observational study of CAR-T,CAR-T Treatment in Pediatric and Adult Acute Lymphoblastic Leukemia,NOT_YET_RECRUITING
+NCT07637929,related,rule: observational study of CAR-T,Non-Interventional Study of Puzol-cel for CD19-Positive Relapsed/Refractory B-Cell Acute Lymphoblastic Leukemia,NOT_YET_RECRUITING
+NCT07638982,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Axatilimab + CAR-T for High-Risk Lymphoma,NOT_YET_RECRUITING
+NCT07648264,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Single-arm Study of IgPro20 in Adults With Secondary Immune Deficiencies Due to Hematologic Malignancies Treated With B-cell Targeting Chimeric Antigen Receptor T-cell and T-cell Redirecting Therapies,RECRUITING
+NCT07649512,related,"rule: CAR-T mentioned, not an intervention",Progressive Muscle Relaxation Delivered Via Virtual Reality - an Intervention for Patients Undergoing Cellular Therapy,NOT_YET_RECRUITING
+NCT07665307,related,rule: observational study of CAR-T,Delayed Toxicities Post-CAR-T,RECRUITING
+NCT07674498,related,"rule: CAR-T mentioned, not an intervention",Immune Fitness in Older Patients With Relapsed and Refractory Multiple Myeloma,RECRUITING
+NCT07679958,related,"rule: CAR-T mentioned, not an intervention",Immersive Virtual Reality Applied to Therapeutic Physical Exercise in Cellular Therapy,NOT_YET_RECRUITING
+NCT07702851,related,"rule: CAR-T mentioned, not an intervention",A Study of Polatuzumab Vedotin and Glofitamab in Patients With Relapsed or Refractory Diffuse Large B-Cell Lymphoma Within 12 Months After R-CHOP,NOT_YET_RECRUITING
+NCT07713511,related,rule: observational study of CAR-T,INfections in Patients Treated With CAR-T,NOT_YET_RECRUITING
+NCT07720310,related,rule: observational study of CAR-T,Anti-CD19 CAR-T Cell Therapy for Patients With Refractory Systemic Lupus Erythematosus,ENROLLING_BY_INVITATION
+NCT07724457,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product","Testing the Addition of a New Anti-Cancer Drug, Glofitamab to Usual Chemotherapy for Burkitt and Double Hit Lymphoma",NOT_YET_RECRUITING
+NCT07724535,related,"rule: CAR-T mentioned, not an intervention",18F-grazy-02 PET/CT of Granzyme B Expression for Monitoring Immunotherapy,RECRUITING
+NCT07740317,related,rule: observational study of CAR-T,Neurocognitive Trajectories After BCMA CAR-T,RECRUITING
+NCT07744750,related,"rule: CAR-T mentioned, not an intervention",Pirtobrutinib+Sonrotoclax（PS) Regimen in the Treatment of B-Cell Lymphoma,NOT_YET_RECRUITING
+NCT07754682,related,"rule: CAR-T mentioned, not an intervention",Immunoglobulin Replacement Therapy (IgRT) Versus Antibiotic Prophylaxis (PA) in Patients Treated by CD19-targeted Chimeric Antigen Receptor (CAR)T Cells for a B Cell Acute Lymphoblastic Leukemia or a B Cell Lymphoma,NOT_YET_RECRUITING
+NCT07763210,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Intrathecal Cytarabine and Hydrocortisone for the Early Treatment of ICANS in Patients Undergoing CAR T Therapy for Non Hodgkin Lymphoma,RECRUITING
+NCT07777120,related,rule: observational study of CAR-T,Liso-Cel in Relapsed/Refractory Marginal Zone Lymphoma,ACTIVE_NOT_RECRUITING
+NCT07794423,related,rule: observational study of CAR-T,Pulmonary Complications of CAR T-cell Therapy,COMPLETED
+NCT07813000,related,rule: observational study of CAR-T,Physician and Patient Preferences for Cell Therapies in Advanced Solid Tumors,RECRUITING
+NCT07814001,related,"rule: CAR-T mentioned, not an intervention",Epcoritamab Plus Lenalidomide in Relapsed/Refractory Large B-cell Lymphoma After Second-Line CAR T-cell Therapy,NOT_YET_RECRUITING
+NCT07825064,related,"rule: CAR-T mentioned, not an intervention",Cevostamab in Combination With Pomalidomide and Dexamethasone After BCMA- Targeting CAR T-Cell Therapy in Participants With Previously Treated Multiple Myeloma,RECRUITING
+NCT07833046,related,rule: observational study of CAR-T,Long-term Follow-up Study in Subjects With Multiple Myeloma Previously Treated With GC012F Injection,ENROLLING_BY_INVITATION
+NCT07852377,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Immunomonitoring and Predictive Biomarkers After CAR-T Cell Therapy in B-Cell Lymphoma and Multiple Myeloma,NOT_YET_RECRUITING
+NCT07854652,related,"rule: CAR-T mentioned, not an intervention",BEBT-908 in MEF2D-Rearranged Relapsed/Refractory or MRD-Positive B-Cell Precursor Acute Lymphoblastic Leukemia,RECRUITING
+NCT07871747,related,"rule: CAR-T mentioned, not an intervention",Microbiome Intervention for CAR-T Optimization and Response (MICRO-CART),NOT_YET_RECRUITING
+NCT07873476,related,rule: observational study of CAR-T,"Real-world Clinical Effectiveness & Safety LV009, an in Vivo CAR-T for the Treatment of Hematologic Cancers, Auto-immune Diseases & HLA/ AAV Sensitization.",NOT_YET_RECRUITING
+NCT07882732,related,rule: observational study of CAR-T,RPM Signals in Outpatient CAR T Therapy,NOT_YET_RECRUITING
+NCT07883135,related,"rule: CAR-T mentioned, not an intervention",Bispecific Antibody-Based Holding/Bridging Therapy Before CAR-T in Aggressive B-Cell Lymphomas,RECRUITING
+NCT07886190,related,"rule: CAR-T mentioned, not an intervention",Symptom Monitoring and Management Intervention After CAR-T,NOT_YET_RECRUITING
+NCT07888530,related,rule: observational study of CAR-T,Non-Interventional Study of Ranicabtagene Autoleucel Injection for Relapsed/Refractory B-cell Non-Hodgkin Lymphoma,NOT_YET_RECRUITING
+NCT07895017,related,"rule: CAR-T mentioned, not an intervention",Time-limited Treatment With Avatrombopag Pre- and Post-CAR T-cell Therapy to Prevent Post-CAR T-cell Cytopenias,NOT_YET_RECRUITING
+NCT07911540,related,"manual: read by hand: concerns CAR-T patients or mentions CAR-T, but the study gives no CAR-T product",Wearable Core Body Temperature Monitoring for Early Detection of Cytokine Release Syndrome in Outpatients Receiving CAR T-Cell Therapy,NOT_YET_RECRUITING
+NCT07915102,related,rule: observational study of CAR-T,"CAR-T Therapy: Safety, Efficacy, and Immune-Escape Mechanisms",RECRUITING
+NCT07931391,related,"rule: CAR-T mentioned, not an intervention",SKCD in Early Relapsed/Refractory Multiple Myeloma,RECRUITING
+NCT00104858,unrelated,rule: CAR-T only in eligibility or not at all,"Fludarabine Phosphate, Radiation Therapy, and Rituximab in Treating Patients Who Are Undergoing Donor Stem Cell Transplant Followed by Rituximab for High-Risk Chronic Lymphocytic Leukemia or Small Lymphocytic Lymphoma",COMPLETED
+NCT00880594,unrelated,rule: CAR-T only in eligibility or not at all,Irritable Bowel Syndrome (IBS) Functional Magnetic Resonance Imaging (fMRI) With Desipramine,TERMINATED
+NCT00917813,unrelated,rule: CAR-T only in eligibility or not at all,A Study of Anti-HIV Monoclonal Antibody KD-247,COMPLETED
+NCT01354145,unrelated,manual: read by hand: not a CAR-T study,Study of the Effect of Chondroitin Sulfate on Structural Changes in Knee Osteoarthritis Patients Assessed by MRI,COMPLETED
+NCT01492985,unrelated,manual: read by hand: not a CAR-T study,Lipopeptide Immunisation With GTU-multiHIV Trial,COMPLETED
+NCT01658150,unrelated,rule: CAR-T only in eligibility or not at all,Evaluating Isradipine for Cognitive Enhancement in Schizophrenia and Schizoaffective Disorder,COMPLETED
+NCT01704144,unrelated,"rule: observational, CAR-T not its subject",Rifampin and Efavirenz Interactions in Older Children,UNKNOWN
+NCT01709799,unrelated,rule: CAR-T only in eligibility or not at all,Village Interactive Training and Learning Study,COMPLETED
+NCT01729806,unrelated,rule: CAR-T only in eligibility or not at all,Ipilimumab and Rituximab in Treating Patients With Relapsed or Refractory B-cell Lymphoma,COMPLETED
+NCT01746849,unrelated,rule: CAR-T only in eligibility or not at all,Palifermin With Leuprolide Acetate for the Promotion of Immune Recovery Following Total Body Irradiation Based T-Cell Depleted Allogeneic Hematopoietic Stem Cell Transplantation,ACTIVE_NOT_RECRUITING
+NCT01800019,unrelated,manual: read by hand: not a CAR-T study,The Canadian HIV Quit Smoking Trial: Tackling the Co-morbidities of Depression and Cardiovascular Disease in HIV+ Smokers,UNKNOWN
+NCT01889992,unrelated,manual: read by hand: not a CAR-T study,Cardiac Allograft Remodeling and Effects of Sirolimus,TERMINATED
+NCT01935921,unrelated,rule: CAR-T only in eligibility or not at all,"Ipilimumab, Cetuximab, and Intensity-Modulated Radiation Therapy in Treating Patients With Previously Untreated Stage III-IVB Head and Neck Cancer",COMPLETED
+NCT02023632,unrelated,rule: CAR-T only in eligibility or not at all,GrOup-based Physical Activity for oLder Adults Trial,COMPLETED
+NCT02117518,unrelated,"rule: observational, CAR-T not its subject",Selective Immunotargeting of Pathogenic CD8 T Cells of Type 1 Diabetes Patients,UNKNOWN
+NCT02129543,unrelated,"rule: observational, CAR-T not its subject",Immune Reconstitution in Stem Cell Transplant Recipients,RECRUITING
+NCT02135055,unrelated,rule: CAR-T only in eligibility or not at all,Effect of Midazolam on Inflammatory Response and Organ Function in Mechanically Ventilated Sepsis Patients With Different Immune Status,UNKNOWN
+NCT02277197,unrelated,rule: CAR-T only in eligibility or not at all,Ficlatuzumab and Cetuximab in Recurrent/Metastatic Head and Neck Squamous Cell Carcinoma (HNSCC),COMPLETED
+NCT02290951,unrelated,manual: read by hand: not a CAR-T study,Study to Investigate the Safety and Tolerability of Odronextamab in Patients With CD20+ B-Cell Malignancies,COMPLETED
+NCT02303821,unrelated,manual: read by hand: not a CAR-T study,Study of Carfilzomib in Combination With Induction Chemotherapy in Children With Relapsed or Refractory Acute Lymphoblastic Leukemia,COMPLETED
+NCT02343042,unrelated,manual: read by hand: not a CAR-T study,Selinexor and Backbone Treatments of Multiple Myeloma Patients,RECRUITING
+NCT02478632,unrelated,manual: read by hand: not a CAR-T study,Bone Mineral Density in Human Immunodeficiency Virus Type 1 (HIV-1)-Infected Adult Subjects Switching From a Tenofovir Regimen to a Dolutegravir Plus Rilpivirine Regimen,COMPLETED
+NCT02482532,unrelated,manual: read by hand: not a CAR-T study,"Vaccine Enriched, Autologous, Activated T-Cells Directed to Tumor in Patients With Relapsed/Refractory Melanoma",COMPLETED
+NCT02568267,unrelated,rule: CAR-T only in eligibility or not at all,"Basket Study of Entrectinib (RXDX-101) for the Treatment of Patients With Solid Tumors Harboring NTRK 1/2/3 (Trk A/B/C), ROS1, or ALK Gene Rearrangements (Fusions)",ACTIVE_NOT_RECRUITING
+NCT02627131,unrelated,rule: CAR-T only in eligibility or not at all,Autologous Bone Marrow Stem Cell Therapy for Autism,COMPLETED
+NCT02672761,unrelated,rule: CAR-T only in eligibility or not at all,"Effect of 8 Weeks of MBSR Training on Neuroplasticity and Improvement of Attention, Memory and Well-Being",UNKNOWN
+NCT02687659,unrelated,rule: CAR-T only in eligibility or not at all,TEMIS: a Pilot Study to Evaluate a Device to Characterize Ambulatory Physical Activity,COMPLETED
+NCT02714426,unrelated,rule: CAR-T only in eligibility or not at all,A 14 Week Study of Mindfulness Effects on Attentional Control in Older Adults,COMPLETED
+NCT02727803,unrelated,manual: read by hand: not a CAR-T study,Personalized NK Cell Therapy in CBT,RECRUITING
+NCT02783573,unrelated,rule: CAR-T only in eligibility or not at all,A Study of Lanabecestat (LY3314814) in Participants With Mild Alzheimer's Disease Dementia,TERMINATED
+NCT02786511,unrelated,"rule: observational, CAR-T not its subject",Longterm Follow-up of Subjects Treated With bb2121,COMPLETED
+NCT02997761,unrelated,manual: read by hand: not a CAR-T study,Ibrutinib and Blinatumomab in Treating Patients With Relapsed or Refractory B Acute Lymphoblastic Leukemia,COMPLETED
+NCT03028870,unrelated,rule: CAR-T only in eligibility or not at all,A Study to Evaluate the Analgesic Efficacy and Safety of V120083 in Subjects With Osteoarthritis (OA) of the Knee,COMPLETED
+NCT03112174,unrelated,manual: read by hand: not a CAR-T study,Study of Ibrutinib Combined With Venetoclax in Subjects With Mantle Cell Lymphoma (MCL),COMPLETED
+NCT03115125,unrelated,rule: CAR-T only in eligibility or not at all,Descriptive Study of the Evolution in Proportion of Regulatory B Lymphocytes in Patients Hospitalized in Intensive Care for Severe Sepsis,TERMINATED
+NCT03181126,unrelated,manual: read by hand: not a CAR-T study,A Study of Venetoclax in Combination With Navitoclax and Chemotherapy in Subjects With Relapsed/Refractory Acute Lymphoblastic Leukemia or Relapsed/Refractory Lymphoblastic Lymphoma,COMPLETED
+NCT03301623,unrelated,rule: CAR-T only in eligibility or not at all,Comparative Effectiveness Trial of Communication Strategies in the Management of Chronic Pain,COMPLETED
+NCT03369353,unrelated,"rule: observational, CAR-T not its subject","Precision Diagnostics in Inflammatory Bowel Disease, Cellular Therapy and Transplantation (The PREDICT Trial)",ENROLLING_BY_INVITATION
+NCT03383783,unrelated,manual: read by hand: not a CAR-T study,Evaluation of the Fluoride Dose Response of a Modified In Situ Caries Model,COMPLETED
+NCT03448250,unrelated,manual: read by hand: not a CAR-T study,Evaluating a Novel Web-based Intervention for Breast Cancer Survivors,TERMINATED
+NCT03648372,unrelated,manual: read by hand: not a CAR-T study,A Study of TAK-981 in People With Advanced Solid Tumors or Cancers in the Immune System,TERMINATED
+NCT03658655,unrelated,rule: CAR-T only in eligibility or not at all,Stem Cells From Human Exfoliated Teeth in Treatment of Type 2 Diabetes,COMPLETED
+NCT03835117,unrelated,rule: CAR-T only in eligibility or not at all,Effect of a Wide Spectrum Nutritional Supplement on Mitochondrial Function in Children With Autism Spectrum Disorder,COMPLETED
+NCT03885076,unrelated,"rule: observational, CAR-T not its subject",Gamma Delta T Cells in AML,UNKNOWN
+NCT03912480,unrelated,rule: CAR-T only in eligibility or not at all,Stem Cells From Human Exfoliated Teeth in Treatment of Diabetic Patients With Significantly Reduced Islet Function,UNKNOWN
+NCT03916146,unrelated,rule: CAR-T only in eligibility or not at all,Behavioral Parent Training for Families With Deaf and Hard of Hearing Preschoolers,ACTIVE_NOT_RECRUITING
+NCT03919968,unrelated,rule: CAR-T only in eligibility or not at all,Effect of Muay Thai vs. Circuit Training on the Cardiovascular Health of Elderly,COMPLETED
+NCT03957655,unrelated,rule: CAR-T only in eligibility or not at all,Safety and Efficacy of SHED for Decompensated Liver Cirrhosis,UNKNOWN
+NCT04003883,unrelated,"rule: observational, CAR-T not its subject",ST-T Segment Changes in Emergency Physicians While on Duty,COMPLETED
+NCT04130100,unrelated,rule: CAR-T only in eligibility or not at all,Clinical Study of Pulp Mesenchymal Stem Cells in the Treatment of Primary Mild to Moderate Knee Osteoarthritis,UNKNOWN
+NCT04198974,unrelated,rule: CAR-T only in eligibility or not at all,The Canadian Underage Substance Use Prevention Trial,ACTIVE_NOT_RECRUITING
+NCT04302519,unrelated,rule: CAR-T only in eligibility or not at all,Novel Coronavirus Induced Severe Pneumonia Treated by Dental Pulp Mesenchymal Stem Cells,UNKNOWN
+NCT04332913,unrelated,"rule: observational, CAR-T not its subject",Efficacy and Safety of Tocilizumab in the Treatment of SARS-Cov-2 Related Pneumonia,UNKNOWN
+NCT04355780,unrelated,"rule: observational, CAR-T not its subject",Immunologic Features of Respiratory Failure in Pediatric Hematopoietic Cell Transplantation (HCT) Recipients and Pediatric Oncology Patients,COMPLETED
+NCT04436094,unrelated,rule: CAR-T only in eligibility or not at all,Soft Tissue Outcomes Of Badly Broken-Down Teeth Treated With Orthodontic Extrusion Compared With Immediate Implant Placement,UNKNOWN
+NCT04443348,unrelated,rule: CAR-T only in eligibility or not at all,Pre-op Pembro + Radiation Therapy in Breast Cancer (P-RAD),ACTIVE_NOT_RECRUITING
+NCT04456959,unrelated,"rule: observational, CAR-T not its subject",InO - A Retrospective Study of UK Patients With Leukaemia,COMPLETED
+NCT04469153,unrelated,"rule: observational, CAR-T not its subject",Interest of the Dosage of Ferritin / Glycosylated Ferritin in COVID-19,UNKNOWN
+NCT04530565,unrelated,manual: read by hand: not a CAR-T study,Testing the Use of Steroids and Tyrosine Kinase Inhibitors With Blinatumomab or Chemotherapy for Newly Diagnosed BCR-ABL-Positive Acute Lymphoblastic Leukemia in Adults,ACTIVE_NOT_RECRUITING
+NCT04538313,unrelated,manual: read by hand: not a CAR-T study,A Clinical Study in Patients With High-risk Recurrent Primary Hepatocellular Carcinoma Using Autologous TILs,UNKNOWN
+NCT04578769,unrelated,rule: CAR-T only in eligibility or not at all,Assessment of Different Modified POEM for Achalasia,COMPLETED
+NCT04621448,unrelated,rule: CAR-T only in eligibility or not at all,Moving Together: An Online Group Movement Program for People Living With Memory Loss and Caregivers,COMPLETED
+NCT04622423,unrelated,"rule: observational, CAR-T not its subject",Advanced Therapies for Liver Metastases,RECRUITING
+NCT04723706,unrelated,"rule: observational, CAR-T not its subject",Response to SARS-CoV-2 Vaccine in Stem Cell Transplant and Cellular Therapy Patients,COMPLETED
+NCT04734678,unrelated,"rule: observational, CAR-T not its subject",Comparison of Tocilizumab Versus Tocilizumab/Infliximab in Patients With COVID-19-associated Cytokine Storm Syndrome,COMPLETED
+NCT04827745,unrelated,manual: read by hand: not a CAR-T study,Blinatumomab for Treatment of R/R or MRD-positive CD19-Positive MPAL,COMPLETED
+NCT04893031,unrelated,"rule: observational, CAR-T not its subject","Effect of Tocilizumab on Intensive Care Patients With COVID-19 Pneumonia, a Retrospective Cohort Study",COMPLETED
+NCT04920617,unrelated,manual: read by hand: not a CAR-T study,"DPX-Survivac and Pembrolizumab With and Without Intermittent Low-Dose Cyclophosphamide, in Subjects With Relapsed/Refractory Diffuse Large B-Cell Lymphoma",RECRUITING
+NCT04952272,unrelated,manual: read by hand: not a CAR-T study,Intratumor CpG-ODN Injection Boosters Immune Killing Against in Situ Tumor Antigen Release for Advanced Solid Tumors,RECRUITING
+NCT04968275,unrelated,rule: CAR-T only in eligibility or not at all,A Cannabis Harm Reduction e-Intervention for Young Cannabis Users With Early Psychosis,COMPLETED
+NCT04982471,unrelated,"rule: observational, CAR-T not its subject",Connect® Lymphoma Disease Registry: A US-Based Prospective Observational Cohort Study,TERMINATED
+NCT05025553,unrelated,rule: CAR-T only in eligibility or not at all,Oral Administration of Polyethylene Glycol (PEG) for 6 Months in Chronically Constipated Autistic Children,COMPLETED
+NCT05040230,unrelated,"rule: observational, CAR-T not its subject",EEG Encephalopathy Patterns in Immune Effectors Cells-associated Neurotoxicity Syndrome (ICANS)Lay Language,COMPLETED
+NCT05045040,unrelated,rule: CAR-T only in eligibility or not at all,Empathetic Communication Facilitation Program for Early Initiation of End-of-life Discussions,COMPLETED
+NCT05127369,unrelated,rule: CAR-T only in eligibility or not at all,Clinical Study on the Safety and Efficacy of Dental Pulp Mesenchymal Cells in the Treatment of Depression,UNKNOWN
+NCT05146336,unrelated,"rule: observational, CAR-T not its subject",CytOSorb TreatMent Of Critically Ill PatientS Registry,RECRUITING
+NCT05166135,unrelated,"rule: observational, CAR-T not its subject",Latin American Real-world Study in Acute Leukemia,COMPLETED
+NCT05185635,unrelated,rule: CAR-T only in eligibility or not at all,Validating Neuropsych Tests in Spanish-speakers,UNKNOWN
+NCT05203809,unrelated,"rule: observational, CAR-T not its subject",Continuous Temperature Monitoring for tHe Early Recognition of Febrile Neutropenia in Haematological MALignancies,UNKNOWN
+NCT05206357,unrelated,manual: read by hand: not a CAR-T study,Study of the Adverse Events and Change in Disease State of Pediatric Participants (and Young Adults Between the Ages of 18-25) With Relapsed/Refractory Aggressive Mature B-cell Neoplasms Receiving Subcutaneous (SC) Injections of Epcoritamab,ACTIVE_NOT_RECRUITING
+NCT05237440,unrelated,manual: read by hand: not a CAR-T study,Childhood Traumas in Obese Women: Association With Deregulation of the Glucocorticoid Axis and Inflammatory State.,RECRUITING
+NCT05277272,unrelated,"rule: observational, CAR-T not its subject",INTO-HLH: A Disease Registry for Patients With Hemophagocytic Lymphohistiocytosis (HLH),RECRUITING
+NCT05303766,unrelated,rule: CAR-T only in eligibility or not at all,Radiofrequency Ablation in the Pain Management of Knee Osteoarthritis,UNKNOWN
+NCT05346601,unrelated,rule: CAR-T only in eligibility or not at all,Trial of Chiauranib Capsule on Pharmacokinetics to Assess the Effect of High Fat Diet in Healthy Volunteers,COMPLETED
+NCT05441137,unrelated,rule: CAR-T only in eligibility or not at all,"Using Head-mounted, Eye-tracking to Compare Looking, Manual Exploration and Social Interaction During Active Locomotion",UNKNOWN
+NCT05443373,unrelated,"rule: observational, CAR-T not its subject",A Multi-Signal Based Monitoring System for CNS Hypersomnias,UNKNOWN
+NCT05464329,unrelated,manual: read by hand: not a CAR-T study,Mosunetuzumab in Combination With Platinum-Based Salvage Chemotherapy in Patients With Relapsed/Refractory Aggressive B Cell Lymphoma,ACTIVE_NOT_RECRUITING
+NCT05473715,unrelated,rule: CAR-T only in eligibility or not at all,A Study to Learn How Well Aflibercept Injected Into the Eye Works and How Safe it is When Given in Customized Treatment Intervals in Patients With an Eye Disease Called Neovascular Age-related Macular Degeneration After Start of Treatment,TERMINATED
+NCT05502887,unrelated,"rule: observational, CAR-T not its subject",The Endothelial Cell Dysfunction and Outcome Project for Hematological Neoplasms,RECRUITING
+NCT05536570,unrelated,rule: CAR-T only in eligibility or not at all,Whiplash-induced Thoracic Outlet Syndrome Treated With Botulinum Toxin.,UNKNOWN
+NCT05541874,unrelated,"rule: observational, CAR-T not its subject",Establishment of 2D and 3D Primary Cell Cultures From Gastric and Gastroesophageal Junction Cancer,NOT_YET_RECRUITING
+NCT05560217,unrelated,"rule: observational, CAR-T not its subject",Collection of Peripheral Blood Mononuclear Cells From Healthy Subjects,UNKNOWN
+NCT05635591,unrelated,manual: read by hand: not a CAR-T study,KSD-101 Therapy for EBV-associated Haematologic Neoplasms: an Exploratory Clinical Trial,ENROLLING_BY_INVITATION
+NCT05643092,unrelated,"rule: observational, CAR-T not its subject",Biomarker and Imaging Package Study in Immune Effector Cell-Associated Neurotoxicity Syndrome,RECRUITING
+NCT05662228,unrelated,rule: CAR-T only in eligibility or not at all,Therapies for Down Syndrome Regression Disorder,COMPLETED
+NCT05674266,unrelated,manual: read by hand: not a CAR-T study,New Treatment Perspectives in Adolescents With Anorexia Nervosa: the Efficacy of Non-invasive Brain-directed Treatment,UNKNOWN
+NCT05748171,unrelated,manual: read by hand: not a CAR-T study,A Study to Learn More About the Study Medicine Called Inotuzumab Ozogamicin (InO) in Children (1 to <18 Years) With First Relapse ALL,RECRUITING
+NCT05753501,unrelated,manual: read by hand: not a CAR-T study,"Study to Evaluate Adverse Events, Change in Disease Activity, and How Oral ABBV-101 Moves Through the Body in Adult Participants With B-Cell Malignancies",ACTIVE_NOT_RECRUITING
+NCT05765864,unrelated,"rule: observational, CAR-T not its subject",Self-harm Behaviour Among the Most At-risk Adolescents,RECRUITING
+NCT05772000,unrelated,"rule: observational, CAR-T not its subject",Clinical Significance of Occult Central Nervous System Localization,UNKNOWN
+NCT05789303,unrelated,manual: read by hand: not a CAR-T study,"Study of Belantamab Mafodotin With Carfilzomib, Pomalidomide, and Dexamethasone in Relapsed Multiple Myeloma",RECRUITING
+NCT05803759,unrelated,rule: CAR-T only in eligibility or not at all,The Effects of Allicor on Patients After Coronary Arteria Revascularization Treatment,UNKNOWN
+NCT05823701,unrelated,manual: read by hand: not a CAR-T study,"Chidamide, Azacitidine Combined With GM Regimen for Relapsed and Refractory DLBCL Patients",UNKNOWN
+NCT05852912,unrelated,"rule: observational, CAR-T not its subject",Effects on Physical and Mental Prognosis and Quality of Life of Elderly People With Depressive Symptoms,UNKNOWN
+NCT05882305,unrelated,manual: read by hand: not a CAR-T study,KSD-101 Therapy for EBV-associated Lymphomas: an Exploratory Clinical Trial,WITHDRAWN
+NCT05884112,unrelated,rule: CAR-T only in eligibility or not at all,Treating Comorbid Depression of Patients With Narcolepsy by Intermittent Theta Burst Stimulation,UNKNOWN
+NCT05917821,unrelated,"rule: observational, CAR-T not its subject",New Antigens Against Glioblastoma,NOT_YET_RECRUITING
+NCT06000631,unrelated,rule: CAR-T only in eligibility or not at all,Long-term Effectiveness of Different Dosage Parameters of Early Powered Mobility Training for Toddlers With Motor Delays,UNKNOWN
+NCT06026046,unrelated,manual: read by hand: not a CAR-T study,Feasibility of an Adapted Sports Program Based on Fencing to Reduce Physical Deconditioning in Adult Hematology Patients,COMPLETED
+NCT06097793,unrelated,manual: read by hand: not a CAR-T study,KSD-101 Therapy for EBV-associated Nasopharyngeal Carcinoma: an Exploratory Clinical Trial,UNKNOWN
+NCT06202885,unrelated,"rule: observational, CAR-T not its subject",CAREMM-2306: Advanced Immunotherapy vs. Classical Immunotherapy,UNKNOWN
+NCT06205823,unrelated,"rule: observational, CAR-T not its subject",Compare Clinical Outcomes Between Advanced Immunotherapy and Classical Immunochemotherapy in RRMM,UNKNOWN
+NCT06248164,unrelated,"rule: observational, CAR-T not its subject",Relationship of Lifestyle Habits and Health Characteristics of Parents and Children,RECRUITING
+NCT06250751,unrelated,rule: CAR-T only in eligibility or not at all,Behavioral Exercise TRaining for Men Undergoing Androgen Depr Therapy for Prostate Ca,COMPLETED
+NCT06251076,unrelated,manual: read by hand: not a CAR-T study,Plan Development for Giving Teclistamab in the Outpatient Setting,RECRUITING
+NCT06260020,unrelated,rule: CAR-T only in eligibility or not at all,Development and Validation of a Comprehensive Module for Management of Sleep Disorders in ASD Children,UNKNOWN
+NCT06294652,unrelated,"rule: observational, CAR-T not its subject",AGMT Austrian Lymphoma Registry,RECRUITING
+NCT06352372,unrelated,rule: CAR-T only in eligibility or not at all,Safety and Efficacy of tPBM for Epileptiform Activity in Autism,COMPLETED
+NCT06370026,unrelated,manual: read by hand: not a CAR-T study,KSD-101 Therapy for Standard Treatment Failed EBV-associated NPC: an Exploratory Clinical Trial,NOT_YET_RECRUITING
+NCT06370403,unrelated,manual: read by hand: not a CAR-T study,Effects of Head and Neck Cooling and Heating on Fatigue in Multiple Sclerosis and Healthy Men,COMPLETED
+NCT06382909,unrelated,rule: CAR-T only in eligibility or not at all,Effect of Probiotic Compound K11T e K11TMax in ASD,COMPLETED
+NCT06395103,unrelated,manual: read by hand: not a CAR-T study,Substudy 01A: Zilovertamab Vedotin in Pediatric and Young Adult Participants With Hematologic Malignancies or Solid Tumors (MK-9999-01A/LIGHTBEAM-U01),RECRUITING
+NCT06399107,unrelated,manual: read by hand: not a CAR-T study,Investigation Into the Use of BAH243 Lentiviral Vector for Gene Therapy in Treating Sickle Cell Disease,RECRUITING
+NCT06413316,unrelated,"rule: observational, CAR-T not its subject",ABC-CT Pre-School Feasibility Study,COMPLETED
+NCT06413927,unrelated,rule: CAR-T only in eligibility or not at all,Driver Education Research Study,RECRUITING
+NCT06414278,unrelated,"rule: observational, CAR-T not its subject",Evaluation of Early Identification of Cognitive Side Effects of Immunotherapy,RECRUITING
+NCT06443320,unrelated,rule: CAR-T only in eligibility or not at all,Evaluation of the Videodrama Therapeutic Device for Children With Autism Spectrum Disorders,RECRUITING
+NCT06472778,unrelated,"rule: observational, CAR-T not its subject",A Real-world Study in Participants With Smoldering Multiple Myeloma,COMPLETED
+NCT06500637,unrelated,rule: CAR-T only in eligibility or not at all,TB006 for Autism Spectrum Disorder,RECRUITING
+NCT06524310,unrelated,rule: CAR-T only in eligibility or not at all,Effects of rTMS on Cognitive Functions and Behavior in Individuals With Autism Spectrum Disorder,COMPLETED
+NCT06541158,unrelated,rule: CAR-T only in eligibility or not at all,Transportation for Cancer Care Navigation Tool for Reducing Travel Barriers Among Patients With Solid Tumors Receiving Radiation Therapy,RECRUITING
+NCT06626867,unrelated,manual: read by hand: not a CAR-T study,"Effect of Dietary Fiber on Metabolic Syndrome, Gastrointestinal Function, Mood and Sleep Quality in Obese People",COMPLETED
+NCT06643221,unrelated,manual: read by hand: not a CAR-T study,Exercise as an Immune Adjuvant for Allogeneic Cell Therapies,RECRUITING
+NCT06655077,unrelated,rule: CAR-T only in eligibility or not at all,Incorporating PRO Data Into RA Clinical Encounters Using Health IT,COMPLETED
+NCT06681285,unrelated,manual: read by hand: not a CAR-T study,Cadonilimab Combined With Anlotinib Followed by Radiotherapy in Recurrent or Metastatic Esophageal Squamous Cell Carcinoma (CAR-RMEC),NOT_YET_RECRUITING
+NCT06708936,unrelated,manual: read by hand: not a CAR-T study,KSD-201 Treatment for Advanced Clear Cell Renal Cell Carcinoma: an Early Exploratory Clinical Study,WITHDRAWN
+NCT06752473,unrelated,manual: read by hand: not a CAR-T study,KSD-101 Therapy for Standard Treatment Failed EBV-associated Nasopharyngeal Carcinoma: an Exploratory Clinical Trial,NOT_YET_RECRUITING
+NCT06802406,unrelated,rule: CAR-T only in eligibility or not at all,Nutrition OUtReach In Systems of Healthcare,RECRUITING
+NCT06921980,unrelated,"rule: observational, CAR-T not its subject",Brain Function and Psychological Changes Related to Cell Therapy for Autoimmune Hemolytic Anemia,RECRUITING
+NCT06925022,unrelated,manual: read by hand: not a CAR-T study,Educational Programs Based on Healthy Habits to Improve Quality of Life and Psychosocial Profile in Women With Neurodegenerative Diseases: The ADVICE Protocol Study (Phase 1),COMPLETED
+NCT06927583,unrelated,rule: CAR-T only in eligibility or not at all,Effect of Sensory Integration in Speech Therapy for Children With Autism,COMPLETED
+NCT06928077,unrelated,rule: CAR-T only in eligibility or not at all,Inspiration From Eye-tracking Data: Investigating the Impact of Combining Specific Environmental Features and Power Mobility Training,RECRUITING
+NCT06985485,unrelated,manual: read by hand: not a CAR-T study,Full-Course Immunotherapy Consolidation for Unfit or Fit B-ALL Who Decline Chemotherapy,RECRUITING
+NCT07065344,unrelated,"rule: observational, CAR-T not its subject","A Multicenter Observational Study to Understand the Clinical Characteristics, Treatment Patterns and Access to Novel Therapies of Patients With Diffuse Large B-Cell Lymphoma in the MEA Region",RECRUITING
+NCT07066436,unrelated,manual: read by hand: not a CAR-T study,ImmunoMRI for Assessment of Tumor-associated Macrophages,NOT_YET_RECRUITING
+NCT07104708,unrelated,rule: CAR-T only in eligibility or not at all,"Effects of Systematic Exercise Training on Core Symptoms, Executive Function and Brain Function in Children With ASD",NOT_YET_RECRUITING
+NCT07115446,unrelated,rule: CAR-T only in eligibility or not at all,Phase Ib Study of HS-20093+HRS-5041 in Patients With Advanced Prostate Cancer,RECRUITING
+NCT07148817,unrelated,rule: CAR-T only in eligibility or not at all,Impact of Earplugs on Mechanisms of Noise-Related Cardiovascular Disease,RECRUITING
+NCT07163091,unrelated,rule: CAR-T only in eligibility or not at all,Bracing After Ankle Fracture,RECRUITING
+NCT07204496,unrelated,"rule: observational, CAR-T not its subject","A Clinical Study on the Safety, Tolerance, and Preliminary Efficacy of γδ-T Cell Injection in the Treatment of Advanced Bladder Cancer",NOT_YET_RECRUITING
+NCT07251179,unrelated,"rule: observational, CAR-T not its subject",Characterization of Autoreactive b Lymphocytes in Autoimmune Diseases and Immune Deficiencies,RECRUITING
+NCT07254637,unrelated,manual: read by hand: not a CAR-T study,Tocilizumab in Chronic Inflammatory CPPD Disease,NOT_YET_RECRUITING
+NCT07255963,unrelated,manual: read by hand: not a CAR-T study,"Pirtobrutinib, Lisaftoclax, and Rituximab in the Treatment of R/R DLBCL",RECRUITING
+NCT07269587,unrelated,"rule: observational, CAR-T not its subject",A Real-world Study on the Treatment of Adult B-cell Acute Lymphoblastic Leukemia With CNCT-19,ACTIVE_NOT_RECRUITING
+NCT07277413,unrelated,rule: CAR-T only in eligibility or not at all,A Study of IDE892 as Monotherapy and Combination in MTAP-deleted Advanced Solid Tumors,RECRUITING
+NCT07321808,unrelated,"rule: observational, CAR-T not its subject","Immunogenicity, Efficacy and Safety of Recombinant Herpes Zoster Vaccine in Frail Patients",RECRUITING
+NCT07381374,unrelated,rule: CAR-T only in eligibility or not at all,Fecal Microbiota Transplantation in Children With ASD,RECRUITING
+NCT07396571,unrelated,"rule: observational, CAR-T not its subject",Predictive Score in Patients With Hematological Malignancies Colonized by Multidrug-resistant Enterobacteriaceae,NOT_YET_RECRUITING
+NCT07403188,unrelated,"rule: observational, CAR-T not its subject",A Long-Term Follow-Up Study for Participants Previously Treated With KYV-101,RECRUITING
+NCT07424157,unrelated,"rule: observational, CAR-T not its subject",Long-Term Follow-Up of Subjects Treated With Seattle Children's Therapeutics Gene Therapy Products,RECRUITING
+NCT07426315,unrelated,manual: read by hand: not a CAR-T study,Innovative Methodologies for Neuroplasticity in Developmental Age With the Use of Virtual Reality,RECRUITING
+NCT07441083,unrelated,manual: read by hand: not a CAR-T study,Efficacy and Safety of Shatavari Root Extract in Women's Sexual Wellness,RECRUITING
+NCT07558057,unrelated,"rule: observational, CAR-T not its subject",Cognitive Impairment in Patients Undergoing Cell- and Antibody-based Immunotherapies for Haematological Malignancies: The COGNITOX Study,NOT_YET_RECRUITING
+NCT07570381,unrelated,"rule: observational, CAR-T not its subject",Biomarkers of ASD/ADHD and Factors Affecting Anxiety and Depression in Children and Young Adults,NOT_YET_RECRUITING
+NCT07646873,unrelated,manual: read by hand: not a CAR-T study,PET-Enabled Dual-Energy CT in Multiple Myeloma,NOT_YET_RECRUITING
+NCT07652476,unrelated,"rule: observational, CAR-T not its subject",Neurocognitive Assessment in Long-Term Survivors of Lymphoma,NOT_YET_RECRUITING
+NCT07682766,unrelated,"rule: observational, CAR-T not its subject","BioMArkeRs of INflammation, Infection, and Immunity in the Critical Area (MARINA): the Use of Inflammatory and Immunity Biomarkers as Early Predictors of Clinical Severity, Organ Damage, Response to Treatment, and Infectious Complications in Patients Admitted to the Critical Care Area.",RECRUITING
+NCT07749976,unrelated,manual: read by hand: not a CAR-T study,"GRACE: A Phase 1/2a Study of VTRU200 in Relapsed/Refractory AML, High-risk MDS, DLBCL Post CART Failure and Advanced Solid Tumors",NOT_YET_RECRUITING
+NCT07804199,unrelated,rule: CAR-T only in eligibility or not at all,taVNS in Veterans With Knee OA (AVAHCS),RECRUITING
+NCT07814261,unrelated,rule: CAR-T only in eligibility or not at all,Implementation Study With Embedded RCT of a Digital System of Parenting Support Within Government Services in South Africa,ACTIVE_NOT_RECRUITING
+NCT07831395,unrelated,manual: read by hand: not a CAR-T study,"Rituximab, Pirtobrutinib, Lisaftoclax and Liposomal Mitoxantrone for for Richter Syndrome Transformed From CLL",NOT_YET_RECRUITING
+NCT07883330,unrelated,"rule: observational, CAR-T not its subject",Unraveling Dynamics and Clinical Impact of Tregs in Allogeneic HSCT With PTCy,NOT_YET_RECRUITING
