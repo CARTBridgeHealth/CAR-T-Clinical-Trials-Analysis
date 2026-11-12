@@ -14,6 +14,7 @@ An end-to-end data pipeline analyzing **2,405 real-world CAR-T clinical trials**
 | 📊 | [Data Analysis](https://cartbridgehealth.github.io/CAR-T-Clinical-Trials-Analysis/) | Interactive clinical trial charts — growth trends, country breakdown, phase analysis |
 | 💼 | [Investor Presentation](https://cartbridgehealth.github.io/CAR-T-Clinical-Trials-Analysis/investor.html) | Full business case — problem, service model, product strategy, data, team · Bilingual EN/CN · Mobile responsive |
 | 🏥 | [Patient Guide](https://cartbridgehealth.github.io/CAR-T-Clinical-Trials-Analysis/patient_guide.html) | One-page product guides for all 5 Priority 1–3 CAR-T products · Bilingual EN/CN · Mobile responsive |
+| 🔎 | [Search by Condition](https://cartbridgehealth.github.io/CAR-T-Clinical-Trials-Analysis/patient_search.html) | Look up trials, approved products and centres by disease (e.g. lupus, myeloma) · Bilingual EN/CN |
 
 ---
 
@@ -193,6 +194,7 @@ This project underpins **CARTBridge Health** — a cross-border CAR-T medical co
 |---|---|
 | 💼 Investor Presentation | [investor.html](https://cartbridgehealth.github.io/CAR-T-Clinical-Trials-Analysis/investor.html) |
 | 🏥 Patient Guide | [patient_guide.html](https://cartbridgehealth.github.io/CAR-T-Clinical-Trials-Analysis/patient_guide.html) |
+| 🔎 Search by Condition | [patient_search.html](https://cartbridgehealth.github.io/CAR-T-Clinical-Trials-Analysis/patient_search.html) |
 
 ---
 
