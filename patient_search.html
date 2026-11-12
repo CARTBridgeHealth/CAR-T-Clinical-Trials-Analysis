@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAR-T by Condition — CARTBridge Health</title>
+<style>
+:root {
+  --ink:#0f172a; --muted:#64748b; --card:#ffffff; --bg:#f8fafc; --border:#e2e8f0;
+  --green:#059669; --greenbg:#d1fae5; --amber:#d97706; --amberbg:#fef3c7; --red:#dc2626; --redbg:#fee2e2;
+  --blue:#2563eb; --bluebg:#dbeafe;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink:#e2e8f0; --muted:#94a3b8; --card:#1e293b; --bg:#0f172a; --border:#334155;
+    --greenbg:#064e3b; --amberbg:#78350f; --redbg:#7f1d1d; --bluebg:#1e3a8a;
+  }
+}
+:root[data-theme="dark"] {
+  --ink:#e2e8f0; --muted:#94a3b8; --card:#1e293b; --bg:#0f172a; --border:#334155;
+  --greenbg:#064e3b; --amberbg:#78350f; --redbg:#7f1d1d; --bluebg:#1e3a8a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", system-ui, -apple-system, "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--ink); font-size: 15px; line-height: 1.6; min-height: 100vh; }
+a { color: var(--blue); }
+.topbar { background:#0f172a; color:#fff; height:52px; padding:0 16px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:10; }
+.topbar a { color:#fff; text-decoration:none; font-weight:700; }
+.topbar a span { color:#34d399; }
+.lang-btn { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); color:#fff; padding:5px 12px; border-radius:6px; font-size:12px; cursor:pointer; }
+main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 24px; margin-bottom: 6px; }
+.lede { color: var(--muted); margin-bottom: 18px; }
+.search-row { display:flex; gap:8px; }
+.search-row input { flex:1; min-width:0; padding:12px 14px; font-size:16px; border:1px solid var(--border); border-radius:8px; background:var(--card); color:var(--ink); }
+.search-row button { padding:12px 18px; border:0; border-radius:8px; background:var(--green); color:#fff; font-weight:600; cursor:pointer; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 4px; }
+.chip { border:1px solid var(--border); background:var(--card); color:var(--ink); padding:6px 12px; border-radius:999px; font-size:13px; cursor:pointer; }
+.chip.active { background:var(--green); border-color:var(--green); color:#fff; }
+.chip small { opacity:.7; }
+.section { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px; margin-top:18px; }
+.section h2 { font-size:17px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; }
+.notice { padding:12px 14px; border-radius:8px; font-size:14px; margin-bottom:10px; }
+.notice.warn { background:var(--amberbg); }
+.notice.info { background:var(--bluebg); }
+.stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap:10px; margin-bottom:12px; }
+.stat { border:1px solid var(--border); border-radius:8px; padding:10px; }
+.stat b { display:block; font-size:20px; }
+.stat span { color:var(--muted); font-size:12px; }
+select { padding:6px 8px; border-radius:6px; border:1px solid var(--border); background:var(--card); color:var(--ink); font-size:13px; }
+.item { border:1px solid var(--border); border-radius:8px; padding:12px; margin-bottom:10px; }
+.item h3 { font-size:15px; font-weight:600; margin-bottom:4px; }
+.meta { color:var(--muted); font-size:13px; }
+.badge { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; margin-right:4px; background:var(--bluebg); }
+.badge.recruit { background:var(--greenbg); }
+.badge.done { background:var(--border); }
+.badge.term { background:var(--redbg); }
+.more { margin-top:8px; padding:8px 14px; border:1px solid var(--border); background:var(--card); color:var(--ink); border-radius:8px; cursor:pointer; }
+.empty { color:var(--muted); padding:12px 0; }
+footer { margin-top:28px; color:var(--muted); font-size:13px; }
+footer p + p { margin-top:6px; }
+@media (max-width: 560px) { h1 { font-size:20px; } .search-row { flex-direction:column; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a href="index.html">CART<span>Bridge</span></a>
+  <button class="lang-btn" id="langBtn" type="button">中文 / EN</button>
+</header>
+
+<main>
+  <h1 id="t-title"></h1>
+  <p class="lede" id="t-lede"></p>
+
+  <form class="search-row" id="searchForm">
+    <input id="q" type="search" autocomplete="off" aria-label="Condition">
+    <button type="submit" id="t-go"></button>
+  </form>
+  <div class="chips" id="chips"></div>
+
+  <div id="results"></div>
+
+  <footer>
+    <p id="t-disc1"></p>
+    <p id="t-disc2"></p>
+    <p id="t-data"></p>
+  </footer>
+</main>
+
+<script>
+const I18N = {
+  en: {
+    title: "CAR-T therapy by condition",
+    lede: "Find clinical trials, approved CAR-T products and treatment centres for a condition. Type a disease or pick one below.",
+    go: "Search",
+    placeholder: "e.g. lupus, myeloma, lymphoma",
+    products: "Approved CAR-T products",
+    noProducts: "No CAR-T product is approved for this condition in the data we track (China, USA). Options here are clinical trials only.",
+    noProductsFree: "No approved CAR-T product matched this search. Try a disease name from the list above.",
+    trials: "Clinical trials",
+    trialsStat: ["Trials", "Recruiting / upcoming", "Phase 1 / early", "Phase 2+"],
+    filter: "Status",
+    fAct: "Recruiting & upcoming",
+    fAll: "All statuses",
+    fDone: "Completed / other",
+    showMore: "Show more",
+    noTrials: "No trials match this filter.",
+    centres: "Treatment centres (estimates)",
+    centresNote: "Costs and waiting times are researched estimates, not quotes. Confirm with the centre before planning.",
+    noCentres: "No listed centre for this CAR target yet.",
+    country: "Country", year: "Started", sponsor: "Sponsor", ped: "Paediatric",
+    viewTrial: "View on ClinicalTrials.gov",
+    approvedIn: "Approved", nmpa: "NMPA no.", indication: "Indications", target: "Target",
+    disc1: "Information only, not medical advice. Ask your doctor whether CAR-T or a trial suits you.",
+    disc2: "Trial data come from ClinicalTrials.gov (a snapshot, updated monthly); approved-product data from FDA and NMPA listings. Eligibility is not shown here—check each trial page.",
+    data: "Data month: ",
+    phase: "Phase", status: "Status",
+    statusLabel: {RECRUITING:"Recruiting",NOT_YET_RECRUITING:"Not yet recruiting",ACTIVE_NOT_RECRUITING:"Active, not recruiting",ENROLLING_BY_INVITATION:"Enrolling by invitation",COMPLETED:"Completed",TERMINATED:"Terminated",WITHDRAWN:"Withdrawn",SUSPENDED:"Suspended",UNKNOWN:"Unknown status",AVAILABLE:"Available",NO_LONGER_AVAILABLE:"No longer available",APPROVED_FOR_MARKETING:"Approved for marketing"},
+    countryLabel: {China:"China", USA:"USA", "United States":"USA", Canada:"Canada", Germany:"Germany", Japan:"Japan", "United Kingdom":"UK", Korea:"Korea", "Korea, Republic of":"Korea"},
+    anyTopic: "Results for"
+  },
+  cn: {
+    title: "按疾病查询 CAR-T 治疗",
+    lede: "查找某种疾病的临床试验、已批准的 CAR-T 产品和治疗中心。输入疾病名，或点选下方常见疾病。",
+    go: "查询",
+    placeholder: "例如：狼疮、骨髓瘤、淋巴瘤",
+    products: "已批准的 CAR-T 产品",
+    noProducts: "在我们追踪的数据中（中国、美国），该疾病目前没有已批准的 CAR-T 产品。这里只有临床试验。",
+    noProductsFree: "没有匹配的已批准 CAR-T 产品。可以试试上方列表中的疾病名。",
+    trials: "临床试验",
+    trialsStat: ["试验总数", "招募中 / 即将招募", "1 期 / 早期", "2 期及以上"],
+    filter: "状态",
+    fAct: "招募中及即将招募",
+    fAll: "全部状态",
+    fDone: "已完成 / 其他",
+    showMore: "显示更多",
+    noTrials: "没有符合该筛选的试验。",
+    centres: "治疗中心（估算）",
+    centresNote: "费用和等待时间为调研估算，并非报价。就诊前请与中心确认。",
+    noCentres: "暂无该靶点的已列出中心。",
+    country: "国家", year: "开始年份", sponsor: "申办方", ped: "儿科",
+    viewTrial: "在 ClinicalTrials.gov 查看",
+    approvedIn: "批准年份", nmpa: "NMPA 批文号", indication: "适应症", target: "靶点",
+    disc1: "仅供信息参考，不构成医疗建议。是否适合 CAR-T 或某项试验，请咨询您的医生。",
+    disc2: "试验数据来源于 ClinicalTrials.gov（每月更新的快照）；已批准产品数据来源于 FDA 和 NMPA 公开目录。本页不显示入组标准，请在每项试验页面核实。",
+    data: "数据月份：",
+    phase: "分期", status: "状态",
+    statusLabel: {RECRUITING:"招募中",NOT_YET_RECRUITING:"尚未招募",ACTIVE_NOT_RECRUITING:"进行中，不再招募",ENROLLING_BY_INVITATION:"邀请入组",COMPLETED:"已完成",TERMINATED:"已终止",WITHDRAWN:"已撤回",SUSPENDED:"已暂停",UNKNOWN:"状态未知",AVAILABLE:"可获得",NO_LONGER_AVAILABLE:"不再可获得",APPROVED_FOR_MARKETING:"已获批上市"},
+    countryLabel: {China:"中国", USA:"美国", "United States":"美国", Canada:"加拿大", Germany:"德国", Japan:"日本", "United Kingdom":"英国", Korea:"韩国", "Korea, Republic of":"韩国"},
+    anyTopic: "搜索结果："
+  }
+};
+
+// Extra words that map a typed query to a topic (matched as substrings, lower case).
+const ALIASES = {
+  sle: ["lupus", "sle", "狼疮"],
+  myeloma: ["myeloma", "骨髓瘤"],
+  lymphoma: ["lymphoma", "淋巴瘤", "dlbcl"],
+  all: ["lymphoblastic", "b-all", "all leukemia", "白血病"],
+  cll: ["cll", "chronic lymphocytic"],
+  gastric: ["gastric", "stomach", "claudin", "胃"]
+};
+
+let lang = "en";
+try { lang = localStorage.getItem("ps_lang") === "cn" ? "cn" : "en"; } catch (e) {}
+let DATA = null;
+let activeTopic = null;     // topic object, or null for free text
+let freeQuery = "";
+let statusFilter = "active";
+let shown = 30;
+
+const $ = (id) => document.getElementById(id);
+const T = () => I18N[lang];
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const topicName = (t) => lang === "cn" ? t.name_cn : t.name_en;
+const ACTIVE = new Set(["RECRUITING", "NOT_YET_RECRUITING"]);
+const DONE = new Set(["COMPLETED", "TERMINATED", "WITHDRAWN", "SUSPENDED", "UNKNOWN", "AVAILABLE", "NO_LONGER_AVAILABLE", "APPROVED_FOR_MARKETING"]);
+
+function applyStaticText() {
+  const s = T();
+  document.documentElement.lang = lang === "cn" ? "zh" : "en";
+  document.title = lang === "cn" ? "按疾病查询 CAR-T — CARTBridge Health" : "CAR-T by Condition — CARTBridge Health";
+  $("t-title").textContent = s.title;
+  $("t-lede").textContent = s.lede;
+  $("t-go").textContent = s.go;
+  $("q").placeholder = s.placeholder;
+  $("t-disc1").textContent = s.disc1;
+  $("t-disc2").textContent = s.disc2;
+  $("t-data").textContent = s.data + (DATA ? DATA.generated : "");
+}
+
+function renderChips() {
+  const box = $("chips");
+  box.innerHTML = "";
+  DATA.topics.forEach((t) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "chip" + (activeTopic && activeTopic.id === t.id ? " active" : "");
+    b.innerHTML = `${esc(topicName(t))} <small>${t.trial_count}</small>`;
+    b.onclick = () => { activeTopic = t; freeQuery = ""; $("q").value = topicName(t); shown = 30; render(); renderChips(); };
+    box.appendChild(b);
+  });
+}
+
+function matchTrials(list) {
+  if (activeTopic) return list.filter((x) => x.topics.includes(activeTopic.id));
+  const q = freeQuery.toLowerCase();
+  if (!q) return [];
+  return list.filter((x) => (x.title + " " + x.conditions.join(" ")).toLowerCase().includes(q));
+}
+
+function matchProducts() {
+  if (activeTopic) return DATA.products.filter((p) => p.topics.includes(activeTopic.id));
+  const q = freeQuery.toLowerCase();
+  if (!q) return [];
+  return DATA.products.filter((p) => (p.product + " " + p.indications).toLowerCase().includes(q));
+}
+
+function matchCentres() {
+  if (!activeTopic) return [];
+  return DATA.centers.filter((c) => c.targets.includes(activeTopic.target));
+}
+
+function statusClass(st) {
+  if (ACTIVE.has(st)) return "recruit";
+  if (st === "TERMINATED" || st === "WITHDRAWN") return "term";
+  if (DONE.has(st)) return "done";
+  return "";
+}
+
+function countryName(c) { return T().countryLabel[c] || c; }
+
+function render() {
+  const s = T();
+  const out = $("results");
+  if (!DATA) { out.innerHTML = ""; return; }
+  if (!activeTopic && !freeQuery) { out.innerHTML = ""; return; }
+
+  const products = matchProducts();
+  const trials = matchTrials(DATA.trials);
+  const centres = matchCentres();
+
+  const counts = {
+    total: trials.length,
+    act: trials.filter((x) => ACTIVE.has(x.status)).length,
+    p1: trials.filter((x) => /^(Early )?Phase 1|Phase 1\/2/.test(x.phase)).length,
+    p2: trials.filter((x) => /Phase (2|3|4)/.test(x.phase)).length,
+  };
+
+  let html = "";
+
+  // Products
+  html += `<section class="section"><h2>${esc(s.products)}</h2>`;
+  if (products.length) {
+    products.forEach((p) => {
+      html += `<div class="item"><h3>${esc(p.product)}</h3>
+        <div class="meta">${esc(countryName(p.country))} · ${esc(s.approvedIn)} ${esc(p.approval_year)}${p.cn_trade_name ? " · " + esc(p.cn_trade_name) : ""}</div>
+        <div class="meta">${esc(s.target)}: ${esc(p.target)} · ${esc(s.indication)}: ${esc(p.indications || "—")}</div>
+        ${p.nmpa_approval_no ? `<div class="meta">${esc(s.nmpa)}: ${esc(p.nmpa_approval_no)}</div>` : ""}
+      </div>`;
+    });
+  } else {
+    html += `<div class="notice warn">${esc(activeTopic ? s.noProducts : s.noProductsFree)}</div>`;
+  }
+  html += `</section>`;
+
+  // Trials
+  html += `<section class="section"><h2>${esc(s.trials)}</h2>
+    <div class="stats">
+      <div class="stat"><b>${counts.total}</b><span>${esc(s.trialsStat[0])}</span></div>
+      <div class="stat"><b>${counts.act}</b><span>${esc(s.trialsStat[1])}</span></div>
+      <div class="stat"><b>${counts.p1}</b><span>${esc(s.trialsStat[2])}</span></div>
+      <div class="stat"><b>${counts.p2}</b><span>${esc(s.trialsStat[3])}</span></div>
+    </div>
+    <div style="margin-bottom:10px"><label class="meta">${esc(s.filter)}: <select id="statusSel">
+      <option value="active">${esc(s.fAct)}</option>
+      <option value="all">${esc(s.fAll)}</option>
+      <option value="done">${esc(s.fDone)}</option>
+    </select></label></div>`;
+
+  const filtered = trials
+    .filter((x) => statusFilter === "all" || (statusFilter === "active" ? ACTIVE.has(x.status) : !ACTIVE.has(x.status)))
+    .sort((a, b) => (b.start_year || 0) - (a.start_year || 0));
+
+  if (!filtered.length) {
+    html += `<div class="empty">${esc(s.noTrials)}</div>`;
+  }
+  filtered.slice(0, shown).forEach((x) => {
+    const countries = x.countries.slice(0, 3).map(countryName).join(", ") || "—";
+    html += `<div class="item">
+      <h3>${esc(x.title)}</h3>
+      <div>
+        <span class="badge ${statusClass(x.status)}">${esc(s.statusLabel[x.status] || x.status)}</span>
+        <span class="badge">${esc(x.phase)}</span>
+        ${x.is_pediatric ? `<span class="badge">${esc(s.ped)}</span>` : ""}
+      </div>
+      <div class="meta">${esc(s.country)}: ${esc(countries)} · ${esc(s.year)}: ${esc(x.start_year ?? "—")} · ${esc(s.sponsor)}: ${esc(x.sponsor || "—")}</div>
+      <div class="meta"><a href="https://clinicaltrials.gov/study/${encodeURIComponent(x.nct)}" target="_blank" rel="noopener">${esc(x.nct)} — ${esc(s.viewTrial)}</a></div>
+    </div>`;
+  });
+  if (filtered.length > shown) {
+    html += `<button class="more" type="button" id="moreBtn">${esc(s.showMore)} (${filtered.length - shown})</button>`;
+  }
+  html += `</section>`;
+
+  // Centres
+  if (activeTopic) {
+    html += `<section class="section"><h2>${esc(s.centres)}</h2>
+      <div class="notice info">${esc(s.centresNote)}</div>`;
+    if (centres.length) {
+      centres.forEach((c) => {
+        html += `<div class="item"><h3>${esc(c.hospital)}</h3>
+          <div class="meta">${esc(countryName(c.country))} · ${esc(c.city)} · ${esc(c.cart_products)}</div>
+          <div class="meta">${esc(c.est_cost_usd ? "USD " + c.est_cost_usd : "")} ${c.wait_weeks ? "· " + esc(c.wait_weeks) + " wk" : ""} ${c.english_support ? "· EN support" : ""}</div>
+        </div>`;
+      });
+    } else {
+      html += `<div class="empty">${esc(s.noCentres)}</div>`;
+    }
+    html += `</section>`;
+  }
+
+  out.innerHTML = html;
+
+  const sel = $("statusSel");
+  if (sel) {
+    sel.value = statusFilter;
+    sel.onchange = () => { statusFilter = sel.value; shown = 30; render(); };
+  }
+  const more = $("moreBtn");
+  if (more) more.onclick = () => { shown += 30; render(); };
+}
+
+$("searchForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const q = $("q").value.trim();
+  shown = 30;
+  if (!q) { activeTopic = null; freeQuery = ""; render(); renderChips(); return; }
+  const lower = q.toLowerCase();
+  const hit = DATA && DATA.topics.find((t) =>
+    t.name_en.toLowerCase().includes(lower) || t.name_cn.includes(q) ||
+    (ALIASES[t.id] || []).some((a) => lower.includes(a)));
+  activeTopic = hit || null;
+  freeQuery = hit ? "" : q;
+  render();
+  renderChips();
+});
+
+$("langBtn").onclick = () => {
+  lang = lang === "en" ? "cn" : "en";
+  try { localStorage.setItem("ps_lang", lang); } catch (e) {}
+  applyStaticText();
+  renderChips();
+  render();
+};
+
+applyStaticText();
+fetch("data/patient_search.json")
+  .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then((d) => { DATA = d; applyStaticText(); renderChips(); })
+  .catch(() => {
+    $("results").innerHTML = `<div class="notice warn">Data could not be loaded. / 数据加载失败。</div>`;
+  });
+</script>
+</body>
+</html>
