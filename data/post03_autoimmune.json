@@ -1,0 +1,107 @@
+{
+  "generated_utc": "2026-11-12T15:54:43Z",
+  "data_month": "November 2026",
+  "total": 305,
+  "all_cart_trials": 2405,
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "per_year": [
+    1,
+    2,
+    6,
+    4,
+    13,
+    73,
+    94
+  ],
+  "current_year": 2026,
+  "current_year_so_far": 67,
+  "share_of_new_trials_last_full_year_pct": 26,
+  "diseases": [
+    {
+      "key": "lupus",
+      "zh": "系统性红斑狼疮 / 狼疮肾炎",
+      "en": "Lupus (SLE / lupus nephritis)",
+      "trials": 145
+    },
+    {
+      "key": "ssc",
+      "zh": "系统性硬化症",
+      "en": "Systemic sclerosis",
+      "trials": 73
+    },
+    {
+      "key": "myositis",
+      "zh": "炎性肌病",
+      "en": "Inflammatory myopathy",
+      "trials": 61
+    },
+    {
+      "key": "aav",
+      "zh": "ANCA 相关血管炎",
+      "en": "ANCA vasculitis",
+      "trials": 41
+    },
+    {
+      "key": "mg",
+      "zh": "重症肌无力",
+      "en": "Myasthenia gravis",
+      "trials": 33
+    },
+    {
+      "key": "cytopenia",
+      "zh": "免疫性血细胞减少",
+      "en": "Immune cytopenias",
+      "trials": 32
+    },
+    {
+      "key": "ms",
+      "zh": "多发性硬化",
+      "en": "Multiple sclerosis",
+      "trials": 31
+    },
+    {
+      "key": "sjogren",
+      "zh": "干燥综合征",
+      "en": "Sjögren's",
+      "trials": 26
+    },
+    {
+      "key": "ra",
+      "zh": "类风湿关节炎",
+      "en": "Rheumatoid arthritis",
+      "trials": 20
+    },
+    {
+      "key": "nmosd",
+      "zh": "视神经脊髓炎谱系病",
+      "en": "NMOSD",
+      "trials": 15
+    }
+  ],
+  "basket_trials": 90,
+  "early_phase": 254,
+  "early_phase_pct": 83,
+  "phase2_or_later": 22,
+  "phase3": 3,
+  "median_enrollment": 18,
+  "completed": 6,
+  "recruiting": 141,
+  "results_posted": 0,
+  "china": 189,
+  "usa": 62,
+  "cd19": 207,
+  "cd19_bcma_dual": 78,
+  "researched": {
+    "approved_for_autoimmune": 0,
+    "first_filing": "Kyverna completed a BLA submission to the FDA for miv-cel (KYV-101) in stiff person syndrome; no decision as of 2026-11-12 (company 8-K filings, BioSpace)."
+  },
+  "china_pct": 62
+}

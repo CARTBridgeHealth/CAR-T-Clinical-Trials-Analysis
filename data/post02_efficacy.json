@@ -1,0 +1,282 @@
+{
+  "as_of": "2026-11",
+  "note": "Figures for Xiaohongshu post 02. Researched, not counted: each range is the lowest and highest best-response rate published for the pivotal registration trials of the approved products in that disease group, taken from each trial's primary publication where one exists. Single-arm trials in heavily pretreated patients unless stated; not comparable across trials. Verified 2026-11-10; each trial row says how.",
+  "count_note": "17 = 7 USA + 10 China, matching approved_products.csv as of 2026-11-10. Anito-cel is NOT counted: FDA decision date is 2026-12-23.",
+  "groups": [
+    {
+      "key": "lymphoma",
+      "zh": "B细胞淋巴瘤",
+      "en": "B-cell lymphoma",
+      "target": "CD19",
+      "usa": [
+        "Kymriah",
+        "Yescarta",
+        "Tecartus",
+        "Breyanzi"
+      ],
+      "china": [
+        "奕凯达 (axi-cel)",
+        "倍诺达 (relma-cel)",
+        "恒凯莱 (雷尼基奥仑赛)",
+        "赛泊华 (泊基奥仑赛)"
+      ],
+      "chart_zh": "大B细胞淋巴瘤",
+      "chart_en": "Large B-cell lymphoma",
+      "metric_zh": "总缓解率，三线及以后",
+      "metric_en": "Overall response, 3rd line+",
+      "low": 52,
+      "high": 82,
+      "cr_low": 40,
+      "cr_high": 54,
+      "trials": [
+        {
+          "trial": "JULIET",
+          "product": "Kymriah",
+          "n": 93,
+          "orr": 52,
+          "cr": 40,
+          "source": "Schuster et al., NEJM 2019",
+          "checked": "confirmed against abstract summaries"
+        },
+        {
+          "trial": "ZUMA-1",
+          "product": "Yescarta",
+          "n": 101,
+          "orr": 82,
+          "cr": 54,
+          "source": "Neelapu et al., NEJM 2017 (primary analysis). Later follow-up reports 83% / 58% (Blood 2023); the primary figure is used so every row is a primary analysis.",
+          "checked": "83/58 confirmed in the Blood 2023 abstract; 82/54 primary figure from recall, not re-read"
+        },
+        {
+          "trial": "TRANSCEND NHL 001",
+          "product": "Breyanzi",
+          "n": 256,
+          "orr": 73,
+          "cr": 53,
+          "source": "Abramson et al., Lancet 2020",
+          "checked": "confirmed, PubMed 32888407"
+        },
+        {
+          "trial": "RELIANCE",
+          "product": "relma-cel",
+          "n": 58,
+          "orr": 75.9,
+          "cr": 51.7,
+          "source": "ASH 2020, via JW Therapeutics approval release 2021-09",
+          "checked": "confirmed in company release"
+        },
+        {
+          "trial": "HRAIN01-NHL01-II",
+          "product": "雷尼基奥仑赛",
+          "n": 81,
+          "orr": 74.1,
+          "cr": 49.4,
+          "source": "AACR 2024, data cut 2023-05-16. Other public versions differ: 73.3% / 52.2% (n=90, NHSA 2026 dossier) and 75.3% / 56.8% (press, later cut). None of them moves the range.",
+          "checked": "three versions found; earliest conference figure used"
+        },
+        {
+          "trial": "IM19 confirmatory",
+          "product": "泊基奥仑赛",
+          "n": 96,
+          "orr": 72.9,
+          "cr": null,
+          "source": "Company approval release 2026-11-05. Whole-population CR rate not published (58.6% is for patients without bridging chemotherapy only).",
+          "checked": "press release only"
+        }
+      ]
+    },
+    {
+      "key": "ball",
+      "zh": "急性B淋巴细胞白血病",
+      "en": "B-cell ALL",
+      "target": "CD19",
+      "usa": [
+        "Kymriah",
+        "Tecartus",
+        "Aucatzyl"
+      ],
+      "china": [
+        "源瑞达 (inati-cel)",
+        "普利得凯 (普基奥仑赛)"
+      ],
+      "chart_zh": "急性B淋巴细胞白血病",
+      "chart_en": "B-cell ALL",
+      "metric_zh": "完全缓解率（含CRi）",
+      "metric_en": "Complete remission (incl. CRi)",
+      "low": 71,
+      "high": 91,
+      "trials": [
+        {
+          "trial": "ELIANA",
+          "product": "Kymriah",
+          "n": 75,
+          "rate": 81,
+          "source": "Maude et al., NEJM 2018",
+          "checked": "confirmed"
+        },
+        {
+          "trial": "ZUMA-3",
+          "product": "Tecartus",
+          "n": 55,
+          "rate": 71,
+          "source": "Shah et al., Lancet 2021 (39 patients; CR 56%)",
+          "checked": "confirmed, PubMed 34097852"
+        },
+        {
+          "trial": "FELIX",
+          "product": "Aucatzyl",
+          "n": 94,
+          "rate": 77,
+          "source": "Roddie et al., NEJM 2024 (cohort 2A; CR 55%)",
+          "checked": "confirmed"
+        },
+        {
+          "trial": "pivotal phase 2",
+          "product": "inati-cel",
+          "n": 48,
+          "rate": 85.4,
+          "source": "Wang et al., Blood Advances 2025, doi 10.1182/bloodadvances.2024014182. Best response; 3-month rate (primary endpoint) 70.8%. Replaces the 82.1% (n=39) ASH 2022 interim figure.",
+          "checked": "confirmed, PMC11872425"
+        },
+        {
+          "trial": "pivotal phase 2, NCT05334823",
+          "product": "普基奥仑赛",
+          "n": 64,
+          "rate": 90.6,
+          "source": "Reported as published in Blood: best ORR 58/64; 3-month rate 76.56%. Ages 3-21.",
+          "checked": "Chinese press reports of the paper; the paper itself not read. This row sets the top of the range."
+        }
+      ]
+    },
+    {
+      "key": "myeloma",
+      "zh": "多发性骨髓瘤",
+      "en": "Multiple myeloma",
+      "target": "BCMA",
+      "usa": [
+        "Abecma",
+        "Carvykti"
+      ],
+      "china": [
+        "福可苏 (eque-cel)",
+        "卡卫荻 (cilta-cel)",
+        "赛恺泽 (zevor-cel)"
+      ],
+      "chart_zh": "多发性骨髓瘤",
+      "chart_en": "Multiple myeloma",
+      "metric_zh": "总缓解率，多线治疗后",
+      "metric_en": "Overall response, heavily pretreated",
+      "low": 73,
+      "high": 98,
+      "cr_low": 33,
+      "cr_high": 83,
+      "trials": [
+        {
+          "trial": "KarMMa",
+          "product": "Abecma",
+          "n": 128,
+          "orr": 73,
+          "cr": 33,
+          "source": "Munshi et al., NEJM 2021",
+          "checked": "confirmed (94 and 42 of 128)"
+        },
+        {
+          "trial": "CARTITUDE-1",
+          "product": "Carvykti",
+          "n": 97,
+          "orr": 98,
+          "cr": 83,
+          "source": "Final protocol-specified analysis, 27.7-month follow-up (Martin et al., JCO 2023): ORR 97.9%, sCR 82.5%",
+          "checked": "confirmed as ~98% / 83% in the EHA abstract; exact decimals from recall"
+        },
+        {
+          "trial": "FUMANBA-1",
+          "product": "eque-cel",
+          "n": 101,
+          "orr": 96.0,
+          "cr": 74.3,
+          "source": "Li et al., JAMA Oncology 2024",
+          "checked": "confirmed"
+        },
+        {
+          "trial": "CARTIFAN-1",
+          "product": "cilta-cel (China)",
+          "n": 48,
+          "orr": 89.6,
+          "cr": 77.1,
+          "source": "Mi et al., JCO 2023;41:1275, doi 10.1200/JCO.22.00690",
+          "checked": "confirmed"
+        },
+        {
+          "trial": "LUMMICAR STUDY 1",
+          "product": "zevor-cel",
+          "n": 102,
+          "orr": 92.2,
+          "cr": 71.6,
+          "source": "Chen et al., Experimental Hematology & Oncology (sCR 68.6% + CR 2.9%)",
+          "checked": "confirmed via Multiple Myeloma Hub summary"
+        }
+      ]
+    },
+    {
+      "key": "gastric",
+      "zh": "胃癌",
+      "en": "Gastric cancer",
+      "target": "CLDN18.2",
+      "usa": [],
+      "china": [
+        "恺力美 (satri-cel)"
+      ],
+      "chart_zh": "胃 / 食管胃结合部癌",
+      "chart_en": "Gastric / GEJ cancer",
+      "metric_zh": "客观缓解率，随机对照",
+      "metric_en": "Objective response, randomised",
+      "low": 22,
+      "high": 22,
+      "control": 4,
+      "trials": [
+        {
+          "trial": "CT041-ST-01",
+          "product": "satri-cel",
+          "orr": 22,
+          "control_orr": 4,
+          "pfs_months": 3.25,
+          "control_pfs_months": 1.77,
+          "pfs_hr": 0.37,
+          "os_months": 7.92,
+          "control_os_months": 5.49,
+          "source": "Qi et al., Lancet 2025 (ITT, IRC-assessed; OS difference not statistically significant)",
+          "n": 156,
+          "checked": "confirmed against the Lancet abstract (PFS, HR) and OncLive (OS, ORR)"
+        }
+      ]
+    }
+  ],
+  "durability": [
+    {
+      "key": "lbcl",
+      "value": 42.6,
+      "trial": "ZUMA-1",
+      "what": "5-year overall survival",
+      "source": "Neelapu et al., Blood 2023",
+      "checked": "confirmed: 42.6% (95% CI 32.8-51.9), Blood 2023;141:2307"
+    },
+    {
+      "key": "mm",
+      "value": 33,
+      "trial": "CARTITUDE-1",
+      "what": "alive and progression-free at >=5 years with no further myeloma treatment (32 of 97)",
+      "source": "Jagannath et al., JCO 2025",
+      "checked": "confirmed: 32 of 97, JCO 2025, doi 10.1200/JCO-25-00760"
+    },
+    {
+      "key": "gastric",
+      "value": 3.25,
+      "control": 1.77,
+      "trial": "CT041-ST-01",
+      "what": "median progression-free survival, months",
+      "source": "Qi et al., Lancet 2025",
+      "checked": "confirmed against the Lancet abstract"
+    }
+  ]
+}
