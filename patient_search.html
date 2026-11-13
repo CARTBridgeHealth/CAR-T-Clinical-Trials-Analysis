@@ -117,6 +117,7 @@ const I18N = {
     viewTrial: "View on ClinicalTrials.gov",
     approvedIn: "Approved", nmpa: "NMPA no.", indication: "Indications", target: "Target",
     resTitle: "Further reading (external)",
+    checked: "last checked",
     resNote: "Medscape articles are written for doctors; full text may need a free sign-up. We do not write or check these articles.",
     disc1: "Information only, not medical advice. Ask your doctor whether CAR-T or a trial suits you.",
     disc2: "Trial data come from ClinicalTrials.gov (a snapshot, updated monthly); approved-product data from FDA and NMPA listings. Eligibility is not shown here—check each trial page.",
@@ -149,6 +150,7 @@ const I18N = {
     viewTrial: "在 ClinicalTrials.gov 查看",
     approvedIn: "批准年份", nmpa: "NMPA 批文号", indication: "适应症", target: "靶点",
     resTitle: "延伸阅读（外部链接）",
+    checked: "最后核对",
     resNote: "Medscape 文章面向医生，全文可能需要免费注册。这些文章不是本站撰写或审核的。",
     disc1: "仅供信息参考，不构成医疗建议。是否适合 CAR-T 或某项试验，请咨询您的医生。",
     disc2: "试验数据来源于 ClinicalTrials.gov（每月更新的快照）；已批准产品数据来源于 FDA 和 NMPA 公开目录。本页不显示入组标准，请在每项试验页面核实。",
@@ -175,32 +177,38 @@ const RESOURCES = [
   {
     en: "Autoimmune CAR-T: trials paused after deaths (Aug–Oct 2026)",
     cn: "自身免疫病 CAR-T：死亡事件后试验暂停（2026 年 8–10 月）",
-    url: "https://www.medscape.com/viewarticle/autoimmune-researchers-seek-answers-after-deaths-car-t-cell-2026a10010xi"
+    url: "https://www.medscape.com/viewarticle/autoimmune-researchers-seek-answers-after-deaths-car-t-cell-2026a10010xi",
+    checked: "2026-11-13"
   },
   {
     en: "Expert panel: CAR-T for autoimmune disease should be given within trials where possible (Oct 2026)",
     cn: "专家组建议：自身免疫病 CAR-T 应尽量在临床试验中使用（2026 年 10 月）",
-    url: "https://www.medscape.com/viewarticle/new-recommendations-released-car-t-cell-therapy-autoimmune-2026a100125c"
+    url: "https://www.medscape.com/viewarticle/new-recommendations-released-car-t-cell-therapy-autoimmune-2026a100125c",
+    checked: "2026-11-13"
   },
   {
     en: "Lupus: early basket-trial results, including 4 children (2026)",
     cn: "狼疮：篮子试验早期结果，含 4 名儿童（2026 年）",
-    url: "https://www.medscape.com/viewarticle/new-autoimmune-disease-car-t-results-tremendous-success-2026a10004ml"
+    url: "https://www.medscape.com/viewarticle/new-autoimmune-disease-car-t-results-tremendous-success-2026a10004ml",
+    checked: "2026-11-13"
   },
   {
     en: "Lymphoma: decade-long remissions in some patients",
     cn: "淋巴瘤：部分患者十年缓解",
-    url: "https://www.medscape.com/viewarticle/car-t-cells-produce-10-year-remissions-some-patients-2026a1000l7h"
+    url: "https://www.medscape.com/viewarticle/car-t-cells-produce-10-year-remissions-some-patients-2026a1000l7h",
+    checked: "2026-11-13"
   },
   {
     en: "Smoldering myeloma: deep, durable remission in a 20-patient pilot",
     cn: "冒烟型骨髓瘤：20 例小型试验中的持久深度缓解",
-    url: "https://www.medscape.com/viewarticle/car-t-induces-deep-durable-remission-smoldering-myeloma-2026a1000cnm"
+    url: "https://www.medscape.com/viewarticle/car-t-induces-deep-durable-remission-smoldering-myeloma-2026a1000cnm",
+    checked: "2026-11-13"
   },
   {
     en: "Crohn's: anti-TL1A duvakitug, phase 2b (2025)",
     cn: "克罗恩病：抗 TL1A 药物 duvakitug，II 期（2025 年）",
-    url: "https://www.medscape.com/viewarticle/novel-anti-tl1a-antibody-shows-potential-crohns-disease-2025a1000un6"
+    url: "https://www.medscape.com/viewarticle/novel-anti-tl1a-antibody-shows-potential-crohns-disease-2025a1000un6",
+    checked: "2026-11-13"
   }
 ];
 
@@ -233,7 +241,8 @@ function applyStaticText() {
   $("t-res-title").textContent = s.resTitle;
   $("t-res-note").textContent = s.resNote;
   $("res-list").innerHTML = RESOURCES.map((r) =>
-    `<li style="margin-bottom:8px"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(lang === "cn" ? r.cn : r.en)}</a></li>`
+    `<li style="margin-bottom:8px"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(lang === "cn" ? r.cn : r.en)}</a>` +
+    ` <span class="meta">(${esc(s.checked)} ${esc(r.checked)})</span></li>`
   ).join("");
 }
 
